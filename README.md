@@ -3,7 +3,7 @@
 [![Tests](https://github.com/Reborn-RU-CM/Reborn-RU-CM/workflows/Tests/badge.svg)](https://github.com/Reborn-RU-CM/Reborn-RU-CM/actions?query=workflow%3ATests)
 [![Build Project](https://github.com/Reborn-RU-CM/Reborn-RU-CM/workflows/Build%20Project/badge.svg?branch=develop)](https://github.com/Reborn-RU-CM/Reborn-RU-CM/actions?query=workflow%3ABuild+branch%3Adevelop)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Reborn-RU-CM/unitystation.svg)](https://github.com/Reborn-RU-CM/Reborn-RU-CM/commits/develop)
-[![Discord](https://img.shields.io/discord/273774715741667329.svg)](https://discord.gg/7CQweJzr)
+[![Discord](https://img.shields.io/discord/273774715741667329.svg)](https://discord.gg/5sRAqd8xmk)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 ![built-with-resentment](http://forthebadge.com/images/badges/built-with-resentment.svg)
@@ -13,7 +13,7 @@ _Reborn RU-CM has been active since late 2020_
 
 ## Talk to us
 Please join us on Discord:  
-[<img src="https://www.seoclerk.com/pics/want57772-1PlHGI1515438378.png" width="75">](https://discord.gg/7CQweJzr)
+[<img src="https://www.seoclerk.com/pics/want57772-1PlHGI1515438378.png" width="75">](https://discord.gg/5sRAqd8xmk)
 
 ## Feel like getting involved?
 Read our Quick Start guide [here](https://unitystation.github.io/unitystation/contribution-guides/Starting-contribution/)
