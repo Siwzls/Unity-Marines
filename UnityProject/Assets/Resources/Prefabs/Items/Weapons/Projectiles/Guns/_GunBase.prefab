@@ -12,25 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdce8a163088453ca593c0e98f2c5f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemStorageStructure: {fileID: 11400000, guid: 263bf834f99424f12bda19d67c3ab5fc,
+  itemStorageStructure: {fileID: 11400000, guid: ee76ba24a0cd443b1a308dd04cdb3678,
     type: 2}
   itemStorageCapacity: {fileID: 0}
   itemStoragePopulator: {fileID: 0}
---- !u!114 &3353337338252429816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8150840225578731674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a50b8b03989f386c90e3ac8b88f94c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setRestriction: 0
-  allowClumsy: 0
-  allowNonClumsy: 1
 --- !u!114 &4644871529314044369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,15 +34,30 @@ MonoBehaviour:
   casingPrefabOverride: {fileID: 0}
   allowMagazineRemoval: 1
   ammoType: 0
+  pinPrefab: {fileID: 6004521592186936485, guid: 0c0328cbf94ffe648a0903cfc375ab91,
+    type: 3}
+  suppressorPrefab: {fileID: 0}
   SpawnsCasing: 1
   MagInternal: 0
-  burstCooldown: 0
-  burstCount: 3
   SmartGun: 0
   CurrentRecoilVariance: 0
   FireCountDown: 0
   FiringSound: 
+  FiringSoundA:
+    SetLoadSetting: 0
+    AssetAddress: Assets/Prefabs/AmbientTracks/Ambient04.prefab
+    AssetReference:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
   SuppressedSound: 
+  SuppressedSoundA:
+    SetLoadSetting: 0
+    AssetAddress: Assets/Prefabs/AmbientTracks/Ambient04.prefab
+    AssetReference:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
   FireRate: 0
   MaxRecoilVariance: 0
   ProjectileVelocity: 20
@@ -68,8 +68,6 @@ MonoBehaviour:
   WeaponType: 0
   isSuppressed: 0
   isSuppressible: 0
-  suppressor: {fileID: 5065923221907874056, guid: 557cc8a1b0b8fd7409c7b846fb7f5c12,
-    type: 3}
 --- !u!1001 &8150967651737613344
 PrefabInstance:
   m_ObjectHideFlags: 0
