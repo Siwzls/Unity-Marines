@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372377793368a2a4cb9f1d16bc0421c3, type: 3}
-  m_Name: AsteroidListSO
+  m_Script: {fileID: 11500000, guid: 79bcee9d2f387084f9294cd33cada6e1, type: 3}
+  m_Name: ShipList
   m_EditorClassIdentifier: 
-  Asteroids:
-  - Asteroid01
-  - Asteroid02
-  - Asteroid03
-  - Asteroid04
-  - Asteroid05
-  - Asteroid06
+  MainStations:
+  - Almayer
