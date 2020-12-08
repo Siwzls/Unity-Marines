@@ -11,15 +11,17 @@ public partial class SubSceneManager : NetworkBehaviour
 	public static SubSceneManager Instance;
 
 	public AwayWorldListSO awayWorldList;
+	[SerializeField] private ShipListSO shipList = null;
 	[SerializeField] private MainStationListSO mainStationList = null;
-	[SerializeField] private AsteroidListSO asteroidList = null;
 	[SerializeField] private AdditionalSceneListSO additionalSceneList = null;
 
 	readonly ScenesSyncList loadedScenesList = new ScenesSyncList();
 
+	public ShipListSO ShipList => shipList;
 	public MainStationListSO MainStationList => mainStationList;
 
 	public bool AwaySiteLoaded { get; private set; }
+	public bool ShipLoaded { get; private set; }
 	public bool MainStationLoaded { get; private set; }
 
 	public bool SyndicateLoaded { get; private set; }
@@ -104,9 +106,9 @@ public partial class SubSceneManager : NetworkBehaviour
 
 public enum SceneType
 {
+	Ship,
 	MainStation,
 	AwaySite,
-	Asteroid,
 	AdditionalScenes
 }
 
