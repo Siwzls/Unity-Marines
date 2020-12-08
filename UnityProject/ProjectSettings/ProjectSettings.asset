@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Unitystation
-  productName: unitystation
+  companyName: Colonial Marines
+  productName: Colonial Marines
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -125,7 +125,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 1
-  bundleVersion: 0.4.1
+  bundleVersion: 0.1.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -277,7 +277,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 35001c30dca274d6baf7a5b7b5352da7, type: 3}
+      m_Icon: {fileID: 2800000, guid: 2683c50bdb03f45a5ae783d1b12435e1, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -289,7 +289,7 @@ PlayerSettings:
       m_Height: 1024
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 35001c30dca274d6baf7a5b7b5352da7, type: 3}
+      m_Icon: {fileID: 2800000, guid: e18eeaf681cc6fd419b03bce405aa9f4, type: 3}
       m_Width: 512
       m_Height: 512
       m_Kind: 0
@@ -302,6 +302,11 @@ PlayerSettings:
       m_Icon: {fileID: 0}
       m_Width: 128
       m_Height: 128
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 0}
+      m_Width: 64
+      m_Height: 64
       m_Kind: 0
     - serializedVersion: 2
       m_Icon: {fileID: 0}
@@ -926,10 +931,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 3
-  cloudProjectId: cd5be26b-512d-4c34-9ba7-ce526037540d
+  cloudProjectId: 4d8ec603-948b-44b1-b191-acb3ceadb04a
   framebufferDepthMemorylessMode: 0
-  projectName: unitystation
-  organizationId: rob-3655378
+  projectName: Colonial Marines
+  organizationId: mishah8888
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

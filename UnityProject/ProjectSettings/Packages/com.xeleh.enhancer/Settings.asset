@@ -23,7 +23,7 @@ MonoBehaviour:
     backColor: {r: 1, g: 1, b: 1, a: 1}
     verticalPadding: 8
     items:
-    - icon: {fileID: 2800000, guid: 35001c30dca274d6baf7a5b7b5352da7, type: 3}
+    - icon: {fileID: 2800000, guid: 2683c50bdb03f45a5ae783d1b12435e1, type: 3}
       function: 1
       layoutName: 
       menuPath: Window/General/Test Runner

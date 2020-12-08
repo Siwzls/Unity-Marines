@@ -14,18 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AdditionalScenes:
   - LavaLand
+  - Almayer
   defaultCentComScenes:
   - CentCom
   CentComScenes:
   - CentComSceneName: Fallstation Centcom
     DependentScene: FallStation
-  defaultSyndicateScenes:
-  - SyndicateOutpost
-  SyndicateScenes:
-  - SyndicateSceneName: Fallstation Syndicate
-    DependentScene: FallStation
-  - SyndicateSceneName: SyndicatePog
-    DependentScene: PogStation
-  WizardScenes:
-  - WizardAsteroid
-  - WizardShip
+  defaultSyndicateScenes: []
+  SyndicateScenes: []
+  WizardScenes: []
