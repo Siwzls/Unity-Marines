@@ -140,20 +140,6 @@ public partial class GameManager
 			// We wait an extra frame after loading each additional scene so that MatrixInfo is ready for player spawning.
 			// If MatrixInfo is not ready, players that spawn in the additional scenes (wizard ship, syndicate base)
 			// will spawn on the wrong matrix and so will exhibit space exposure symptoms.
-
-			if (job.AntagOccupation.JobType == JobType.SYNDICATE)
-			{
-				yield return StartCoroutine(SubSceneManager.Instance.LoadSyndicate());
-				yield return WaitFor.EndOfFrame;
-				break;
-			}
-
-			if (job.AntagOccupation.JobType == JobType.WIZARD)
-			{
-				yield return StartCoroutine(SubSceneManager.Instance.LoadWizard());
-				yield return WaitFor.EndOfFrame;
-				break;
-			}
 		}
 
 		GameMode.StartRound();

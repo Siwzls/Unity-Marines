@@ -86,6 +86,7 @@ public partial class SubSceneManager
 		AdminForcedShip = "Random";
 
 		loadTimer.IncrementLoadBar($"Loading {serverChosenShip}");
+
 		//load ship
 		yield return StartCoroutine(LoadSubScene(serverChosenShip, loadTimer));
 		loadedScenesList.Add(new SceneInfo
@@ -242,34 +243,6 @@ public partial class SubSceneManager
 
 	#region GameMode Unique Scenes
 
-	public IEnumerator LoadSyndicate()
-	{
-		if (SyndicateLoaded) yield break;
-		var pickedMap = additionalSceneList.defaultSyndicateScenes.PickRandom();
-
-		foreach (var syndicateData in additionalSceneList.SyndicateScenes)
-		{
-			if (syndicateData.DependentScene == null || syndicateData.SyndicateSceneName == null)
-				continue;
-			if (syndicateData.DependentScene != serverChosenMainStation)
-				continue;
-
-			pickedMap = syndicateData.SyndicateSceneName;
-			break;
-		}
-		yield return StartCoroutine(LoadSubScene(pickedMap));
-
-		loadedScenesList.Add(new SceneInfo
-		{
-			SceneName = pickedMap,
-			SceneType = SceneType.AdditionalScenes
-		});
-
-		PokeClientSubScene.SendToAll( pickedMap);
-		yield return StartCoroutine(RunOnSpawnServer(pickedMap));
-		SyndicateLoaded = true;
-	}
-
 	private IEnumerator RunOnSpawnServer(string map)
 	{
 		if (GameManager.Instance.CurrentRoundState == RoundState.Started) // the game started long ago!
@@ -284,25 +257,6 @@ public partial class SubSceneManager
 				GameManager.Instance.MappedOnSpawnServer(iserverspawnlist);
 			}
 		}
-	}
-
-	public IEnumerator LoadWizard()
-	{
-		if (WizardLoaded) yield break;
-
-		string pickedScene = additionalSceneList.WizardScenes.PickRandom();
-
-		yield return StartCoroutine(LoadSubScene(pickedScene));
-
-		loadedScenesList.Add(new SceneInfo
-		{
-			SceneName = pickedScene,
-			SceneType = SceneType.AdditionalScenes
-		});
-
-		PokeClientSubScene.SendToAll(pickedScene);
-		yield return StartCoroutine(RunOnSpawnServer(pickedScene));
-		WizardLoaded = true;
 	}
 
 	#endregion
