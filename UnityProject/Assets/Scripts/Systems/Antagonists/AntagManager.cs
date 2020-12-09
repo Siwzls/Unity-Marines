@@ -95,15 +95,8 @@ namespace Antagonists
 				connectedPlayer.Script.mind.occupation = antagonist.AntagOccupation;
 			}
 
-			if (antagonist.AntagJobType == JobType.SYNDICATE)
-			{
-				yield return StartCoroutine(SubSceneManager.Instance.LoadSyndicate());
-				yield return WaitFor.EndOfFrame;
-			}
-
 			if (antagonist.AntagJobType == JobType.WIZARD)
 			{
-				yield return StartCoroutine(SubSceneManager.Instance.LoadWizard());
 				yield return WaitFor.EndOfFrame;
 			}
 

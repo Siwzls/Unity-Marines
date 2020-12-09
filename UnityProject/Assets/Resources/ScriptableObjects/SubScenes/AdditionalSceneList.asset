@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AdditionalScenes:
   - LavaLand
-  - Almayer
   defaultCentComScenes:
   - CentCom
   CentComScenes:
