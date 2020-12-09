@@ -24,9 +24,6 @@ public partial class SubSceneManager : NetworkBehaviour
 	public bool ShipLoaded { get; private set; }
 	public bool MainStationLoaded { get; private set; }
 
-	public bool SyndicateLoaded { get; private set; }
-	public bool WizardLoaded { get; private set; }
-
 	void Awake()
 	{
 		if (Instance == null)

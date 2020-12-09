@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bcee9d2f387084f9294cd33cada6e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8940b51082029c04fbaf11749cdd67df, type: 3}
   m_Name: ShipList
   m_EditorClassIdentifier: 
-  MainStations:
+  Ships:
   - Almayer
