@@ -50,7 +50,7 @@ public class GunPKA : Gun
 		}
 		else
 		{
-			SoundManager.PlayNetworkedAtPos(ReloadKinetic, gameObject.AssumedWorldPosServer(), sourceObj: serverHolder);
+			SoundManager.PlayNetworkedAtPos(SingletonSOSounds.Instance.KineticReload, gameObject.AssumedWorldPosServer(), sourceObj: serverHolder);
 		}
 		allowRecharge = true;
 	}
