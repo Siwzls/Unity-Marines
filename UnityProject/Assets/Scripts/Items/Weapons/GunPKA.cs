@@ -8,6 +8,8 @@ public class GunPKA : Gun
 {
 	public GameObject Projectile;
 
+	[SerializeField] private AddressableAudioSource ReloadKinetic = null;
+
 	bool allowRecharge = true;
 	public float rechargeTime = 2.0f;
 
