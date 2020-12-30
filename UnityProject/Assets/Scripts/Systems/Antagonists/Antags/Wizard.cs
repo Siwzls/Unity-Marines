@@ -26,12 +26,8 @@ namespace Antagonists
 
 		public int StartingSpellCount => startingSpellCount;
 
-		public override GameObject ServerSpawn(PlayerSpawnRequest spawnRequest)
+		public override void AfterSpawn(ConnectedPlayer player)
 		{
-			GameObject newPlayer = PlayerSpawn.ServerSpawnPlayer(spawnRequest.JoinedViewer, AntagOccupation,
-					spawnRequest.CharacterSettings);
-			ConnectedPlayer player = newPlayer.Player();
-
 			GiveRandomSpells(player);
 
 			if (assignRandomNameOnSpawn)
@@ -40,8 +36,6 @@ namespace Antagonists
 			}
 
 			SetPapers(player);
-
-			return newPlayer;
 		}
 
 		public string GetRandomWizardName()
@@ -94,10 +88,6 @@ namespace Antagonists
 						"- Once you teleport to the station, you cannot return.\n" +
 						"- The Blink spell has a small chance to send you into space if you use it while near space.\n" +
 						"- The wizard staff does not serve a meaningful purpose, but it does look great on you!\n" +
-						"\n<size=28><b>Known Issues</b></size>\n" +
-						"- The artifact Whizzamazon drop-pods do not display the landing target reticule. Watch out!\n" +
-						"- Unfortunately, you will lose your action spells if you disconnect from the game or are respawned.\n" +
-						"- LesserSummonGuns spell animation does not work. Cosmetic only.\n" +
 						"Good luck!");
 			}
 		}
