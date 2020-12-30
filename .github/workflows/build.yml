@@ -18,7 +18,7 @@ jobs:
         projectPath:
           - UnityProject
         unityVersion:
-          - 2020.1.6f1
+          - 2020.1.17f1
         targetPlatform:
         #LIST of available buildtargets is here https://docs.unity3d.com/2019.1/Documentation/ScriptReference/BuildTarget.html
           - StandaloneWindows64
