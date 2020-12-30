@@ -1,20 +1,11 @@
 "Scene Changes":
   - UnityProject/Assets/**/*.unity
 
-"Scene: SquareStation":
-  - UnityProject/Assets/Scenes/MainStations/SquareStation.unity
+"Scene: Almayer":
+  - UnityProject/Assets/Scenes/Ships/Almayer.unity
 
-"Scene: PogStation":
-  - UnityProject/Assets/Scenes/MainStations/PogStation.unity
-
-"Scene: FallStation":
-  - UnityProject/Assets/Scenes/MainStations/FallStation.unity
-
-"Scene: OutpostStation":
-  - UnityProject/Assets/Scenes/MainStations/OutpostStation.unity
-
-"Scene: BoxStation":
-  - UnityProject/Assets/Scenes/MainStations/BoxStationV1.unity
+"Scene: LV-624":
+  - UnityProject/Assets/Scenes/MainStations/LV-624.unity
 
 "Documentation":
   - docs/**/*
