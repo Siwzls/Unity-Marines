@@ -13,6 +13,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6091e12e11a798342817bc15ccc6c283,
         type: 2}
+    - target: {fileID: 74060292381164707, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2228339426510106135, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: m_Layer
@@ -127,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 4852608456249896569, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: m_Name
-      value: Prepdoor_Alpha_h
+      value: Prepdoor_alpha_h
       objectReference: {fileID: 0}
     - target: {fileID: 4852608456249896569, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}

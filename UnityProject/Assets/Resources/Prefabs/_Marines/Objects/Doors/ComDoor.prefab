@@ -128,6 +128,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 249b3cc679bc7bc46a3ee8ed4b8b7dbd,
         type: 2}
+    - target: {fileID: 4753479972348938389, guid: ed01dbb56f7eaec43a7c493afa00559a,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6781430717906444833, guid: ed01dbb56f7eaec43a7c493afa00559a,
         type: 3}
       propertyPath: m_Layer

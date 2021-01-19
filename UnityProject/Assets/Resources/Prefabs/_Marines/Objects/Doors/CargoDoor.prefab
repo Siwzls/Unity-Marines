@@ -13,6 +13,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c24aed76f9e165a4788b88d413fcaa1b,
         type: 2}
+    - target: {fileID: 84667090685158959, guid: bdae81f88094e1b4e909f4b7911be203,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3936688480203274647, guid: bdae81f88094e1b4e909f4b7911be203,
         type: 3}
       propertyPath: sceneId
@@ -82,7 +87,7 @@ PrefabInstance:
     - target: {fileID: 4862828333936135413, guid: bdae81f88094e1b4e909f4b7911be203,
         type: 3}
       propertyPath: m_Name
-      value: AirlockCargoOpaque (1)
+      value: CargoDoor
       objectReference: {fileID: 0}
     - target: {fileID: 5786440522888546916, guid: bdae81f88094e1b4e909f4b7911be203,
         type: 3}

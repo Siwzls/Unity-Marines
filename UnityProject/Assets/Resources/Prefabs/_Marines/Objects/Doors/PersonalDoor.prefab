@@ -104,5 +104,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f2b21ff1a8c33394d969bff3fecb87fa,
         type: 2}
+    - target: {fileID: 7510025779675799261, guid: 5fd9d8acdd4f02849884dcddff5db286,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd9d8acdd4f02849884dcddff5db286, type: 3}

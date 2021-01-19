@@ -13,6 +13,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4acd33bb27e6e4b41b43cb4c81e19976,
         type: 2}
+    - target: {fileID: 84667090685158959, guid: bdae81f88094e1b4e909f4b7911be203,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3936688480203274647, guid: bdae81f88094e1b4e909f4b7911be203,
         type: 3}
       propertyPath: sceneId
