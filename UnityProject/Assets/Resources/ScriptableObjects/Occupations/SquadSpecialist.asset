@@ -25,7 +25,7 @@ MonoBehaviour:
   previewSprite: {fileID: 21300000, guid: 69451895108b7264cbefde466f969d6b, type: 3}
   displayName: Squad Specialist
   difficulty: 2
-  descriptionShort: "\u2022 Assist squad.\n\u2022  Employ special weapons, explosives
+  descriptionShort: "\u2022 Assist squad.\n\u2022 Employ special weapons, explosives
     and equipment.\n\u2022 Follow your sergeant's orders."
   descriptionLong: "\n\"Independently targeting particle beam phalanx. Vwap! Fry
     half a city with this puppy. We got tactical smart missiles, phased plasma pulse
