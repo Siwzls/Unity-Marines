@@ -19,18 +19,12 @@ namespace Weapons
 		{
 			JobType job = PlayerList.Instance.Get(shotBy).Job;
 
-			if (job == setRestriction || (setRestriction == JobType.NULL &&
-			(job != JobType.CLOWN && allowNonClumsy || job == JobType.CLOWN && allowClumsy)))
+			if (job == setRestriction || (setRestriction == JobType.NULL && ( allowNonClumsy ||  allowClumsy)))
 			{
 				// a normal shot
 				return 2;
 			}
-			else if (setRestriction == JobType.NULL && (job == JobType.CLOWN && !allowClumsy))
-			{
-				//shooting a non-clusmy weapon as a clusmy person
-				return 3;
-			}
-			else if (setRestriction == JobType.NULL && (job != JobType.CLOWN && !allowNonClumsy))
+			else if (setRestriction == JobType.NULL)
 			{
 				return 1;
 			}

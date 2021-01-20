@@ -628,7 +628,7 @@ public partial class GameManager : MonoBehaviour, IInitialise
 		for (var i = 0; i < PlayerList.Instance.ClientConnectedPlayers.Count; i++)
 		{
 			var player = PlayerList.Instance.ClientConnectedPlayers[i];
-			if (player.Job != JobType.SYNDICATE && player.Job != JobType.NULL)
+			if (player.Job != JobType.NULL)
 			{
 				startCount++;
 			}
@@ -667,7 +667,7 @@ public partial class GameManager : MonoBehaviour, IInitialise
 			}
 		}
 
-		return OccupationList.Instance.Get(JobType.ASSISTANT);
+		return OccupationList.Instance.Get(JobType.SQUAD_MARINE);
 	}
 
 	/// <summary>

@@ -12,12 +12,10 @@ namespace Objects.Telecomms
 
 		private static readonly Dictionary<JobType, ChatChannel> channelFromJob = new Dictionary<JobType, ChatChannel>()
 	{
-		{ JobType.CAPTAIN, ChatChannel.Command },
-		{ JobType.HOP, ChatChannel.Service },
-		{ JobType.RD, ChatChannel.Science },
+		{ JobType.COMMANDING_OFFICER, ChatChannel.Command },
 		{ JobType.CHIEF_ENGINEER, ChatChannel.Engineering },
-		{ JobType.CMO, ChatChannel.Medical },
-		{ JobType.HOS, ChatChannel.Security }
+		{ JobType.CHIEF_MEDICAL_OFFICER, ChatChannel.Medical },
+		{ JobType.CHIEF_MP, ChatChannel.Security }
 	};
 
 		private void OnEnable()
@@ -66,15 +64,6 @@ namespace Objects.Telecomms
 			if (JobCategories.CentCommJobs.Contains(playerOccupation.JobType))
 			{
 				chatChannels = ChatChannel.CentComm;
-			}
-
-			if (playerOccupation.JobType == JobType.AI)
-			{
-				commonMessage = $"{player.ExpensiveName()} has been bluespace-beamed into the AI core!";
-			}
-			else if (playerOccupation.JobType == JobType.SYNDICATE)
-			{
-				chatChannels = ChatChannel.Syndicate;
 			}
 			else if (playerOccupation.IsCrewmember == false)
 			{

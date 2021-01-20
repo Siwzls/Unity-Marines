@@ -53,13 +53,6 @@ public class HolyBook: MonoBehaviour, IPredictedCheckedInteractable<PositionalHa
 		//Occurs only if applied on the head.
 		if (interaction.TargetBodyPart != BodyPartType.Head) return;
 
-		//Only the Chaplain can use the holy book.
-		if (PlayerList.Instance.Get(interaction.Performer).Job != JobType.CHAPLAIN)
-		{
-			Chat.AddExamineMsgFromServer(interaction.Performer, "A force restrains you. Non-Clergymen can't use this!");
-			return;
-		}
-
 		//If using harm intent, book has 60% chance of causing brain trauma, and 40% of healing a bodypart.
 		//If using any other intent, book has 60% chance of healing a bodypart, and 40% of causing brain trauma.
 

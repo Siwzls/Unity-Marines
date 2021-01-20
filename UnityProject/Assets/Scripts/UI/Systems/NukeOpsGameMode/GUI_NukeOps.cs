@@ -18,7 +18,6 @@ public class GUI_NukeOps : MonoBehaviour
 
 	void Update()
 	{
-		syndiActive = GameManager.Instance.GetOccupationsCount(JobType.SYNDICATE);
 		nanoActive = GameManager.Instance.GetNanoTrasenCount();
 		UpdateCounts();
 		SyndiesAllowed();
@@ -53,7 +52,6 @@ public class GUI_NukeOps : MonoBehaviour
 
 	public void SyndieBtn()
 	{
-		PlayerManager.LocalViewerScript.RequestJob(JobType.SYNDICATE);
 		gameObject.SetActive(false);
 	}
 }
