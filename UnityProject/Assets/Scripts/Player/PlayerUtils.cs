@@ -44,39 +44,17 @@ public static class PlayerUtils
 			{
 				continue;
 			}
-
-			if (ps.mind != null &&
-			    ps.mind.occupation != null &&
-			    ps.mind.occupation.JobType == JobType.CLOWN)
+			if (ps.PlayerSync.IsMovingServer)
 			{
-				//love clown
-				ps.playerMove.Uncuff();
-				foreach (var bodyPart in ps.playerHealth.BodyParts)
-				{
-					bodyPart.HealDamage(200, DamageType.Brute);
-					bodyPart.HealDamage(200, DamageType.Burn);
-				}
-				ps.registerTile.ServerStandUp();
-				var left = Spawn.ServerPrefab("Bike Horn").GameObject;
-				var right = Spawn.ServerPrefab("Bike Horn").GameObject;
+				var plantPos = ps.WorldPos + ps.CurrentDirection.Vector;
+				Spawn.ServerPrefab("Banana peel", plantPos, cancelIfImpassable: true);
 
-				Inventory.ServerAdd(left, player.Script.ItemStorage.GetNamedItemSlot(NamedSlot.leftHand));
-				Inventory.ServerAdd(right, player.Script.ItemStorage.GetNamedItemSlot(NamedSlot.rightHand));
 			}
-			else
+			foreach (var pos in ps.WorldPos.BoundsAround().allPositionsWithin)
 			{
-				if (ps.PlayerSync.IsMovingServer)
-				{
-					var plantPos = ps.WorldPos + ps.CurrentDirection.Vector;
-					Spawn.ServerPrefab("Banana peel", plantPos, cancelIfImpassable: true);
-
-				}
-				foreach (var pos in ps.WorldPos.BoundsAround().allPositionsWithin)
-				{
-					var matrixInfo = MatrixManager.AtPoint(pos, true);
-					var localPos = MatrixManager.WorldToLocalInt(pos, matrixInfo);
-					matrixInfo.MetaDataLayer.Clean(pos, localPos, true);
-				}
+				var matrixInfo = MatrixManager.AtPoint(pos, true);
+				var localPos = MatrixManager.WorldToLocalInt(pos, matrixInfo);
+				matrixInfo.MetaDataLayer.Clean(pos, localPos, true);
 			}
 		}
 		SoundManager.PlayNetworked(SingletonSOSounds.Instance.ClownHonk, Random.Range(0.2f,0.5f),true,true);

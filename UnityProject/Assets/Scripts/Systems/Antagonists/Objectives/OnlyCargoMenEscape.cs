@@ -25,8 +25,7 @@ namespace Antagonists
 				{
 					playersFound++;
 					var playerDetails = PlayerList.Instance.Get(player.gameObject);
-					if (playerDetails.Job != JobType.CARGOTECH && playerDetails.Job != JobType.MINER
-					                                           && playerDetails.Job != JobType.QUARTERMASTER)
+					if (playerDetails.Job != JobType.REQUISITIONS_OFFICER)
 					{
 						if(playerDetails.Script == null || playerDetails.Script.playerHealth == null) continue;
 						if (!playerDetails.Script.playerHealth.IsDead)

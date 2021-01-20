@@ -137,7 +137,7 @@ public static class PlayerSpawn
 				//Fallback to assistant spawn location if none found for late join
 				if (spawnTransform == null && occupation.JobType != JobType.NULL)
 				{
-					spawnTransform = SpawnPoint.GetRandomPointForJob(JobType.ASSISTANT);
+					spawnTransform = SpawnPoint.GetRandomPointForJob(JobType.SQUAD_MARINE);
 				}
 			}
 
@@ -311,8 +311,8 @@ public static class PlayerSpawn
 	/// </summary>
 	public static void ServerSpawnGhost(JoinedViewer joinedViewer, CharacterSettings characterSettings)
 	{
-		//Hard coding to assistant
-		Vector3Int spawnPosition = SpawnPoint.GetRandomPointForJob(JobType.ASSISTANT).transform.position.CutToInt();
+		//Hard coding to squad marine
+		Vector3Int spawnPosition = SpawnPoint.GetRandomPointForJob(JobType.SQUAD_MARINE).transform.position.CutToInt();
 
 		//Get spawn location
 		var matrixInfo = MatrixManager.AtPoint(spawnPosition, true);
@@ -327,12 +327,12 @@ public static class PlayerSpawn
 	}
 
 	/// <summary>
-	/// Spawns an assistant dummy
+	/// Spawns an squad marine dummy
 	/// </summary>
 	public static void ServerSpawnDummy(Transform spawnTransform = null)
 	{
 		if(spawnTransform == null)
-			spawnTransform = SpawnPoint.GetRandomPointForJob(JobType.ASSISTANT);
+			spawnTransform = SpawnPoint.GetRandomPointForJob(JobType.SQUAD_MARINE);
 		if (spawnTransform != null)
 		{
 			var dummy = ServerCreatePlayer(spawnTransform.position.RoundToInt());
@@ -341,7 +341,7 @@ public static class PlayerSpawn
 
 
 			//fire all hooks
-			var info = SpawnInfo.Player(OccupationList.Instance.Get(JobType.ASSISTANT), new CharacterSettings(), CustomNetworkManager.Instance.humanPlayerPrefab,
+			var info = SpawnInfo.Player(OccupationList.Instance.Get(JobType.SQUAD_MARINE), new CharacterSettings(), CustomNetworkManager.Instance.humanPlayerPrefab,
 				SpawnDestination.At(spawnTransform.gameObject));
 			Spawn._ServerFireClientServerSpawnHooks(SpawnResult.Single(info, dummy));
 		}
