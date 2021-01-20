@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using DatabaseAPI;
 using Mirror;
 using UnityEngine;
-using UnityEngine.Diagnostics;
 using DiscordWebhook;
 using Messages.Client;
 using Newtonsoft.Json;
@@ -220,6 +219,12 @@ public partial class PlayerList
 		}
 
 		return admins;
+	}
+
+	[Server]
+	public bool IsAdmin(ConnectedPlayer player)
+	{
+		return IsAdmin(player.ClientId);
 	}
 
 	[Server]
@@ -647,7 +652,7 @@ public partial class PlayerList
 	/// </summary>
 	/// <param name="job"></param>
 	/// <returns></returns>
-	public bool ClientCheck(JobType job)
+	public bool ClientJobBanCheck(JobType job)
 	{
 		if (Instance.clientSideBanEntries == null || Instance.clientSideBanEntries.Count == 0)
 		{
