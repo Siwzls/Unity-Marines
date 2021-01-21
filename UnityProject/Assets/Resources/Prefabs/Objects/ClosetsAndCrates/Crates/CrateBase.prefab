@@ -111,6 +111,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122670086388767519, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
         type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122670086388767519, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122670086388767519, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ce3b9d32133f450488a45114d1c465f5,
@@ -145,7 +155,20 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: ec3e476bb69c3794f861ce56b2a5aff3,
+        type: 2}
+    - target: {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ec3e476bb69c3794f861ce56b2a5aff3,
+        type: 2}
+    - target: {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a4ae55934b588894e93402b075bb4327,
+        type: 2}
     - target: {fileID: 5985477544408477782, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
         type: 3}
       propertyPath: variantIndex
@@ -187,6 +210,5 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2800606321036689351, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73, type: 3}
-    - {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73, type: 3}

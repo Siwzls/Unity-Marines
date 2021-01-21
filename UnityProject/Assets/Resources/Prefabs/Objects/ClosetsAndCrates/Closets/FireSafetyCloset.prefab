@@ -116,24 +116,19 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: cd133950bdb6be74fa120fe6b6dfb547,
+      objectReference: {fileID: 11400000, guid: 5ae8a18fa02aeda43910d7a97d06e09d,
         type: 2}
-    - target: {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
-        type: 3}
-      propertyPath: SubCatalogue.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
         type: 3}
       propertyPath: SubCatalogue.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: cd133950bdb6be74fa120fe6b6dfb547,
+      objectReference: {fileID: 11400000, guid: 5ae8a18fa02aeda43910d7a97d06e09d,
         type: 2}
     - target: {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
         type: 3}
       propertyPath: SubCatalogue.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: e427fb2d9e72073418b0ceb2115a045e,
+      objectReference: {fileID: 11400000, guid: c519b053653555140aa7d4bc705246fa,
         type: 2}
     - target: {fileID: 5985477544408477782, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
         type: 3}

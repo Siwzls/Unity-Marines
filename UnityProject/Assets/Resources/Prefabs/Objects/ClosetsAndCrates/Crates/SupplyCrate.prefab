@@ -22,6 +22,24 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A supply crate.
       objectReference: {fileID: 0}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: PresentSpriteSet
+      value: 
+      objectReference: {fileID: 11400000, guid: f22903407951ef4438027a03895807ef,
+        type: 2}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f22903407951ef4438027a03895807ef,
+        type: 2}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 78137f0016b2c5d41a2c7231607adedb,
+        type: 2}
     - target: {fileID: 8429732818373960007, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
         type: 3}
       propertyPath: m_Sprite

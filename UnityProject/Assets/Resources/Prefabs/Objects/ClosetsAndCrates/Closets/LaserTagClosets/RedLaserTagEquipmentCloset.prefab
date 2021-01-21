@@ -73,6 +73,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0de6dbfb91380c947b1c2a30a44c7735,
         type: 3}
+    - target: {fileID: 5351872023868866946, guid: 8a5f7a73bf0b6c54d8b899d29938c03b,
+        type: 3}
+      propertyPath: PresentSpriteSet
+      value: 
+      objectReference: {fileID: 11400000, guid: 93364a62aa13041409f2f7fc48af16e6,
+        type: 2}
+    - target: {fileID: 5351872023868866946, guid: 8a5f7a73bf0b6c54d8b899d29938c03b,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 93364a62aa13041409f2f7fc48af16e6,
+        type: 2}
+    - target: {fileID: 5351872023868866946, guid: 8a5f7a73bf0b6c54d8b899d29938c03b,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f5f68f35abc403542937b393d167c31a,
+        type: 2}
     - target: {fileID: 7831942723146364008, guid: 8a5f7a73bf0b6c54d8b899d29938c03b,
         type: 3}
       propertyPath: initialName

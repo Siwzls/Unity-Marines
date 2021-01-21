@@ -27,6 +27,24 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A freezer crate.
       objectReference: {fileID: 0}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: PresentSpriteSet
+      value: 
+      objectReference: {fileID: 11400000, guid: 82eec0b6efc75b4449ee8b913d1f3077,
+        type: 2}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 82eec0b6efc75b4449ee8b913d1f3077,
+        type: 2}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e1c98fce0efa134e83422fdeeb0d88c,
+        type: 2}
     - target: {fileID: 8429732818373960007, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
         type: 3}
       propertyPath: m_Sprite

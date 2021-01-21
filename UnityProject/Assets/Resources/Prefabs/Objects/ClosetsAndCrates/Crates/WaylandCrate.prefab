@@ -22,6 +22,24 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A crate with a Wayland insignia on it.
       objectReference: {fileID: 0}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: PresentSpriteSet
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c0acf0214cb806458c5fbf0d073bc4f,
+        type: 2}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c0acf0214cb806458c5fbf0d073bc4f,
+        type: 2}
+    - target: {fileID: 3876650825505468298, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f70fd24d60f8436408f597dfbf4fa681,
+        type: 2}
     - target: {fileID: 8429732818373960007, guid: 1d35052f4fc2cad4d8226d1a63e4a1b3,
         type: 3}
       propertyPath: m_Sprite

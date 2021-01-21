@@ -116,7 +116,19 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: 775f58835bb79a444a0422de78d74680,
+      objectReference: {fileID: 11400000, guid: 2e085c2493cc9d146aec726d6bf7177f,
+        type: 2}
+    - target: {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e085c2493cc9d146aec726d6bf7177f,
+        type: 2}
+    - target: {fileID: 5666735912054379986, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 32ea944c610a3734c9ae90bf257191d6,
         type: 2}
     - target: {fileID: 5985477544408477782, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
         type: 3}

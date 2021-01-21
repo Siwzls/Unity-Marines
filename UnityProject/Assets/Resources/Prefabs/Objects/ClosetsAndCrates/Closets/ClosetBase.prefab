@@ -127,7 +127,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   initialContents: {fileID: 0}
-  lockLight: {fileID: 0}
   IsLockable: 0
   playerLimit: 3
   breakoutTime: 120
@@ -155,9 +154,7 @@ MonoBehaviour:
       m_AssetGUID: 
       m_SubObjectName: 
       m_SubObjectType: 
-  doorOpened: {fileID: 21300000, guid: 64b240e12ad22cb448e547c57af09f62, type: 3}
-  spriteRenderer: {fileID: 1122670086388767519}
-  lockOverlay: {fileID: 0}
+  doorSpriteHandler: {fileID: 0}
   isEmagged: 0
   weldOverlay: {fileID: 877469643864734438}
   weldSprite: {fileID: 21300000, guid: 8aaa39f0cb7eb7441bbaeb97bc598aa9, type: 3}
@@ -239,7 +236,7 @@ MonoBehaviour:
   isInitiallyNotPushable: 0
   pushPullSound:
     SetLoadSetting: 0
-    AssetAddress: Assets/Prefabs/AmbientTracks/Ambient04.prefab
+    AssetAddress: null
     AssetReference:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -331,7 +328,30 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: 056f26842e61c7e4e9f124dfd82949b4,
+      objectReference: {fileID: 11400000, guid: 4d8c401bcc2e2224fac2e53dabe80140,
+        type: 2}
+    - target: {fileID: 3920465809857098496, guid: a7af28adb717b4c44b8b2002b27670bd,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920465809857098496, guid: a7af28adb717b4c44b8b2002b27670bd,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d8c401bcc2e2224fac2e53dabe80140,
+        type: 2}
+    - target: {fileID: 3920465809857098496, guid: a7af28adb717b4c44b8b2002b27670bd,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d23dbb4361f58204b89e1bc4d1f9c728,
+        type: 2}
+    - target: {fileID: 3920465809857098496, guid: a7af28adb717b4c44b8b2002b27670bd,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d2de9c440cedfa4a855277fac47f8d0,
         type: 2}
     - target: {fileID: 5718954047647765097, guid: a7af28adb717b4c44b8b2002b27670bd,
         type: 3}
@@ -436,7 +456,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 929166672355850642, guid: a7af28adb717b4c44b8b2002b27670bd, type: 3}
-    - {fileID: 3920465809857098496, guid: a7af28adb717b4c44b8b2002b27670bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7af28adb717b4c44b8b2002b27670bd, type: 3}
 --- !u!1 &933576176691117832 stripped
 GameObject:
@@ -453,12 +472,6 @@ Transform:
 --- !u!4 &4004208935647589563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5718954047647765097, guid: a7af28adb717b4c44b8b2002b27670bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 8704332902418867922}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1122670086388767519 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8599771746108915149, guid: a7af28adb717b4c44b8b2002b27670bd,
     type: 3}
   m_PrefabInstance: {fileID: 8704332902418867922}
   m_PrefabAsset: {fileID: 0}

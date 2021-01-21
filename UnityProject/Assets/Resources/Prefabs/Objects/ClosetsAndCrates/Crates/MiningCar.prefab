@@ -109,5 +109,23 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8558355401010680877, guid: 4325ff5e8c92fee47b53476d3cd97788,
+        type: 3}
+      propertyPath: PresentSpriteSet
+      value: 
+      objectReference: {fileID: 11400000, guid: 72ca2d4aab6448848b68550ac9cc9016,
+        type: 2}
+    - target: {fileID: 8558355401010680877, guid: 4325ff5e8c92fee47b53476d3cd97788,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 72ca2d4aab6448848b68550ac9cc9016,
+        type: 2}
+    - target: {fileID: 8558355401010680877, guid: 4325ff5e8c92fee47b53476d3cd97788,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d361852c9a10564ba1c54022ea69ccc,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4325ff5e8c92fee47b53476d3cd97788, type: 3}
