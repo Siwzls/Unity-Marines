@@ -13,6 +13,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f4842c3e642bc0647a36dc42b24c1065,
         type: 3}
+    - target: {fileID: 4225844797596930963, guid: 8edc1f3642b9f28429c21e6c30566791,
+        type: 3}
+      propertyPath: PresentSpriteSet
+      value: 
+      objectReference: {fileID: 11400000, guid: f5de0e296e38b98409ede7decfbedcef,
+        type: 2}
     - target: {fileID: 5357584910751481964, guid: 8edc1f3642b9f28429c21e6c30566791,
         type: 3}
       propertyPath: PresentSpriteSet
@@ -30,6 +36,12 @@ PrefabInstance:
       propertyPath: initialName
       value: box of replacement tubes
       objectReference: {fileID: 0}
+    - target: {fileID: 7859588250752850760, guid: 8edc1f3642b9f28429c21e6c30566791,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 74d3f95b94da6f1478f272fdc8ca9e38,
+        type: 3}
     - target: {fileID: 7959863695103628704, guid: 8edc1f3642b9f28429c21e6c30566791,
         type: 3}
       propertyPath: m_AssetId
@@ -39,6 +51,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoxOfReplacementTubes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066134277105145184, guid: 8edc1f3642b9f28429c21e6c30566791,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8066134277105145184, guid: 8edc1f3642b9f28429c21e6c30566791,
         type: 3}
@@ -57,6 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8066134277105145184, guid: 8edc1f3642b9f28429c21e6c30566791,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066134277105145184, guid: 8edc1f3642b9f28429c21e6c30566791,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -69,16 +91,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8066134277105145184, guid: 8edc1f3642b9f28429c21e6c30566791,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8066134277105145184, guid: 8edc1f3642b9f28429c21e6c30566791,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8066134277105145184, guid: 8edc1f3642b9f28429c21e6c30566791,
         type: 3}

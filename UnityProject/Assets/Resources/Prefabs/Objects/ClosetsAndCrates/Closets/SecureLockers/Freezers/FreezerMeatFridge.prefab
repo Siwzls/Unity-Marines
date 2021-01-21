@@ -11,7 +11,25 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: bac65961633c93043b2f248ea704df20,
+      objectReference: {fileID: 11400000, guid: 91442ca6a12886f4096fcbd056c52a27,
+        type: 2}
+    - target: {fileID: 664703297392823326, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: d85a7f26cf70b954a9e91d3602de4f21,
+        type: 2}
+    - target: {fileID: 664703297392823326, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: e8fec34f5d589084da501f919dd0ec4b,
+        type: 2}
+    - target: {fileID: 664703297392823326, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91442ca6a12886f4096fcbd056c52a27,
         type: 2}
     - target: {fileID: 3444282888222636532, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
         type: 3}
@@ -31,17 +49,6 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5190763709621519059, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c1544516a9f78c0479969814bbe51fc4,
-        type: 3}
-    - target: {fileID: 5190763709621519059, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5190763709621519059, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
-        type: 3}
       propertyPath: m_Size.x
       value: 1.5
       objectReference: {fileID: 0}
@@ -49,6 +56,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190763709621519059, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ccbe244580cb7ab47ab8e5ea5c172fa7,
+        type: 3}
+    - target: {fileID: 5190763709621519059, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5304060587062873747, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
         type: 3}
@@ -59,6 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FreezerMeatFridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439439281914060830, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5439439281914060830, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
         type: 3}
@@ -77,6 +100,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5439439281914060830, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439439281914060830, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -89,16 +117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439439281914060830, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439439281914060830, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5439439281914060830, guid: b4ec918f7ea1a6044b5598bef5bdbbfe,
         type: 3}
