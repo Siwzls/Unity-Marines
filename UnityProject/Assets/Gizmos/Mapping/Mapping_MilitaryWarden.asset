@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d69829c302d5fb54fb21763031858708, type: 3}
-  m_Name: Engineering
+  m_Script: {fileID: 11500000, guid: 9d1de2691495b304e9843ac3335b626d, type: 3}
+  m_Name: Mapping_MilitaryWarden
   m_EditorClassIdentifier: 
-  displayName: Enginering
-  description: 
-  headerColor: {r: 0.454902, g: 0.39607847, b: 0.17254902, a: 1}
-  icon: {fileID: 0}
-  headOccupations: []
-  occupations: []
+  Variance: []
+  IsPalette: 0
+  setID: 22965

@@ -15,10 +15,10 @@ MonoBehaviour:
   jobType: 1
   isCrewmember: 1
   lateSpawnIsArrivals: 1
-  inventoryPopulator: {fileID: 11400000, guid: e2b80cc04e0d84eef995adbf5f2ec39e, type: 2}
+  inventoryPopulator: {fileID: 0}
   limit: 99
   priority: 99
-  allowedAccess: 1a0000002200000031000000
+  allowedAccess: 
   spells: []
   progress: 95
   choiceColor: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}

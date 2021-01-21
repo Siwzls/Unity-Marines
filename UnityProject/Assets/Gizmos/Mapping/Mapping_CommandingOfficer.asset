@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d69829c302d5fb54fb21763031858708, type: 3}
-  m_Name: Civilian
+  m_Script: {fileID: 11500000, guid: 9d1de2691495b304e9843ac3335b626d, type: 3}
+  m_Name: Mapping_CommandingOfficer
   m_EditorClassIdentifier: 
-  displayName: Civilian
-  description: 
-  headerColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  icon: {fileID: 0}
-  headOccupations: []
-  occupations: []
+  Variance:
+  - Frames:
+    - sprite: {fileID: 21300000, guid: c3f496d3f7e8df245bd5971f948a21f0, type: 3}
+      secondDelay: 0
+  IsPalette: 0
+  setID: 23702
