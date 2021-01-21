@@ -51,12 +51,12 @@ PrefabInstance:
     - target: {fileID: 3930020025141844763, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: sceneId
-      value: 3480702283
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3930020025141844763, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: m_AssetId
-      value: 5fd9d8acdd4f02849884dcddff5db286
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3999148358293947231, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
@@ -70,10 +70,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4627397243032095342, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4627397243032095342, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4627397243032095342, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4038115653559367068, guid: d4b54512aef47084ebcdccab01fbf89f,
+      objectReference: {fileID: 5800416020299311654, guid: 650d1795bd0ab0241803724bbad50843,
         type: 3}
+    - target: {fileID: 4627397243032095342, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4846533335637108899, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: m_RootOrder
@@ -132,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 4852608456249896569, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: m_Name
-      value: Prepdoor_alpha_h
+      value: Prepdoor_Alpha_h
       objectReference: {fileID: 0}
     - target: {fileID: 4852608456249896569, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}

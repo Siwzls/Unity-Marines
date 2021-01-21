@@ -21,10 +21,6 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	[SerializeField]
 	private SpawnableList initialContents = null;
 
-	[Tooltip("Lock light status indicator component")]
-	[SerializeField]
-	private LockLightController lockLight = null;
-
 	[Tooltip("Whether the container can be locked.")]
 	[SerializeField]
 	private bool IsLockable = false;
@@ -58,17 +54,16 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	[SerializeField]
 	private AddressableAudioSource soundOnEscape = null;
 
-	[Tooltip("Sprite to show when door is open.")]
+	[Tooltip("SpriteHandler for the door or other sprite with different opened and closed states.")]
 	[SerializeField]
-	private Sprite doorOpened = null;
+	protected SpriteHandler doorSpriteHandler;
 
-	[Tooltip("Renderer for the whole locker")]
-	[SerializeField]
-	protected SpriteRenderer spriteRenderer;
-
-	[Tooltip("GameObject for the lock overlay")]
-	[SerializeField]
-	protected GameObject lockOverlay = null;
+	private enum DoorState
+	{
+		Closed,
+		Opened,
+		Locked
+	}
 
 	/// <summary>
 	/// Invoked when locker becomes closed / open. Param is true
@@ -155,9 +150,6 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 
 	private RegisterCloset registerTile;
 	private PushPull pushPull;
-	//cached closed door sprite, initialized from whatever sprite the sprite renderer is initially set
-	//to in the prefab
-	private Sprite doorClosed;
 
 	private Matrix Matrix => registerTile.Matrix;
 	private PushPull PushPull
@@ -184,7 +176,6 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	private void EnsureInit()
 	{
 		if (registerTile != null) return;
-		doorClosed = spriteRenderer != null ? spriteRenderer.sprite : null;
 
 		registerTile = GetComponent<RegisterCloset>();
 		pushPull = GetComponent<PushPull>();
@@ -373,8 +364,6 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 		{
 			SyncLocked(isLocked, false);
 			IsLockable = false;
-			lockLight.Hide();
-			Despawn.ClientSingle(lockOverlay);
 		}
 	}
 
@@ -425,19 +414,11 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	{
 		if (statusSync == ClosetStatus.Open)
 		{
-			spriteRenderer.sprite = doorOpened;
-			if (lockLight && IsLockable)
-			{
-				lockLight.Hide();
-			}
+			doorSpriteHandler.ChangeSprite((int) DoorState.Opened);
 		}
 		else
 		{
-			spriteRenderer.sprite = doorClosed;
-			if (lockLight && IsLockable)
-			{
-				lockLight.Show();
-			}
+			doorSpriteHandler.ChangeSprite((int) DoorState.Closed);
 		}
 	}
 
@@ -457,16 +438,13 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 		//Set closet to locked or unlocked as well as update light graphic
 		EnsureInit();
 		isLocked = value;
-		if (lockLight)
+		if (isLocked)
 		{
-			if (isLocked)
-			{
-				lockLight.Lock();
-			}
-			else
-			{
-				lockLight.Unlock();
-			}
+			doorSpriteHandler.ChangeSprite((int) DoorState.Locked);
+		}
+		else
+		{
+			doorSpriteHandler.ChangeSprite((int) DoorState.Closed);
 		}
 	}
 

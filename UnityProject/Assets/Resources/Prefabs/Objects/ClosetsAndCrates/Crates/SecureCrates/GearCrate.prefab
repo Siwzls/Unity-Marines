@@ -17,7 +17,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d0e82fc8470ef294d940df51030b9524,
+      objectReference: {fileID: 21300000, guid: 6620682fb01bc7041b888311e271760b,
         type: 3}
     - target: {fileID: 4164543352101994574, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
         type: 3}
@@ -28,6 +28,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GearCrate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233074960747258499, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4233074960747258499, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
         type: 3}
@@ -46,6 +51,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4233074960747258499, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233074960747258499, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -58,16 +68,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233074960747258499, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233074960747258499, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4233074960747258499, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
         type: 3}
@@ -99,5 +99,29 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A secure gear crate.
       objectReference: {fileID: 0}
+    - target: {fileID: 8717739805835431555, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
+        type: 3}
+      propertyPath: PresentSpriteSet
+      value: 
+      objectReference: {fileID: 11400000, guid: d7d1f43a24b0b844d826600911d0373b,
+        type: 2}
+    - target: {fileID: 8717739805835431555, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3962e94a445a1934b9e3881b5668a909,
+        type: 2}
+    - target: {fileID: 8717739805835431555, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3962e94a445a1934b9e3881b5668a909,
+        type: 2}
+    - target: {fileID: 8717739805835431555, guid: e9f5c9b81c30b4742b7859c8d2b045c3,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d7d1f43a24b0b844d826600911d0373b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f5c9b81c30b4742b7859c8d2b045c3, type: 3}
