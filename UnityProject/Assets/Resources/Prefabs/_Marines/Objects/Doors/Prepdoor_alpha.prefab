@@ -16,8 +16,32 @@ PrefabInstance:
     - target: {fileID: 74060292381164707, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: SubCatalogue.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 74060292381164707, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3665b735722b1684aac5a84ee3c124f6,
+        type: 2}
+    - target: {fileID: 74060292381164707, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 519cf71ed939a0a45befea5cc141adfb,
+        type: 2}
+    - target: {fileID: 74060292381164707, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f7b05f565d7aee14ca69838800c7b644,
+        type: 2}
+    - target: {fileID: 74060292381164707, guid: c04905100b9b3d746ad50b5a62efe998,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f1782476ead6544e81b2a80f85b93aa,
+        type: 2}
     - target: {fileID: 2228339426510106135, guid: c04905100b9b3d746ad50b5a62efe998,
         type: 3}
       propertyPath: m_Layer
