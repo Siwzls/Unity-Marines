@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &798788866287549205
+--- !u!1001 &178527588234454798
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,8 +11,18 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: be5760cabf66f244b8a268d221fef290,
+      objectReference: {fileID: 11400000, guid: 70d445e3b4b81a9489dc0f7137b846f9,
         type: 2}
+    - target: {fileID: 2708563353263609498, guid: c80393b4412660b41937e05425ceb921,
+        type: 3}
+      propertyPath: Resistances.AcidProof
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708563353263609498, guid: c80393b4412660b41937e05425ceb921,
+        type: 3}
+      propertyPath: Resistances.Indestructable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3145725722567961701, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: m_AssetId
@@ -21,13 +31,13 @@ PrefabInstance:
     - target: {fileID: 4242374203497104951, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: initialName
-      value: tinted window
+      value: ultra-reinforced window
       objectReference: {fileID: 0}
     - target: {fileID: 4242374203497104951, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: initialDescription
-      value: A tinted glass window. It looks rather strong and opaque. Might take
-        a few good hits to shatter it."
+      value: An ultra-reinforced window designed to keep the briefing podium a secure
+        area
       objectReference: {fileID: 0}
     - target: {fileID: 6708729305040715024, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
@@ -93,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 6807768264998672647, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: m_Name
-      value: DirectionalWindowTinted
+      value: DirectionalWindowReinforcedIndestructible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c80393b4412660b41937e05425ceb921, type: 3}

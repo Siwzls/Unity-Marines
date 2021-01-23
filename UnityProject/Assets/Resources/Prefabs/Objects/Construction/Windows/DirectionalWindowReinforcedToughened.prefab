@@ -1,18 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &798788866287549205
+--- !u!1001 &1309745523861781247
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2029713811664008157, guid: c80393b4412660b41937e05425ceb921,
+    - target: {fileID: 2708563353263609498, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
-      propertyPath: PresentSpriteSet
-      value: 
-      objectReference: {fileID: 11400000, guid: be5760cabf66f244b8a268d221fef290,
-        type: 2}
+      propertyPath: initialIntegrity
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 3145725722567961701, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: m_AssetId
@@ -21,20 +20,14 @@ PrefabInstance:
     - target: {fileID: 4242374203497104951, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: initialName
-      value: tinted window
+      value: safety glass
       objectReference: {fileID: 0}
     - target: {fileID: 4242374203497104951, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: initialDescription
-      value: A tinted glass window. It looks rather strong and opaque. Might take
-        a few good hits to shatter it."
+      value: A very tough looking window reinforced with tempered glass and bracing
+        rods, probably bullet proof.
       objectReference: {fileID: 0}
-    - target: {fileID: 6708729305040715024, guid: c80393b4412660b41937e05425ceb921,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -732472142911537887, guid: 0857c7e6dd2612345acd2897da4e09b7,
-        type: 3}
     - target: {fileID: 6804860837380333533, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: m_RootOrder
@@ -93,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 6807768264998672647, guid: c80393b4412660b41937e05425ceb921,
         type: 3}
       propertyPath: m_Name
-      value: DirectionalWindowTinted
+      value: DirectionalWindowReinforcedToughened
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c80393b4412660b41937e05425ceb921, type: 3}
