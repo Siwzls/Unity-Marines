@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad263680d73c8c54ba53262044a57d04, type: 3}
-  m_Name: rock_wall
+  m_Name: RockWall
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: rock wall
   LayerType: 0
   TileType: 1
   RequiredTiles: []
@@ -20,25 +20,25 @@ MonoBehaviour:
   CanSoundOverride: 0
   atmosPassable: 0
   isSealed: 0
-  SpawnWithNoAir: 1
+  SpawnWithNoAir: 0
   passable: 0
-  mineable: 1
+  mineable: 0
   doesReflectBullet: 0
   passableException:
     m_keys: 
     m_values: 
   maxHealth: 100
-  damageDeflection: 0
+  damageDeflection: 100
   armor:
-    Melee: 90
-    Bullet: 90
-    Laser: 90
-    Energy: 90
-    Bomb: 90
+    Melee: 100
+    Bullet: 100
+    Laser: 100
+    Energy: 100
+    Bomb: 100
     Rad: 100
     Fire: 100
-    Acid: 90
-    Magic: 0
+    Acid: 100
+    Magic: 100
     Bio: 100
   tileInteractions: []
   spawnOnDeconstruct: {fileID: 0}
@@ -52,7 +52,7 @@ MonoBehaviour:
       m_SubObjectName: 
       m_SubObjectType: 
   connectCategory: 0
-  connectType: 1
+  connectType: 2
   spriteSheet:
     Texture: {fileID: 2800000, guid: 7c3a7336be2637043a7f39cec5350bba, type: 3}
     Sprites:
