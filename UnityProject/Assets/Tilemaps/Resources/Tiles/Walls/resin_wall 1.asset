@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad263680d73c8c54ba53262044a57d04, type: 3}
-  m_Name: rock_wall
+  m_Name: resin_wall 1
   m_EditorClassIdentifier: 
   displayName: 
   LayerType: 0
   TileType: 1
-  RequiredTiles: []
+  RequiredTiles:
+  - {fileID: 11400000, guid: 83855008e43a2674d8d6a006ce94326f, type: 2}
   floorTileSounds: {fileID: 0}
   CanSoundOverride: 0
   atmosPassable: 0
   isSealed: 0
-  SpawnWithNoAir: 1
+  SpawnWithNoAir: 0
   passable: 0
-  mineable: 1
+  mineable: 0
   doesReflectBullet: 0
   passableException:
     m_keys: 
@@ -42,7 +43,7 @@ MonoBehaviour:
     Bio: 100
   tileInteractions: []
   spawnOnDeconstruct: {fileID: 0}
-  spawnAmountOnDeconstruct: 0
+  spawnAmountOnDeconstruct: 1
   lootOnDespawn: {fileID: 0}
   soundOnHit:
     SetLoadSetting: 0
