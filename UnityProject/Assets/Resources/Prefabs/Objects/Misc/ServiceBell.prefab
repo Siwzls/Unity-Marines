@@ -17,7 +17,13 @@ MonoBehaviour:
   registerTile: {fileID: 0}
   floorDecal: {fileID: 0}
   isInitiallyNotPushable: 0
-  pushPullSound: 
+  pushPullSound:
+    SetLoadSetting: 0
+    AssetAddress: null
+    AssetReference:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
   soundDelayTime: 0
   soundMinimumPitchVariance: 1
   soundMaximumPitchVariance: 1
@@ -51,7 +57,13 @@ MonoBehaviour:
   throwDamage: 0
   throwSpeed: 2
   throwRange: 7
-  hitSound: GenericHit
+  hitSound:
+    SetLoadSetting: 0
+    AssetAddress: Assets/Prefabs/Effects/GenericHit.prefab
+    AssetReference:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
   hitSoundSettings: 0
   canConnectToTank: 0
   isEVACapable: 0
@@ -101,6 +113,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  RingSound:
+    SetLoadSetting: 0
+    AssetAddress: Assets/Prefabs/Effects/ServiceBell.prefab
+    AssetReference:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
 --- !u!1001 &7193715622847501631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,11 +349,6 @@ PrefabInstance:
       propertyPath: m_AssetId
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5971563122362279857, guid: ebb08cf966efc084aa918bd8d9429604,
-        type: 3}
-      propertyPath: butcherSound
-      value: BladeSlice
-      objectReference: {fileID: 0}
     - target: {fileID: 6838691275677014393, guid: ebb08cf966efc084aa918bd8d9429604,
         type: 3}
       propertyPath: initialName
@@ -349,7 +363,8 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 61806e82ef848ac47a0e3e2c155dd9d6,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 90804091474310291, guid: ebb08cf966efc084aa918bd8d9429604, type: 3}
     - {fileID: 6838691275677014393, guid: ebb08cf966efc084aa918bd8d9429604, type: 3}

@@ -6,6 +6,8 @@ using DiscordWebhook;
 using DatabaseAPI;
 using Systems.MobAIs;
 using System.Text;
+using System.Text.RegularExpressions;
+using Items;
 
 /// <summary>
 /// The Chat API
@@ -32,23 +34,27 @@ public partial class Chat : MonoBehaviour
 	//Connections to scene based ChatRelay. This is null if in the lobby
 	private ChatRelay chatRelay;
 	private Action<ChatEvent> addChatLogServer;
-	private Action<string, ChatChannel> addChatLogClient;
+	private Action<string, ChatChannel, bool> addChatLogClient;
 	private Action<string> addAdminPriv;
+	private Action<string> addMentorPriv;
 	//Does the ghost hear everyone or just local
 	public bool GhostHearAll { get; set; } = true;
 
 	public bool OOCMute = false;
 
+	private static Regex htmlRegex = new Regex(@"^(http|https)://.*$");
+
 	/// <summary>
 	/// Set the scene based chat relay at the start of every round
 	/// </summary>
 	public static void RegisterChatRelay(ChatRelay relay, Action<ChatEvent> serverChatMethod,
-		Action<string, ChatChannel> clientChatMethod, Action<string> adminMethod)
+		Action<string, ChatChannel, bool> clientChatMethod, Action<string> adminMethod, Action<string> mentorMethod)
 	{
 		Instance.chatRelay = relay;
 		Instance.addChatLogServer = serverChatMethod;
 		Instance.addChatLogClient = clientChatMethod;
 		Instance.addAdminPriv = adminMethod;
+		Instance.addMentorPriv = mentorMethod;
 	}
 
 	public static void InvokeChatEvent(ChatEvent chatEvent)
@@ -63,6 +69,17 @@ public partial class Chat : MonoBehaviour
 			if (IsNamelessChan(channel) || channel == ChatChannel.None)
 			{
 				continue;
+			}
+
+			// A temporary solution until proper telecomms is implemented
+			if (Channels.RadioChannels.HasFlag(channel))
+			{
+				if (InGameEvents.EventCommsBlackout.CommsDown) return;
+
+				if (InGameEvents.EventProcessorOverload.ProcessorOverload)
+				{
+					chatEvent.message = InGameEvents.EventProcessorOverload.ProcessMessage(chatEvent.message);
+				}
 			}
 
 			chatEvent.channels = channel;
@@ -117,8 +134,40 @@ public partial class Chat : MonoBehaviour
 			{
 				chatEvent.speaker = "<color=red>[Admin]</color> " + chatEvent.speaker;
 			}
+			else if(PlayerList.Instance.IsMentor(sentByPlayer.UserId)){
+				chatEvent.speaker = "<color=#6400ff>[Mentor]</color> " + chatEvent.speaker;
+			}
 
 			if (Instance.OOCMute && !isAdmin) return;
+
+			//http/https links in OOC chat
+			if (isAdmin || !GameManager.Instance.AdminOnlyHtml)
+			{
+				if (htmlRegex.IsMatch(chatEvent.message))
+				{
+					var messageParts = chatEvent.message.Split(' ');
+
+					var builder = new StringBuilder();
+
+					foreach (var part in messageParts)
+					{
+						if (!htmlRegex.IsMatch(part))
+						{
+							builder.Append(part);
+							builder.Append(" ");
+							continue;
+						}
+
+						builder.Append($"<link={part}><color=blue>{part}</color></link> ");
+					}
+
+					chatEvent.message = builder.ToString();
+
+					//TODO have a config file available to whitelist/blacklist links if all players are allowed to post links
+					//disables client side tag protection to allow <link=></link> tag
+					chatEvent.stripTags = false;
+				}
+			}
 
 			Instance.addChatLogServer.Invoke(chatEvent);
 
@@ -515,7 +564,7 @@ public partial class Chat : MonoBehaviour
 	/// <param name="message"> The message to add to the client chat stream</param>
 	public static void AddExamineMsgToClient(string message)
 	{
-		Instance.addChatLogClient.Invoke(message, ChatChannel.Examine);
+		Instance.addChatLogClient.Invoke(message, ChatChannel.Examine, true);
 	}
 
 	/// <summary>
@@ -551,12 +600,17 @@ public partial class Chat : MonoBehaviour
 	public static void AddWarningMsgToClient(string message)
 	{
 		message = ProcessMessageFurther(message, "", ChatChannel.Warning, ChatModifier.None); //TODO: Put processing in a unified place for server and client.
-		Instance.addChatLogClient.Invoke(message, ChatChannel.Warning);
+		Instance.addChatLogClient.Invoke(message, ChatChannel.Warning, true);
 	}
 
 	public static void AddAdminPrivMsg(string message)
 	{
 		Instance.addAdminPriv.Invoke(message);
+	}
+
+	public static void AddMentorPrivMsg(string message)
+	{
+		Instance.addMentorPriv.Invoke(message);
 	}
 
 	/// <summary>

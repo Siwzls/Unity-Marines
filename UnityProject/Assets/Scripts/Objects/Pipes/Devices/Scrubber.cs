@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Pipes
 {
-	public class Scrubber : MonoPipe
+	public class Scrubber : MonoPipe, IServerSpawn
 	{
 		public bool SelfSufficient = false;
 		// minimum pressure needs to be a little lower because of floating point inaccuracies
@@ -27,19 +27,14 @@ namespace Pipes
 			base.Start();
 		}
 
+		public void OnSpawnServer(SpawnInfo info)
+		{
+			metaDataLayer = MatrixManager.AtPoint(registerTile.WorldPositionServer, true).MetaDataLayer;
+			metaNode = metaDataLayer.Get(registerTile.LocalPositionServer, false);
+		}
+
 		public override void TickUpdate()
 		{
-			if (metaDataLayer == null)
-			{
-				metaDataLayer = MatrixManager.AtPoint(registerTile.WorldPositionServer, true).MetaDataLayer;
-			}
-
-			if (metaNode == null)
-			{
-				metaNode = metaDataLayer.Get(registerTile.LocalPositionServer, false);
-			}
-
-
 			base.TickUpdate();
 			pipeData.mixAndVolume.EqualiseWithOutputs(pipeData.Outputs);
 			CheckAtmos();
@@ -47,9 +42,18 @@ namespace Pipes
 
 		private void CheckAtmos()
 		{
+			// FIXME I'm just handling the exception here, I'm no atmos nerd so I don't know what's happening.
+			// maybe it is just an initialization order problem?
+			if (metaNode == null)
+			{
+				Logger.LogError("Scrubber found metadaNode to be null. Returning with no op.", Category.Atmos);
+				return;
+			}
+
 			if (SelfSufficient == false)
 			{
 				var pressureDensity = pipeData.mixAndVolume.Density();
+
 				if (pressureDensity.y > MaxInternalPressure || metaNode.GasMix.Pressure < MMinimumPressure )
 				{
 					return;

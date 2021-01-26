@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UI.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +27,7 @@ public class PlayerExaminationWindowSlot : MonoBehaviour
 	public bool IsObscured => obstructedOverlay.activeSelf;
 	public bool IsPocket => itemSlot.NamedSlot == NamedSlot.storage01 
 			|| itemSlot.NamedSlot == NamedSlot.storage02
-			|| itemSlot.NamedSlot == NamedSlot.storage03;
+			|| itemSlot.NamedSlot == NamedSlot.suitStorage;
 	
 	public bool IsQuestionMarkActive => questionMark.activeSelf;
 

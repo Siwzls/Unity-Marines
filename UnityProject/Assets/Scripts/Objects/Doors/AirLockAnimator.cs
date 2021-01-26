@@ -64,8 +64,7 @@ namespace Doors
 			}
 
 			doorController.isPerformingAction = true;
-			//RRTL
-			SoundManager.PlayAtPosition(TripleBeep, transform.position, gameObject, polyphonic: true, isGlobal: true);
+			_ = SoundManager.PlayAtPosition(TripleBeep, transform.position, gameObject, polyphonic: true, isGlobal: true);
 			StartCoroutine(PlayPressureWarnAnim());
 		}
 

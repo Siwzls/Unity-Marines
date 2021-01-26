@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Items;
 using AddressableReferences;
 using Mirror;
 using UnityEditor;
@@ -13,7 +15,6 @@ namespace Weapons
 	/// </summary>
 	[RequireComponent(typeof(Pickupable))]
 	[RequireComponent(typeof(ItemStorage))]
-	[RequireComponent(typeof(GunTrigger))]
 	public class Gun : NetworkBehaviour, IPredictedCheckedInteractable<AimApply>, ICheckedInteractable<HandActivate>,
 		ICheckedInteractable<InventoryApply>, IServerInventoryMove, IServerSpawn, IExaminable
 	{
@@ -59,6 +60,24 @@ namespace Weapons
 			magSlot.Item != null ? magSlot.Item.GetComponent<MagazineBehaviour>() : null;
 
 		/// <summary>
+		/// The firing pin currently inside the weapon
+		/// </summary>
+		public GunTrigger FiringPin =>
+			pinSlot.Item.GetComponent<GunTrigger>();
+
+		/// <summary>
+		/// The firing pin to initally spawn within the gun
+		/// </summary>
+		[SerializeField, Tooltip("The firing pin initally inside the gun")]
+		private GameObject pinPrefab = null;
+
+		/// <summary>
+		/// The suppressor that will initally spawn attached to the gun provided the gun is suppressable
+		/// </summary>
+		[SerializeField, Tooltip("The suppressor initally attached to the gun (if there is one)")]
+		private GameObject suppressorPrefab = default;
+
+		/// <summary>
 		/// Checks if the weapon should spawn weapon casings
 		/// </summary>
 		[Tooltip("If the weapon should spawn casings ")]
@@ -91,29 +110,20 @@ namespace Weapons
 		/// <summary>
 		/// The name of the sound this gun makes when shooting
 		/// </summary>
-		[FormerlySerializedAs("FireingSound"), Tooltip("The name of the sound the gun uses when shooting (must be in soundmanager")]
-		public string FiringSound;
-
-
-		/// <summary>
-		/// The name of the sound this gun makes when shooting
-		/// </summary>
 		[Tooltip("The name of the sound the gun uses when shooting (must be in soundmanager")]
-		public AddressableAudioSource FiringSoundA;
-		//RRTL
-
-		/// <summary>
-		/// The name of the sound this gun makes when shooting
-		/// </summary>
-		[Tooltip("The name of the sound the gun uses when shooting with a suppressor attached (must be in soundmanager")]
-		public string SuppressedSound;
+		public AddressableAudioSource FiringSoundA = null;
 
 		/// <summary>
 		/// The name of the sound this gun makes when shooting
 		/// </summary>
 		[Tooltip("The name of the sound the gun uses when shooting with a suppressor attached (must be in soundmanager")]
 		public AddressableAudioSource SuppressedSoundA;
-		//RRTL
+		
+		/// <summary>
+		/// The sound the gun makes while trying to fire without ammo.
+		/// </summary>
+		[Tooltip("The sound the gun uses when trying to fire without ammo.")]
+		public AddressableAudioSource DryFireSound;
 
 		/// <summary>
 		/// The amount of times per second this weapon can fire
@@ -169,8 +179,11 @@ namespace Weapons
 		private RegisterTile registerTile;
 		private ItemStorage itemStorage;
 		public ItemSlot magSlot;
+		public ItemSlot pinSlot;
+		public ItemSlot suppressorSlot;
 
-		private GunTrigger gunTrigger;
+		// used for clusmy self shooting randomness
+		private System.Random rnd = new System.Random();
 
 		/// <summary>
 		/// If true, displays a message whenever a gun is shot
@@ -185,9 +198,6 @@ namespace Weapons
 		[SerializeField, Tooltip("If suppressors can be applied or removed")]
 		private bool isSuppressible = default;
 
-		[SerializeField]
-		private GameObject suppressor = default;
-
 		#region Init Logic
 
 		private void Awake()
@@ -196,10 +206,11 @@ namespace Weapons
 			GetComponent<ItemAttributesV2>().AddTrait(CommonTraits.Instance.Gun);
 			itemStorage = GetComponent<ItemStorage>();
 			magSlot = itemStorage.GetIndexedItemSlot(0);
+			pinSlot = itemStorage.GetIndexedItemSlot(1);
+			suppressorSlot = itemStorage.GetIndexedItemSlot(2);
 			registerTile = GetComponent<RegisterTile>();
-			gunTrigger = GetComponent<GunTrigger>();
 			queuedShots = new Queue<QueuedShot>();
-			if (gunTrigger == null || magSlot == null || itemStorage == null)
+			if (pinSlot == null || magSlot == null || itemStorage == null)
 			{
 				Debug.LogWarning($"{gameObject.name} missing components, may cause issues");
 			}
@@ -239,6 +250,19 @@ namespace Weapons
 			//populate with a full external mag on spawn
 			Logger.LogTraceFormat("Auto-populate external magazine for {0}", Category.Inventory, name);
 			Inventory.ServerAdd(Spawn.ServerPrefab(ammoPrefab).GameObject, magSlot);
+
+			if (pinPrefab == null)
+			{
+				Debug.LogError($"{gameObject.name} firing pin prefab was null, cannot auto-populate.");
+				return;
+			}
+
+			Inventory.ServerAdd(Spawn.ServerPrefab(pinPrefab).GameObject, pinSlot);
+
+			if (suppressorPrefab != null && isSuppressed && isSuppressible)
+			{
+				Inventory.ServerAdd(Spawn.ServerPrefab(suppressorPrefab).GameObject, suppressorSlot);
+			}
 		}
 
 		public void OnInventoryMoveServer(InventoryMove info)
@@ -247,11 +271,19 @@ namespace Weapons
 			{
 				serverHolder = info.ToPlayer.gameObject;
 				shooterRegisterTile = serverHolder.GetComponent<RegisterTile>();
+				if (FiringPin != null)
+				{
+					FiringPin.UpdatePredictionCanFire(serverHolder);
+				}
 			}
 			else
 			{
 				serverHolder = null;
 				shooterRegisterTile = null;
+				if (FiringPin != null)
+				{
+					FiringPin.ClearPredictionCanFire();
+				}
 			}
 		}
 
@@ -332,7 +364,7 @@ namespace Weapons
 			return false;
 		}
 
-		public bool WillInteract(InventoryApply interaction, NetworkSide side)
+		public virtual bool WillInteract(InventoryApply interaction, NetworkSide side)
 		{
 			if (DefaultWillInteract.Default(interaction, side) == false) return false;
 			if (side == NetworkSide.Server && DefaultWillInteract.Default(interaction, side)) return true;
@@ -371,7 +403,15 @@ namespace Weapons
 			}
 
 			var dir = ApplyRecoil(interaction.TargetVector.normalized);
-			DisplayShot(PlayerManager.LocalPlayer, dir, UIManager.DamageZone, isSuicide, CurrentMagazine.containedBullets[0].name, CurrentMagazine.containedProjectilesFired[0]);
+
+			if (FiringPin != null)
+			{
+				bool canFire = FiringPin.TriggerPullClient();
+				if (canFire)
+				{
+					DisplayShot(PlayerManager.LocalPlayer, dir, UIManager.DamageZone, isSuicide, CurrentMagazine.containedBullets[0].name, CurrentMagazine.containedProjectilesFired[0]);
+				}
+			}
 		}
 
 		//nothing to rollback
@@ -392,7 +432,53 @@ namespace Weapons
 			}
 
 			//enqueue the shot (will be processed in Update)
-			gunTrigger.TriggerPull(interaction.Performer, interaction.TargetVector.normalized, UIManager.DamageZone, isSuicide);
+			if (FiringPin != null)
+			{
+				int shotResult = FiringPin.TriggerPull(interaction.Performer);
+
+				switch (shotResult) {
+
+					case 0:
+						// job requirement not met
+						Chat.AddExamineMsgToClient($"The {gameObject.ExpensiveName()} displays \'User authentication failed\'");
+						break;
+
+					case 1:
+						// shooting a clusmy weapon as a non-clusmy person
+						ServerShoot(interaction.Performer, interaction.TargetVector.normalized, UIManager.DamageZone, true);
+						Chat.AddActionMsgToChat(interaction.Performer,
+						"You somehow shoot yourself in the face! How the hell?!",
+						$"{interaction.Performer.ExpensiveName()} somehow manages to shoot themself in the face!");
+						break;
+
+					case 2:
+						//just normal Firing
+						ServerShoot(interaction.Performer, interaction.TargetVector.normalized, UIManager.DamageZone, isSuicide);
+						break;
+
+					case 3:
+						//shooting a non-clusmy weapon as a clusmy person
+						int chance = rnd.Next(0 ,2);
+						if (chance == 0)
+						{
+							ServerShoot(interaction.Performer, interaction.TargetVector.normalized, UIManager.DamageZone, true);
+							Chat.AddActionMsgToChat(interaction.Performer,
+							"You fumble up and shoot yourself!",
+							$"{interaction.Performer.ExpensiveName()} fumbles up and shoots themself!");
+						}
+						else
+						{
+							ServerShoot(interaction.Performer, interaction.TargetVector.normalized, UIManager.DamageZone, isSuicide);
+						}
+						break;
+
+					default:
+						// unexpected behaviour
+						// if this ever runs, somethings gone horribly fucking wrong, good luck.
+						Debug.LogError($"{gameObject.name} returned a unexpected result when calling TriggerPull serverside!");
+						break;
+				}
+			}
 		}
 
 		public virtual void ServerPerformInteraction(HandActivate interaction)
@@ -403,7 +489,7 @@ namespace Weapons
 			}
 		}
 
-		public void ServerPerformInteraction(InventoryApply interaction)
+		public virtual void ServerPerformInteraction(InventoryApply interaction)
 		{
 			if (interaction.TargetObject == gameObject && interaction.IsFromHandSlot)
 			{
@@ -417,20 +503,13 @@ namespace Weapons
 					else if (Validations.HasItemTrait(interaction.UsedObject, CommonTraits.Instance.Suppressor) && !isSuppressed && isSuppressible)
 					{
 						SyncIsSuppressed(isSuppressed, true);
-						// setting the suppressor var to the gameobject and then spawning that would be better,
-						// however the despawning sets the var to null
-						Despawn.ServerSingle(interaction.UsedObject);
+						Inventory.ServerTransfer(interaction.FromSlot, suppressorSlot);
 					}
 				}
-				else if (isSuppressed && isSuppressible)
+				else if (isSuppressed && isSuppressible && suppressorSlot.Item != null)
 				{
 					SyncIsSuppressed(isSuppressed, false);
-					var result = Spawn.ServerPrefab(suppressor);
-					if (result.Successful)
-					{
-					var item = result.GameObject;
-					Inventory.ServerAdd(item, interaction.FromSlot);
-					}
+					Inventory.ServerTransfer(suppressorSlot, interaction.FromSlot);
 				}
 			}
 		}
@@ -482,7 +561,7 @@ namespace Weapons
 				DequeueAndProcessServerShot();
 			}
 
-			if (queuedUnload && queuedShots.Count == 0 && allowMagazineRemoval && !MagInternal)
+			if (queuedUnload && queuedShots.Count == 0 && !MagInternal)
 			{
 				// done processing shot queue,
 				// perform the queued unload action, causing all clients and server to update their version of this Weapon
@@ -525,7 +604,7 @@ namespace Weapons
 		private bool TryReload(GameObject ammo)
 		{
 			MagazineBehaviour magazine = ammo.GetComponent<MagazineBehaviour>();
-			if (CurrentMagazine == null || (MagInternal && magazine.isClip))
+			if (CurrentMagazine == null || (MagInternal && magazine.magType == MagType.Clip))
 			{
 				//RELOAD
 				// If the item used on the gun is a magazine, check type and reload
@@ -707,20 +786,20 @@ namespace Weapons
 
 			if (isSuicideShot)
 			{
-				GameObject bullet = Spawn.ClientPrefab(projectileName,
+				GameObject projectile = Spawn.ClientPrefab(projectileName,
 					shooter.transform.position, parent: shooter.transform.parent).GameObject;
-				var b = bullet.GetComponent<Projectile>();
-				b.Suicide(shooter, this, damageZone);
+				Projectile projectileComponent = projectile.GetComponent<Projectile>();
+				projectileComponent.Suicide(shooter, this, damageZone);
 			}
 			else
 			{
 				for (int n = 0; n < quantity; n++)
 				{
-					GameObject Abullet = Spawn.ClientPrefab(projectileName,
+					GameObject projectile = Spawn.ClientPrefab(projectileName,
 						shooter.transform.position, parent: shooter.transform.parent).GameObject;
-					var A = Abullet.GetComponent<Projectile>();
-					var finalDirectionOverride = CalcDirection(finalDirection, n);
-					A.Shoot(finalDirectionOverride, shooter, this, damageZone);
+					Projectile projectileComponent = projectile.GetComponent<Projectile>();
+					Vector2 finalDirectionOverride = CalcDirection(finalDirection, n);
+					projectileComponent.Shoot(finalDirectionOverride, shooter, this, damageZone);
 				}
 			}
 			if (isSuppressed && SuppressedSoundA != null)
@@ -736,10 +815,22 @@ namespace Weapons
 
 		private Vector2 CalcDirection(Vector2 direction, int iteration)
 		{
+			if (iteration == 0) return direction;
+
+			// trying to get clientside prediction work with random spread
+			// is far too difficult/expensive, so set spread it is
 			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 			float angleVariance = iteration/1f;
-			float angleDeviation = Random.Range(-angleVariance, angleVariance);
-			float newAngle = (angle+ angleDeviation) * Mathf.Deg2Rad;
+			float angleDeviation;
+			if (iteration % 2 == 0)
+			{
+				angleDeviation = angleVariance; //even
+			}
+			else
+			{
+				angleDeviation = -angleVariance; //odd
+			}
+			float newAngle = (angle + angleDeviation) * Mathf.Deg2Rad;
 			Vector2 vec2 = new Vector2(Mathf.Cos(newAngle), Mathf.Sin(newAngle)).normalized;
 			return vec2;
 		}
@@ -752,7 +843,7 @@ namespace Weapons
 		/// handles validation checks and then calls ServerHandleReloadRequest
 		/// </summary>
 		/// <param name="mag"></param>
-		private void RequestReload(GameObject mag)
+		public void RequestReload(GameObject mag)
 		{
 			uint networkID = mag.gameObject.GetComponent<NetworkIdentity>().netId;
 			ServerHandleReloadRequest(networkID);
@@ -806,7 +897,7 @@ namespace Weapons
 		/// Calls InertiaDrop and then passes handling over to ServerHandleUnloadRequest
 		/// </summary>
 		/// <param name="magscript"></param>
-		private void RequestUnload(MagazineBehaviour magscript)
+		public void RequestUnload(MagazineBehaviour magscript)
 		{
 			Logger.LogTrace("Unloading", Category.Firearms);
 			if (magscript != null)
@@ -830,12 +921,12 @@ namespace Weapons
 
 		private void OutOfAmmoSFX()
 		{
-			SoundManager.PlayNetworkedAtPos("OutOfAmmoAlarm", transform.position, sourceObj: serverHolder);
+			SoundManager.PlayNetworkedAtPos(SingletonSOSounds.Instance.GunEmptyAlarm, transform.position, sourceObj: serverHolder);
 		}
 
 		public void PlayEmptySFX()
 		{
-			SoundManager.PlayNetworkedAtPos("EmptyGunClick", transform.position, sourceObj: serverHolder);
+			SoundManager.PlayNetworkedAtPos(DryFireSound, transform.position, sourceObj: serverHolder);
 		}
 
 		#endregion

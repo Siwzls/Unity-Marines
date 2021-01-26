@@ -270,7 +270,7 @@ namespace Mirror
         void OnValidate()
         {
 #if UNITY_EDITOR
-            //SetupIDs();
+            SetupIDs();
 #endif
         }
 
@@ -432,9 +432,9 @@ namespace Mirror
             if (LogFilter.Debug) Debug.Log(name + " in scene=" + gameObject.scene.name + " scene index hash(" + pathHash.ToString("X") + ") copied into sceneId: " + sceneId.ToString("X"));
         }
 
-        void SetupIDs()
+	    void SetupIDs()
         {
-            if (ThisIsAPrefab())
+	        if (ThisIsAPrefab())
             {
                 // force 0 for prefabs
                 sceneId = 0;

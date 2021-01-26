@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Weapons;
+using AddressableReferences;
 
 public class GunPKA : Gun
 {
@@ -42,12 +43,12 @@ public class GunPKA : Gun
 		{
 			if (serverHolder != null)
 			{
-				Chat.AddExamineMsgFromServer(serverHolder, $"The {gameObject.ExpensiveName()} silently recharges");
+				Chat.AddExamineMsgFromServer(serverHolder, $"The {gameObject.ExpensiveName()} silently recharges.");
 			}
 		}
 		else
 		{
-			SoundManager.PlayNetworkedAtPos("ReloadKinetic", gameObject.AssumedWorldPosServer(), sourceObj: serverHolder);
+			SoundManager.PlayNetworkedAtPos(SingletonSOSounds.Instance.KineticReload, gameObject.AssumedWorldPosServer(), sourceObj: serverHolder);
 		}
 		allowRecharge = true;
 	}

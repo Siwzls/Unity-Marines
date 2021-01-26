@@ -7,7 +7,7 @@ using Pipes;
 
 namespace Pipes
 {
-	public class AirVent : MonoPipe
+	public class AirVent : MonoPipe, IServerSpawn
 	{
 		public bool SelfSufficient = false;
 
@@ -28,19 +28,14 @@ namespace Pipes
 			base.Start();
 		}
 
+		public void OnSpawnServer(SpawnInfo info)
+		{
+			metaDataLayer = MatrixManager.AtPoint(registerTile.WorldPositionServer, true).MetaDataLayer;
+			metaNode = metaDataLayer.Get(registerTile.LocalPositionServer, false);
+		}
+
 		public override void TickUpdate()
 		{
-			if (metaDataLayer == null)
-			{
-				metaDataLayer = MatrixManager.AtPoint(registerTile.WorldPositionServer, true).MetaDataLayer;
-			}
-
-			if (metaNode == null)
-			{
-				metaNode = metaDataLayer.Get(registerTile.LocalPositionServer, false);
-			}
-
-
 			base.TickUpdate();
 			pipeData.mixAndVolume.EqualiseWithOutputs(pipeData.Outputs);
 			CheckAtmos();
@@ -48,6 +43,14 @@ namespace Pipes
 
 		private void CheckAtmos()
 		{
+			// FIXME I'm just handling the exception here, I'm no atmos nerd so I don't know what's happening.
+			// maybe it is just an initialization order problem?
+			if (metaNode == null)
+			{
+				Logger.LogError("Airvent found metadaNode to be null. Returning with no op.", Category.Atmos);
+				return;
+			}
+
 			//metaNode.GasMix = pipeData.mixAndVolume.EqualiseWithExternal(metaNode.GasMix);
 			if (metaNode.GasMix.Pressure > MaxOutletPressure)
 			{

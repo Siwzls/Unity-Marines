@@ -2,13 +2,14 @@
 using UnityEngine;
 using NaughtyAttributes;
 using Antagonists;
+using AddressableReferences;
 
 namespace InGameEvents
 {
 	public class EventSummonGuns : EventGiveGuns
 	{
-		[SerializeField]
-		private string globalSound = default;
+
+		[SerializeField] private AddressableAudioSource globalSound = null;
 
 		[Tooltip("Set the percent chance a player will become an antagonist with a survival/steal guns objective.")]
 		[SerializeField, Range(0, 100)]
@@ -46,7 +47,7 @@ namespace InGameEvents
 		private void SetAsAntagSurvivor(ConnectedPlayer player)
 		{
 			Chat.AddExamineMsgFromServer(player, "<color='red'><size=60>You are the survivalist!</size></color>");
-			AntagManager.Instance.ServerFinishAntag(survivorAntag, player, player.GameObject);
+			AntagManager.Instance.ServerFinishAntag(survivorAntag, player);
 		}
 	}
 }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Systems.Atmospherics;
+using Managers;
+using Strings;
 using UnityEngine;
 
 namespace InGameEvents
@@ -13,7 +15,7 @@ namespace InGameEvents
 			{
 				var text = "It appears the chemistry of the universe has been broken, damn those science nerds.";
 
-				CentComm.MakeAnnouncement(CentComm.CentCommAnnounceTemplate, text, CentComm.UpdateSound.alert);
+				CentComm.MakeAnnouncement(ChatTemplates.CentcomAnnounce, text, CentComm.UpdateSound.Alert);
 			}
 
 			if (FakeEvent) return;
@@ -53,7 +55,7 @@ namespace InGameEvents
 			throw new System.NotImplementedException();
 		}
 
-		public void React(GasMix gasMix, Vector3 tilePos)
+		public void React(GasMix gasMix, Vector3 tilePos, Matrix matrix)
 		{
 			gasMix.AddGas(Gas.Plasma, 1f);
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AddressableReferences;
 using UnityEngine;
 using Mirror;
 using UnityEngine.Serialization;
@@ -18,7 +19,7 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	[Tooltip("Contents that will spawn inside every instance of this locker when the" +
 			 " locker spawns.")]
 	[SerializeField]
-	public SpawnableList initialContents = null;
+	private SpawnableList initialContents = null;
 
 	[Tooltip("Lock light status indicator component")]
 	[SerializeField]
@@ -26,7 +27,11 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 
 	[Tooltip("Whether the container can be locked.")]
 	[SerializeField]
-	public bool IsLockable = false;
+	private bool IsLockable = false;
+
+	[Tooltip("Whether or not the lock sprite is hidden when the container is opened.")]
+	[SerializeField]
+	private bool hideLockWhenOpened = true;
 
 	[Tooltip("Max amount of players that can fit in it at once.")]
 	[SerializeField]
@@ -47,23 +52,25 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	[FormerlySerializedAs("soundOnOpen")]
 	[Tooltip("Name of sound to play when opened / closed")]
 	[SerializeField]
-	private string soundOnOpenOrClose = "OpenClose";
+	private AddressableAudioSource soundOnOpenOrClose = null;
 
 	[Tooltip("Name of sound to play when emagged")]
 	[SerializeField]
-	private string soundOnEmag = "Grillehit";
+	private AddressableAudioSource soundOnEmag = null;
 
 	[Tooltip("Name of sound to play when emagged")]
 	[SerializeField]
-	private string soundOnEscape = "Rustle 1";
+	private AddressableAudioSource soundOnEscape = null;
 
-	[Tooltip("Sprite to show when door is open.")]
+	[Tooltip("SpriteHandler for the door or other sprite with different opened and closed states.")]
 	[SerializeField]
-	private Sprite doorOpened = null;
+	protected SpriteHandler doorSpriteHandler;
 
-	[Tooltip("Renderer for the whole locker")]
-	[SerializeField]
-	protected SpriteRenderer spriteRenderer;
+	private enum DoorState
+	{
+		Closed,
+		Opened
+	}
 
 	[Tooltip("GameObject for the lock overlay")]
 	[SerializeField]
@@ -154,9 +161,6 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 
 	private RegisterCloset registerTile;
 	private PushPull pushPull;
-	//cached closed door sprite, initialized from whatever sprite the sprite renderer is initially set
-	//to in the prefab
-	private Sprite doorClosed;
 
 	private Matrix Matrix => registerTile.Matrix;
 	private PushPull PushPull
@@ -183,7 +187,6 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	private void EnsureInit()
 	{
 		if (registerTile != null) return;
-		doorClosed = spriteRenderer != null ? spriteRenderer.sprite : null;
 
 		registerTile = GetComponent<RegisterCloset>();
 		pushPull = GetComponent<PushPull>();
@@ -424,16 +427,16 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	{
 		if (statusSync == ClosetStatus.Open)
 		{
-			spriteRenderer.sprite = doorOpened;
-			if (lockLight && IsLockable)
+			doorSpriteHandler.ChangeSprite((int) DoorState.Opened);
+			if (lockLight && IsLockable && hideLockWhenOpened)
 			{
 				lockLight.Hide();
 			}
 		}
 		else
 		{
-			spriteRenderer.sprite = doorClosed;
-			if (lockLight && IsLockable)
+			doorSpriteHandler.ChangeSprite((int) DoorState.Closed);
+			if (lockLight && IsLockable && hideLockWhenOpened)
 			{
 				lockLight.Show();
 			}

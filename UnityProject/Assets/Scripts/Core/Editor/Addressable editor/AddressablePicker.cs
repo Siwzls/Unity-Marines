@@ -83,19 +83,20 @@ public class AddressablePicker : EditorWindow
 		return FoundFiles;
 	}
 
-
 	public static void Refresh()
 	{
 		var FoundFiles = GetCataloguePath();
 		foreach (var FoundFile in FoundFiles)
 		{
-			JObject o1 = JObject.Parse(File.ReadAllText((@FoundFile.Replace("/", @"\"))));
+			JObject o1 = JObject.Parse(File.ReadAllText((@FoundFile.Replace("/", @"/"))));
 			var IDs = o1.GetValue("m_InternalIds");
 			var ListIDs = IDs.ToObject<List<string>>().Where(x => x.Contains(".bundle") == false);
 
 			catalogueData = AssetDatabase.LoadAssetAtPath<CatalogueData>("Assets/CachedData/CatalogueData.asset");
 			var flip = new FileInfo(FoundFile);
-			catalogueData.Data[flip.Directory.Parent.Name] = ListIDs.ToList();
+			var ToPutInList = ListIDs.ToList();
+			ToPutInList .Insert(0, "null");
+			catalogueData.Data[flip.Directory.Parent.Name] = ToPutInList;
 
 		}
 
@@ -106,5 +107,5 @@ public class AddressablePicker : EditorWindow
 		}
 
 		EditorUtility.SetDirty(catalogueData);
-	}
+    }
 }

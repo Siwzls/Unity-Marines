@@ -34,7 +34,7 @@ public class ChatRelay : NetworkBehaviour
 		if (Instance == null)
 		{
 			Instance = this;
-			Chat.RegisterChatRelay(Instance, PropagateChatToClients, AddToChatLogClient, AddPrivMessageToClient);
+			Chat.RegisterChatRelay(Instance, PropagateChatToClients, AddToChatLogClient, AddAdminPrivMessageToClient, AddMentorPrivMessageToClient);
 		}
 		else
 		{
@@ -130,7 +130,7 @@ public class ChatRelay : NetworkBehaviour
 				if (!channels.HasFlag(ChatChannel.Binary) || players[i].Script.IsGhost)
 				{
 					UpdateChatMessage.Send(players[i].GameObject, channels, chatEvent.modifiers, chatEvent.message, chatEvent.messageOthers,
-						chatEvent.originator, chatEvent.speaker);
+						chatEvent.originator, chatEvent.speaker, chatEvent.stripTags);
 
 					continue;
 				}
@@ -149,7 +149,7 @@ public class ChatRelay : NetworkBehaviour
 			if (channels != ChatChannel.None)
 			{
 				UpdateChatMessage.Send(players[i].GameObject, channels, chatEvent.modifiers, chatEvent.message, chatEvent.messageOthers,
-					chatEvent.originator, chatEvent.speaker);
+					chatEvent.originator, chatEvent.speaker, chatEvent.stripTags);
 			}
 		}
 
@@ -166,13 +166,13 @@ public class ChatRelay : NetworkBehaviour
 	}
 
 	[Client]
-	private void AddToChatLogClient(string message, ChatChannel channels)
+	private void AddToChatLogClient(string message, ChatChannel channels, bool isOriginator)
 	{
-		UpdateClientChat(message, channels);
+		UpdateClientChat(message, channels, isOriginator);
 	}
 
 	[Client]
-	private void AddPrivMessageToClient(string message)
+	private void AddAdminPrivMessageToClient(string message)
 	{
 		trySendingTTS(message);
 
@@ -180,7 +180,15 @@ public class ChatRelay : NetworkBehaviour
 	}
 
 	[Client]
-	private void UpdateClientChat(string message, ChatChannel channels)
+	private void AddMentorPrivMessageToClient(string message)
+	{
+		trySendingTTS(message);
+
+		ChatUI.Instance.AddMentorPrivEntry(message);
+	}
+
+	[Client]
+	private void UpdateClientChat(string message, ChatChannel channels, bool isOriginator)
 	{
 		if (string.IsNullOrEmpty(message)) return;
 
@@ -196,8 +204,7 @@ public class ChatRelay : NetworkBehaviour
 			// replace action messages with chat bubble
 			if(channels.HasFlag(ChatChannel.Combat) || channels.HasFlag(ChatChannel.Action) || channels.HasFlag(ChatChannel.Examine))
 			{
-				string cleanMessage = Regex.Replace(message, "<.*?>", string.Empty);
-				if(cleanMessage.StartsWith("You"))
+				if(isOriginator)
 				{
 					ChatBubbleManager.ShowAction(Regex.Replace(message, "<.*?>", string.Empty));
 					return;

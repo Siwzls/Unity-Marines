@@ -22,6 +22,9 @@ public class SpriteHandler : MonoBehaviour
 	[SerializeField] private SpriteDataSO PresentSpriteSet;
 	private SpriteDataSO.Frame PresentFrame = null;
 
+	[Tooltip("If checked, a random sprite SO will be selected during initialization from the catalogue of sprite SOs.")]
+	[SerializeField] private bool randomInitialSprite = false;
+
 	private SpriteRenderer spriteRenderer;
 	private Image image;
 
@@ -73,6 +76,12 @@ public class SpriteHandler : MonoBehaviour
 	/// Null if sprite became hidden
 	/// </summary>
 	public event System.Action<Sprite> OnSpriteChanged;
+
+	/// <summary>
+	/// Invokes when sprite data scriptable object is changed
+	/// Null if sprite became hidden
+	/// </summary>
+	public event System.Action<SpriteDataSO> OnSpriteDataSOChanged;
 
 	/// <summary>
 	/// Invoke when sprite handler has changed color of sprite
@@ -183,6 +192,7 @@ public class SpriteHandler : MonoBehaviour
 			{
 				NetUpdate(NewspriteDataSO);
 			}
+			OnSpriteDataSOChanged?.Invoke(NewspriteDataSO);
 		}
 
 		if (color != null)
@@ -288,6 +298,7 @@ public class SpriteHandler : MonoBehaviour
 		cataloguePage = -1;
 		PushClear(false);
 		PresentSpriteSet = null;
+		OnSpriteDataSOChanged?.Invoke(null);
 		
 
 		if (Network)
@@ -692,7 +703,11 @@ public class SpriteHandler : MonoBehaviour
 		ImageComponentStatus(false);
 		Initialised = true;
 
-		if (PresentSpriteSet != null)
+		if (randomInitialSprite && CatalogueCount > 0)
+		{
+			ChangeSprite(Random.Range(0, CatalogueCount), NetworkThis);
+		}
+		else if (PresentSpriteSet != null)
 		{
 			if (HasImageComponent() && pushTextureOnStartUp)
 			{
@@ -725,6 +740,8 @@ public class SpriteHandler : MonoBehaviour
 
 		GetImageComponent();
 		OnSpriteChanged?.Invoke(CurrentSprite);
+
+		PushTexture(false); // TODO: animations don't resume when sprite object is disabled and re-enabled, this is a workaround
 	}
 
 	private void OnDisable()

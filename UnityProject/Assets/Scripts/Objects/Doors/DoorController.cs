@@ -9,7 +9,7 @@ using Objects.Wallmounts;
 
 namespace Doors
 {
-	public class DoorController : NetworkBehaviour, IServerSpawn, ISetMultitoolSlave
+	public class DoorController : NetworkBehaviour, ISetMultitoolSlave
 	{
 		//public bool isWindowed = false;
 		public enum OpeningDirection
@@ -27,24 +27,27 @@ namespace Doors
 
 		private int closedLayer;
 		private int closedSortingLayer;
-		public string openSFX = "AirlockOpen", closeSFX = "AirlockClose";
 
-		public AddressableAudioSource openSFXA;
+		public AddressableAudioSource openSFX;
 
-		public AddressableAudioSource closeSFXA;
-
-		//RRTL
+		public AddressableAudioSource closeSFX;
 
 		private IEnumerator coWaitOpened;
 		private IEnumerator coBlockAutomaticClosing;
-		[Tooltip("how many sprites in the main door animation")] public int doorAnimationSize = 6;
+		[Tooltip("how many sprites in the main door animation")]
+		public int doorAnimationSize = 6;
 		public DoorAnimator doorAnimator;
-		[Tooltip("first frame of the light animation")] public int DoorDeniedSpriteOffset = 12;
-		[Tooltip("first frame of the door Cover/window animation")] public int DoorCoverSpriteOffset;
+		[Tooltip("first frame of the light animation")]
+		public int DoorDeniedSpriteOffset = 12;
+		[Tooltip("first frame of the door Cover/window animation")]
+		public int DoorCoverSpriteOffset;
 		private int doorDirection;
-		[Tooltip("first frame of the light animation")] public int DoorLightSpriteOffset;
-		[Tooltip("first frame of the door animation")] public int DoorSpriteOffset;
-		[SerializeField] [Tooltip("SpriteRenderer which is toggled when welded. Existence is equivalent to weldability of door.")] private SpriteRenderer weldOverlay = null;
+		[Tooltip("first frame of the light animation")]
+		public int DoorLightSpriteOffset;
+		[Tooltip("first frame of the door animation")]
+		public int DoorSpriteOffset;
+		[SerializeField] [Tooltip("SpriteRenderer which is toggled when welded. Existence is equivalent to weldability of door.")]
+		private SpriteRenderer weldOverlay = null;
 		[SerializeField] private Sprite weldSprite = null;
 
 		public bool IsWeldable => (weldOverlay != null);
@@ -69,7 +72,6 @@ namespace Doors
 		private MultitoolConnectionType conType = MultitoolConnectionType.DoorButton;
 		public MultitoolConnectionType ConType => conType;
 
-		public DoorSwitch connectedDoorSwitch;
 		public void SetMaster(ISetMultitoolMaster Imaster)
 		{
 			var doorSwitch = (Imaster as DoorSwitch);
@@ -259,7 +261,7 @@ namespace Doors
 			if (openSFX != null)
 			{
 				// Need to play this sound as global - this will ignore muffle effect
-				SoundManager.PlayAtPosition(openSFXA, registerTile.WorldPosition, gameObject, polyphonic: true, isGlobal: true);
+				_ = SoundManager.PlayAtPosition(openSFX, registerTile.WorldPosition, gameObject, polyphonic: true, isGlobal: true);
 			}
 		}
 
@@ -267,7 +269,7 @@ namespace Doors
 		{
 			if (closeSFX != null)
 			{
-				SoundManager.PlayAtPosition(closeSFXA, registerTile.WorldPosition, gameObject, polyphonic: true, isGlobal: true);
+				_ = SoundManager.PlayAtPosition(closeSFX, registerTile.WorldPosition, gameObject, polyphonic: true, isGlobal: true);
 			}
 		}
 
@@ -547,16 +549,15 @@ namespace Doors
 				pressureLevel = PressureLevel.Warning;
 				return true;
 			}
-			else if (vertPressureDiff >= pressureThresholdCaution || horzPressureDiff >= pressureThresholdCaution)
+
+			if (vertPressureDiff >= pressureThresholdCaution || horzPressureDiff >= pressureThresholdCaution)
 			{
 				pressureLevel = PressureLevel.Caution;
 				return true;
 			}
-			else
-			{
-				pressureLevel = PressureLevel.Safe;
-				return false;
-			}
+
+			pressureLevel = PressureLevel.Safe;
+			return false;
 		}
 
 		#region UI Mouse Actions
@@ -651,11 +652,6 @@ namespace Doors
 			//close timer
 			HackingNode cancelCloseTimer = hackingProcess.GetNodeWithInternalIdentifier(HackingIdentifier.CancelCloseTimer);
 			cancelCloseTimer.AddToInputMethods(CancelWaiting);
-		}
-
-		public void OnSpawnServer(SpawnInfo info)
-		{
-
 		}
 	}
 }

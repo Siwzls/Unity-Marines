@@ -4,6 +4,7 @@ using AdminTools;
 using Audio.Managers;
 using Initialisation;
 using Mirror;
+using UI.Core;
 using UI.Jobs;
 using UI.UI_Bottom;
 using UnityEngine;
@@ -29,7 +30,7 @@ public class UIManager : MonoBehaviour, IInitialise
 	public PlayerExaminationWindowUI playerExaminationWindow;
 	public ControlIntent intentControl;
 	public PlayerHealthUI playerHealthUI;
-	public PlayerListUI playerListUIControl;
+	public StatsTab statsTab;
 	public Text toolTip;
 	public Text pingDisplay;
 	[SerializeField]
@@ -46,6 +47,7 @@ public class UIManager : MonoBehaviour, IInitialise
 	public GamePad gamePad;
 	public AnimationCurve strandedZoomOutCurve;
 	public AdminChatButtons adminChatButtons;
+	public AdminChatButtons mentorChatButtons;
 	public AdminChatWindows adminChatWindows;
 	public ProfileScrollView profileScrollView;
 	public PlayerAlerts playerAlerts;
@@ -142,7 +144,7 @@ public class UIManager : MonoBehaviour, IInitialise
 
 	//		public static ControlChat Chat => Instance.chatControl; //Use ChatRelay.Instance.AddToChatLog instead!
 	public static PlayerHealthUI PlayerHealthUI => Instance.playerHealthUI;
-	
+
 	public static PlayerExaminationWindowUI PlayerExaminationWindow => Instance.playerExaminationWindow;
 
 	public static Hands Hands => Instance.hands;
@@ -158,7 +160,7 @@ public class UIManager : MonoBehaviour, IInitialise
 	public static ControlDisplays Display => Instance.displayControl;
 	public static ControlClothing ControlClothing => Instance.controlClothing;
 
-	public static PlayerListUI PlayerListUI => Instance.playerListUIControl;
+	public static StatsTab StatsTab => Instance.statsTab;
 
 	public static UI_StorageHandler StorageHandler
 	{
@@ -248,6 +250,7 @@ public class UIManager : MonoBehaviour, IInitialise
 		}
 
 		adminChatButtons.transform.parent.gameObject.SetActive(false);
+		mentorChatButtons.transform.parent.gameObject.SetActive(false);
 		SetVersionDisplay = $"Work In Progress {GameData.BuildNumber}";
 	}
 
@@ -288,6 +291,7 @@ public class UIManager : MonoBehaviour, IInitialise
 	void OnSceneChange(Scene oldScene, Scene newScene)
 	{
 		adminChatButtons.ClearAllNotifications();
+		mentorChatButtons.ClearAllNotifications();
 		adminChatWindows.ResetAll();
 		playerAlerts.ClearLogs();
 	}
@@ -505,12 +509,15 @@ public class UIManager : MonoBehaviour, IInitialise
 	/// <summary>
 	/// Links the UI slots to the spawned local player. Should only be called after local player has been spawned / set
 	/// </summary>
-	public static void LinkUISlots()
+	public static void LinkUISlots(ItemStorageLinkOrigin itemStorageLinkOrigin)
 	{
 		//link the UI slots to this player
 		foreach (var uiSlot in Instance.GetComponentsInChildren<UI_ItemSlot>(true))
 		{
-			uiSlot.LinkToLocalPlayer();
+			if (uiSlot.ItemStorageLinkOrigin == itemStorageLinkOrigin)
+			{
+				uiSlot.LinkToLocalPlayer();
+			}
 		}
 	}
 
