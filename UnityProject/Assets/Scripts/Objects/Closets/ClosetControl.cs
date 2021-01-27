@@ -25,6 +25,10 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	[SerializeField]
 	private bool IsLockable = false;
 
+	[Tooltip("Whether or not the lock sprite is hidden when the container is opened.")]
+	[SerializeField]
+	private bool hideLockWhenOpened = true;
+
 	[Tooltip("Max amount of players that can fit in it at once.")]
 	[SerializeField]
 	private int playerLimit = 3;
@@ -61,8 +65,7 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	private enum DoorState
 	{
 		Closed,
-		Opened,
-		Locked
+		Opened
 	}
 
 	/// <summary>
@@ -415,10 +418,18 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 		if (statusSync == ClosetStatus.Open)
 		{
 			doorSpriteHandler.ChangeSprite((int) DoorState.Opened);
+			if (lockLight && IsLockable && hideLockWhenOpened)
+			{
+				lockLight.Hide();
+			}
 		}
 		else
 		{
 			doorSpriteHandler.ChangeSprite((int) DoorState.Closed);
+			if (lockLight && IsLockable && hideLockWhenOpened)
+			{
+				lockLight.Show();
+			}
 		}
 	}
 
