@@ -21,6 +21,10 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	[SerializeField]
 	private SpawnableList initialContents = null;
 
+	[Tooltip("Lock light status indicator component")]
+	[SerializeField]
+	private LockLightController lockLight = null;
+
 	[Tooltip("Whether the container can be locked.")]
 	[SerializeField]
 	private bool IsLockable = false;
@@ -449,13 +453,16 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 		//Set closet to locked or unlocked as well as update light graphic
 		EnsureInit();
 		isLocked = value;
-		if (isLocked)
+		if (lockLight)
 		{
-			doorSpriteHandler.ChangeSprite((int) DoorState.Locked);
-		}
-		else
-		{
-			doorSpriteHandler.ChangeSprite((int) DoorState.Closed);
+			if (isLocked)
+			{
+				lockLight.Lock();
+			}
+			else
+			{
+				lockLight.Unlock();
+			}
 		}
 	}
 
