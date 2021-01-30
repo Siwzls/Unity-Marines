@@ -93,10 +93,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 530318068566146347, guid: ed01dbb56f7eaec43a7c493afa00559a,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1195314703854478558, guid: ed01dbb56f7eaec43a7c493afa00559a,
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195314703854478558, guid: ed01dbb56f7eaec43a7c493afa00559a,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1195314703854478558, guid: ed01dbb56f7eaec43a7c493afa00559a,
         type: 3}
