@@ -8,27 +8,13 @@ namespace Systems.Spawns
 {
 	public class SpawnPoint : NetworkStartPosition
 	{
-		private static readonly Dictionary<JobType, SpawnPointCategory> categoryByJob = new Dictionary<JobType, SpawnPointCategory>
-	{
-		{ JobType.COMMANDING_OFFICER, SpawnPointCategory.CommandingOfficer },
-		{ JobType.EXECUTIFE_OFFICER, SpawnPointCategory.ExecutifeOfficer },
-		{ JobType.STAFF_OFFICER, SpawnPointCategory.StaffOfficer },
-		{ JobType.INTELLIGATE_OFFICER, SpawnPointCategory.IntelligateOfficer },
-		{ JobType.PILOT_OFFICER, SpawnPointCategory.PilotOfficer },
-		{ JobType.VEHICLE_CREWMAN, SpawnPointCategory.VehicleCrewman},
-		{ JobType.SENIOR_ENLISTED, SpawnPointCategory.SeniorEnlisted },
-		{ JobType.ADVISOR, SpawnPointCategory.Advisor },
-
-		{ JobType.SQUAD_MARINE, SpawnPointCategory.SquadMarine},
-	};
-
 		[SerializeField, FormerlySerializedAs("Department")]
 		private SpawnPointCategory category = default;
 
 		public static IEnumerable<Transform> GetPointsForCategory(SpawnPointCategory category)
 		{
 			return NetworkManager.startPositions.Select(x => x.transform)
-					.Where(x => x.GetComponent<SpawnPoint>().category == category);
+				.Where(x => x.GetComponent<SpawnPoint>().category == category);
 		}
 
 		public static Transform GetRandomPointForLateSpawn()
@@ -40,7 +26,7 @@ namespace Systems.Spawns
 		{
 			Transform point;
 			if (categoryByJob.ContainsKey(job) &&
-					(point = GetPointsForCategory(categoryByJob[job]).ToList().PickRandom()) != null)
+			    (point = GetPointsForCategory(categoryByJob[job]).ToList().PickRandom()) != null)
 			{
 				return point;
 			}
@@ -50,17 +36,32 @@ namespace Systems.Spawns
 			return GetRandomPointForLateSpawn();
 		}
 
-	private string iconName => iconNames[category];
+		private const string DEFAULT_SPAWNPOINT_ICON = "Mapping/mapping_x2.png";
+		private string iconName => iconNames.ContainsKey(category) ? iconNames[category] : DEFAULT_SPAWNPOINT_ICON;
 
-	private void OnDrawGizmos()
-	{
-	Gizmos.DrawIcon(transform.position, iconName);
-	}
+		private void OnDrawGizmos()
+		{
+			Gizmos.DrawIcon(transform.position, iconName);
+		}
 
-	private static readonly Dictionary<SpawnPointCategory, string> iconNames = new Dictionary<SpawnPointCategory, string>()
-	{
-		{SpawnPointCategory.SquadMarine, "Mapping/mapping_SquadMarine.png"},
-	};
+		private static readonly Dictionary<JobType, SpawnPointCategory> categoryByJob = new Dictionary<JobType, SpawnPointCategory>
+		{
+			{ JobType.COMMANDING_OFFICER, SpawnPointCategory.CommandingOfficer },
+			{ JobType.EXECUTIFE_OFFICER, SpawnPointCategory.ExecutifeOfficer },
+			{ JobType.STAFF_OFFICER, SpawnPointCategory.StaffOfficer },
+			{ JobType.INTELLIGATE_OFFICER, SpawnPointCategory.IntelligateOfficer },
+			{ JobType.PILOT_OFFICER, SpawnPointCategory.PilotOfficer },
+			{ JobType.VEHICLE_CREWMAN, SpawnPointCategory.VehicleCrewman},
+			{ JobType.SENIOR_ENLISTED, SpawnPointCategory.SeniorEnlisted },
+			{ JobType.ADVISOR, SpawnPointCategory.Advisor },
+
+			{ JobType.SQUAD_MARINE, SpawnPointCategory.SquadMarine},
+		};
+
+		private static readonly Dictionary<SpawnPointCategory, string> iconNames = new Dictionary<SpawnPointCategory, string>()
+		{
+			{SpawnPointCategory.SquadMarine, "Mapping/mapping_SquadMarine.png"},
+		};
 
 	}
 

@@ -21,9 +21,17 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	[SerializeField]
 	private SpawnableList initialContents = null;
 
+	[Tooltip("Lock light status indicator component")]
+	[SerializeField]
+	private LockLightController lockLight = null;
+
 	[Tooltip("Whether the container can be locked.")]
 	[SerializeField]
 	private bool IsLockable = false;
+
+	[Tooltip("Whether or not the lock sprite is hidden when the container is opened.")]
+	[SerializeField]
+	private bool hideLockWhenOpened = true;
 
 	[Tooltip("Max amount of players that can fit in it at once.")]
 	[SerializeField]
@@ -61,8 +69,7 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 	private enum DoorState
 	{
 		Closed,
-		Opened,
-		Locked
+		Opened
 	}
 
 	/// <summary>
@@ -415,10 +422,18 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 		if (statusSync == ClosetStatus.Open)
 		{
 			doorSpriteHandler.ChangeSprite((int) DoorState.Opened);
+			if (lockLight && IsLockable && hideLockWhenOpened)
+			{
+				lockLight.Hide();
+			}
 		}
 		else
 		{
 			doorSpriteHandler.ChangeSprite((int) DoorState.Closed);
+			if (lockLight && IsLockable && hideLockWhenOpened)
+			{
+				lockLight.Show();
+			}
 		}
 	}
 
@@ -438,13 +453,16 @@ public class ClosetControl : NetworkBehaviour, ICheckedInteractable<HandApply>, 
 		//Set closet to locked or unlocked as well as update light graphic
 		EnsureInit();
 		isLocked = value;
-		if (isLocked)
+		if (lockLight)
 		{
-			doorSpriteHandler.ChangeSprite((int) DoorState.Locked);
-		}
-		else
-		{
-			doorSpriteHandler.ChangeSprite((int) DoorState.Closed);
+			if (isLocked)
+			{
+				lockLight.Lock();
+			}
+			else
+			{
+				lockLight.Unlock();
+			}
 		}
 	}
 

@@ -191,6 +191,16 @@ PrefabInstance:
       propertyPath: initialDescription
       value: Old will forever be in fashion.
       objectReference: {fileID: 0}
+    - target: {fileID: 8581740722262618261, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
+      propertyPath: initialIntegrity
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581740722262618261, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
+        type: 3}
+      propertyPath: Resistances.Flammable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8730627397065656938, guid: 68a3eee06f0a8cf4da5d8ab811ce1c73,
         type: 3}
       propertyPath: m_AssetId

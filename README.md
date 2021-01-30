@@ -3,7 +3,7 @@
 [![Tests](https://github.com/Reborn-RU-CM/Reborn-RU-CM/workflows/Tests/badge.svg)](https://github.com/Reborn-RU-CM/Reborn-RU-CM/actions?query=workflow%3ATests)
 [![Build Project](https://github.com/Reborn-RU-CM/Reborn-RU-CM/workflows/Build%20Project/badge.svg?branch=develop)](https://github.com/Reborn-RU-CM/Reborn-RU-CM/actions?query=workflow%3ABuild+branch%3Adevelop)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Reborn-RU-CM/unitystation.svg)](https://github.com/Reborn-RU-CM/Reborn-RU-CM/commits/develop)
-[![Discord](https://img.shields.io/discord/273774715741667329.svg)](https://discord.gg/5sRAqd8xmk)
+[![Discord](https://img.shields.io/discord/614611020039585792.svg)](https://discord.gg/5sRAqd8xmk)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 ![built-with-resentment](http://forthebadge.com/images/badges/built-with-resentment.svg)
