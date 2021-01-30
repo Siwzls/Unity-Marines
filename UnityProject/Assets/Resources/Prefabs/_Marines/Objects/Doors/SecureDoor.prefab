@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6566083412937251475, guid: 1172c577b92e17940afd7e1729f184f6,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8753957893764624942, guid: 1172c577b92e17940afd7e1729f184f6,
         type: 3}
       propertyPath: RelatedAPC

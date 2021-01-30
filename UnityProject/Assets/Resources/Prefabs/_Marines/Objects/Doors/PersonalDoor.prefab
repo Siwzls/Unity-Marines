@@ -108,6 +108,11 @@ PrefabInstance:
       propertyPath: PresentSpriteSet
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4132514532240978582, guid: 5fd9d8acdd4f02849884dcddff5db286,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6896657813079916901, guid: 5fd9d8acdd4f02849884dcddff5db286,
         type: 3}
       propertyPath: sceneId
