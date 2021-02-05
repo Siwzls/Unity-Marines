@@ -13,10 +13,7 @@ public partial class SubSceneManager
 	private string serverChosenMainStation = "loading";
 	private string serverChosenShip = "loading";
 
-	public static string ServerChosenMainStation
-	{
-		get { return Instance.serverChosenMainStation; }
-	}
+	public static string ServerChosenMainStation => Instance.serverChosenMainStation;
 
 	public static string ServerChosenShip
 	{
@@ -52,7 +49,6 @@ public partial class SubSceneManager
 			yield return StartCoroutine(ServerLoadCentCom(loadTimer));
 			//Load Additional Scenes:
 			yield return StartCoroutine(ServerLoadAdditionalScenes(loadTimer));
-
 		}
 
 		netIdentity.isDirty = true;
