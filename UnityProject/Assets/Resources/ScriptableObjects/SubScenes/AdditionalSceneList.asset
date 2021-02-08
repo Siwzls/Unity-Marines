@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AdditionalScenes:
   - LavaLand
-  - AncientStation
+  - StartUp
   defaultCentComScenes:
   - CentCom
   CentComScenes:
-  - CentComSceneName: Fallstation Centcom
-    DependentScene: FallStation
+  - CentComSceneName: StartUp
+    DependentScene: StartUp
   defaultSyndicateScenes: []
   SyndicateScenes: []
   WizardScenes: []
