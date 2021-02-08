@@ -39,7 +39,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   squishSFX:
     SetLoadSetting: 0
+<<<<<<< HEAD
+    AssetAddress: null
+=======
     AssetAddress: Assets/Prefabs/NPC/squish.prefab
+>>>>>>> develop
     AssetReference:
       m_AssetGUID: 
       m_SubObjectName: 

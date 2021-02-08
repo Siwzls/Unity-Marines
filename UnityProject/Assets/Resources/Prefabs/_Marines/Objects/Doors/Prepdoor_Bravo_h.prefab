@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 552305384801587101, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
       propertyPath: sceneId
-      value: 304817718
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 552305384801587101, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
       propertyPath: m_AssetId
-      value: 9f6a082ba93c5684b808b09619c08044
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1644380039084729807, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
@@ -26,36 +26,36 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: e2ae99d4d1ba7db43a19e7cdbd2492d1,
+      objectReference: {fileID: 11400000, guid: 1651c29d51b6384489eebc8182cd1665,
         type: 2}
     - target: {fileID: 3469759388258226213, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
       propertyPath: SubCatalogue.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3469759388258226213, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
       propertyPath: SubCatalogue.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 645904ad754030a4a9fa5ff314fc01f6,
+      objectReference: {fileID: 11400000, guid: 1651c29d51b6384489eebc8182cd1665,
         type: 2}
     - target: {fileID: 3469759388258226213, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
       propertyPath: SubCatalogue.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 8f1be423d04322d4bad135a96d874512,
+      objectReference: {fileID: 11400000, guid: 9c5e6406da6fd8b4486921117d126778,
         type: 2}
     - target: {fileID: 3469759388258226213, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
       propertyPath: SubCatalogue.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: cd935a82a0dd98248a1b444424fca7af,
+      objectReference: {fileID: 11400000, guid: c5d33e3bbb7541344ab48454c24b42cf,
         type: 2}
     - target: {fileID: 3469759388258226213, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
       propertyPath: SubCatalogue.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: d41b45a5190520d409b30c0ef870c7dc,
+      objectReference: {fileID: 11400000, guid: 6bcbd65f8d3fae346aa234e6397c6373,
         type: 2}
     - target: {fileID: 4838404475818808531, guid: 6af0a221ec6985a46956ac77fab1f771,
         type: 3}
