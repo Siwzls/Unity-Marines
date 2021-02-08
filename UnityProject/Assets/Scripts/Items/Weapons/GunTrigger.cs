@@ -11,12 +11,29 @@ namespace Weapons
 		private bool allowClumsy;
 		[SerializeField]
 		private bool allowNonClumsy;
+		[SerializeField]
+		private bool alwaysFail;
 
 		[HideInInspector, SyncVar(hook = nameof(SyncPredictionCanFire))]
 		public bool PredictionCanFire;
 
+		public string DeniedMessage;
+
+		public bool playHONK; //honk.
+		private float randomPitch => Random.Range( 0.7f, 1.2f );
+
 		public int TriggerPull(GameObject shotBy)
 		{
+			if (playHONK)
+			{
+				SoundManager.PlayNetworkedAtPos( SingletonSOSounds.Instance.ClownHonk, shotBy.AssumedWorldPosServer(), randomPitch, true, sourceObj: shotBy);
+			}
+
+			if (alwaysFail)
+			{
+				return 0;
+			}
+
 			JobType job = PlayerList.Instance.Get(shotBy).Job;
 
 			if (job == setRestriction || (setRestriction == JobType.NULL && ( allowNonClumsy ||  allowClumsy)))
@@ -65,6 +82,5 @@ namespace Weapons
 		{
 			PredictionCanFire = newValue;
 		}
-
 	}
 }
