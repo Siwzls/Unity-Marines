@@ -10,6 +10,7 @@ public class ShipListSO : ScriptableObject
 	[Header("Provide the exact name of the scene in the fields below:")]
 	[InfoBox("Remember to also add your scene to " +
 	         "the build settings list",EInfoBoxType.Normal)]
+	[Scene]
 	public List<string> Ships = new List<string>();
 
 	public string GetRandomShip()
