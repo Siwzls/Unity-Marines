@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c909446621c41cd975e26eab73860a6, type: 3}
+  m_Name: L44M37A2ScabbardCapacity
+  m_EditorClassIdentifier: 
+  MaxItemSize: 5
+  Whitelist:
+  - {fileID: 11400000, guid: 76a7a7261f773cb41ad5f53e1dfa153c, type: 2}
+  - {fileID: 11400000, guid: 0f1f3c756960d244d9e464ea4a789912, type: 2}
+  Required: []
+  Blacklist: []
