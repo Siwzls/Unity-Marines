@@ -14,12 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AdditionalScenes:
   - LavaLand
-  - StartUp
-  defaultCentComScenes:
-  - CentCom
-  CentComScenes:
-  - CentComSceneName: StartUp
-    DependentScene: StartUp
+  defaultCentComScenes: []
+  CentComScenes: []
   defaultSyndicateScenes: []
   SyndicateScenes: []
   WizardScenes: []
