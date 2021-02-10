@@ -22,7 +22,7 @@ MonoBehaviour:
   spells: []
   progress: 50
   choiceColor: {r: 0.583552, g: 0.12517802, b: 0.9150943, a: 1}
-  previewSprite: {fileID: 0}
+  previewSprite: {fileID: 21300000, guid: 7e1f049489152434482f28d3abc28bf7, type: 3}
   displayName: Xenomorph
   difficulty: 1
   descriptionShort: "\u2022 Using the life given to you by a host, go forth and expand
@@ -30,7 +30,7 @@ MonoBehaviour:
   descriptionLong: '"Everyone is screaming in terror after watching a Chestburster/Larva
     bust out of Kane''s chest." - Alien
 
-    
+
 
 '
   customProperties:

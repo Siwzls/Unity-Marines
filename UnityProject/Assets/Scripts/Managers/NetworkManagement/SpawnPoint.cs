@@ -55,12 +55,46 @@ namespace Systems.Spawns
 			{ JobType.SENIOR_ENLISTED, SpawnPointCategory.SeniorEnlisted },
 			{ JobType.ADVISOR, SpawnPointCategory.Advisor },
 
-			{ JobType.SQUAD_MARINE, SpawnPointCategory.SquadMarine},
+			{ JobType.CHIEF_MEDICAL_OFFICER, SpawnPointCategory.ChiefMedicalOfficer },
+			{ JobType.RESEARCHER, SpawnPointCategory.Researcher },
+			{ JobType.DOCTOR, SpawnPointCategory.Doctor },
+			{ JobType.NURSE, SpawnPointCategory.Nurse },
+			
+			{ JobType.SQUAD_LEADER, SpawnPointCategory.SquadLeader },
+			{ JobType.SQUAD_SPECIALIST, SpawnPointCategory.SquadSpecialist },
+			{ JobType.SQUAD_SMARTGUNNER, SpawnPointCategory.SquadSmartgunner},
+			{ JobType.SQUAD_MEDIC, SpawnPointCategory.SquadEngineer },
+			{ JobType.SQUAD_ENGINEER, SpawnPointCategory.SquadEngineer },
+			{ JobType.SQUAD_MARINE, SpawnPointCategory.SquadMarine },
+
+			{ JobType.XENOMORPHQUEEN, SpawnPointCategory.XenomorphQueen },
+			{ JobType.XENOMORPH, SpawnPointCategory.Xenomorph },
 		};
 
 		private static readonly Dictionary<SpawnPointCategory, string> iconNames = new Dictionary<SpawnPointCategory, string>()
 		{
+			{SpawnPointCategory.CommandingOfficer, "Mapping/mapping_commandingofficer.png" },
+			{SpawnPointCategory.ExecutifeOfficer, "Mapping/mapping_executiveofficer.png" },
+			{SpawnPointCategory.StaffOfficer, "Mapping/mapping_staffofficer.png" },
+			{SpawnPointCategory.IntelligateOfficer, "Mapping/mapping_intelligateofficer.png" },
+			{SpawnPointCategory.PilotOfficer, "Mapping/mapping_pilotofficer.png" },
+			{SpawnPointCategory.VehicleCrewman, "Mapping/mapping_vehiclecrewmna.png" },
+			{SpawnPointCategory.SeniorEnlisted, "Mapping/mapping_seniorenlisted.png" },
+
+			{SpawnPointCategory.ChiefMedicalOfficer, "Mapping/mapping_chiefmedicalofficer.png" },
+			{SpawnPointCategory.Researcher, "Mapping/mapping_researcher.png" },			
+			{SpawnPointCategory.Doctor, "Mapping/mapping_doctor.png" },
+			{SpawnPointCategory.Nurse, "Mapping/mapping_nurse.png" },
+
+			{SpawnPointCategory.SquadLeader, "Mapping/mapping_squadleader.png" },
+			{SpawnPointCategory.SquadSpecialist, "Mapping/mapping_squadspecialist.png" },
+			{SpawnPointCategory.SquadSmartgunner, "Mapping/mapping_squadsmartgunner.png" },
+			{SpawnPointCategory.SquadMedic, "Mapping/mapping_squadmedic.png" },
+			{SpawnPointCategory.SquadEngineer, "Mapping/mapping_squadengineer.png" },
 			{SpawnPointCategory.SquadMarine, "Mapping/mapping_SquadMarine.png"},
+
+			{SpawnPointCategory.XenomorphQueen, "Mapping/mapping_xenomorphqueen.png" },
+			{SpawnPointCategory.Xenomorph, "Mapping/mapping_xenomorph.png" },
 		};
 
 	}
@@ -98,6 +132,8 @@ namespace Systems.Spawns
 		ExecutifeOfficer,
 		CommandingOfficer,
 		Survivor,
+		Xenomorph,
+		XenomorphQueen,
 		LateJoin
 	}
 }
