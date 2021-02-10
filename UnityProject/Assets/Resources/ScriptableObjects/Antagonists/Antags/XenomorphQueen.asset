@@ -29,5 +29,5 @@ MonoBehaviour:
   needsEscapeObjective: 0
   chanceForGimmickObjective: 0
   coreObjectives: []
-  antagOccupation: {fileID: 11400000, guid: 9ce98ac3d36a07c42a899c05f1a3f506, type: 2}
+  antagOccupation: {fileID: 11400000, guid: 5589e08f10460bc4391ca126f9e6fef7, type: 2}
   showInPreferences: 1
