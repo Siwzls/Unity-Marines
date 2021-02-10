@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wizard
   m_EditorClassIdentifier: 
   antagName: Wizard
-  antagJobType: 54
+  antagJobType: 29
   playSound: 1
   spawnSound:
     SetLoadSetting: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 62560f1cff23ba84b9fe8e661f199730, type: 2}
   - {fileID: 11400000, guid: 180a8d8c464973b4ebcf1d9778e8b895, type: 2}
   - {fileID: 11400000, guid: 0523fbd67f14a494e9e594128625c77b, type: 2}
-  antagOccupation: {fileID: 11400000, guid: 191fa13b4d14221479bf108a4c9628fa, type: 2}
+  antagOccupation: {fileID: 0}
   showInPreferences: 1
   startingSpellCount: 1
   assignRandomNameOnSpawn: 1

@@ -39,6 +39,8 @@ public enum JobType
 	COMMANDING_OFFICER = 27,
 	SURVIVOR = 28,
 	WIZARD = 29, //DELETE THIS IN FUTURE
+	XENOMORPH = 30,
+	XENOMORPHQUEEN = 31,
 }
 
 public static class JobCategories

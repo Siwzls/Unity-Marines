@@ -22,7 +22,7 @@ MonoBehaviour:
   minAntags: 2
   maxAntags: 10
   requiresMinAntags: 1
-  teamGameMode: 0
+  teamGameMode: 1
   midRoundAntags: 1
   possibleAntags: []
   allocateJobsToAntags: 0

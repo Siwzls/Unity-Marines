@@ -9,26 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4850c8caa4d7da43a9d5dcb81f0663c, type: 3}
-  m_Name: Blob
+  m_Script: {fileID: 11500000, guid: ed80f023dac5b7e49925e4d91f8d64c4, type: 3}
+  m_Name: XenomorphQueen
   m_EditorClassIdentifier: 
-  antagName: Blob
-  antagJobType: 55
-  playSound: 1
+  antagName: Xenomorph
+  antagJobType: 30
+  playSound: 0
   spawnSound:
     SetLoadSetting: 0
-    AssetAddress: Assets/Prefabs/AmbientTracks/SpawnSounds/Ling_alert.prefab
+    AssetAddress: 
     AssetReference:
       m_AssetGUID: 
       m_SubObjectName: 
       m_SubObjectType: 
-  textColor: {r: 0.27058825, g: 0.28235295, b: 0.18431373, a: 1}
-  backgroundColor: {r: 0.3019608, g: 0.47450984, b: 0.2509804, a: 1}
-  numberOfObjectives: 1
+  textColor: {r: 0.63765717, g: 0, b: 1, a: 1}
+  backgroundColor: {r: 0.5720377, g: 0, b: 1, a: 1}
+  numberOfObjectives: 0
   canUseSharedObjectives: 0
   needsEscapeObjective: 0
   chanceForGimmickObjective: 0
-  coreObjectives:
-  - {fileID: 11400000, guid: 9f9c3bc2fbfe78e4fad94612a8af1c59, type: 2}
-  antagOccupation: {fileID: 0}
+  coreObjectives: []
+  antagOccupation: {fileID: 11400000, guid: 9ce98ac3d36a07c42a899c05f1a3f506, type: 2}
   showInPreferences: 1
