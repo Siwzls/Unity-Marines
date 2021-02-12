@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d69ab76b2a02704cb275b3a9fbbb912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  job: {fileID: 0}
+  job: {fileID: 11400000, guid: 55b70b7bf1cde5a4ab804f6f89e465a2, type: 2}
   title: {fileID: 2602169687057748096}
   summary: {fileID: 2235697507481662766}
   description: {fileID: 4685931033313209486}
