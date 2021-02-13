@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3508849286059769522, guid: 5b44c6fb57f3efe46a94df342694494a,
+        type: 3}
+      propertyPath: runningSpeedDebuff
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508849286059769522, guid: 5b44c6fb57f3efe46a94df342694494a,
+        type: 3}
+      propertyPath: walkingSpeedDebuff
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 3675494832130518717, guid: 5b44c6fb57f3efe46a94df342694494a,
         type: 3}
       propertyPath: initialName
@@ -119,6 +129,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e905da36b3d77f4448934e5798b79943,
         type: 3}
+    - target: {fileID: 4671990286718046650, guid: 5b44c6fb57f3efe46a94df342694494a,
+        type: 3}
+      propertyPath: itemStorageStructure
+      value: 
+      objectReference: {fileID: 11400000, guid: 74bf3e872403e488695c17ecdde194ab,
+        type: 2}
     - target: {fileID: 6965518931188726360, guid: 5b44c6fb57f3efe46a94df342694494a,
         type: 3}
       propertyPath: PresentSpriteSet
