@@ -113,7 +113,7 @@ public partial class PlayerList : NetworkBehaviour
 	/// </summary>
 	public List<ConnectedPlayer> GetPlayersOnMatrix(MatrixInfo matrix)
 	{
-		return InGamePlayers.FindAll(p => (p.Script != null) && p.Script.registerTile.Matrix.Id == matrix.Id);
+		return InGamePlayers.FindAll(p => (p.Script != null) && p.Script.registerTile.Matrix.Id == matrix?.Id);
 	}
 
 	public List<ConnectedPlayer> GetAlivePlayers(List<ConnectedPlayer> players = null)
@@ -344,6 +344,7 @@ public partial class PlayerList : NetworkBehaviour
 			return;
 		}
 
+		SetPlayerReady(player, false);
 		CheckForLoggedOffAdmin(player.UserId, player.Username);
 		TryMoveClientToOfflineList(player);
 	}
