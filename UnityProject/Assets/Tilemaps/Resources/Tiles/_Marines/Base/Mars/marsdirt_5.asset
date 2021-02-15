@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c576ac449c2d45d99890dcfa21598645, type: 3}
-  m_Name: asteroid_1
+  m_Name: marsdirt_5
   m_EditorClassIdentifier: 
   displayName: 
   LayerType: 3
@@ -25,6 +25,7 @@ MonoBehaviour:
   passable: 1
   mineable: 0
   doesReflectBullet: 0
+  indestructible: 0
   passableException:
     m_keys: 01000000
     m_values: 00
@@ -54,4 +55,4 @@ MonoBehaviour:
       m_AssetGUID: 
       m_SubObjectName: 
       m_SubObjectType: 
-  sprite: {fileID: 700545933855869757, guid: efa17b934e7523244893bd9e38eaa34d, type: 3}
+  sprite: {fileID: 4262779300870566273, guid: 7b2cb584d4ea7d646ba972f4ce88a953, type: 3}

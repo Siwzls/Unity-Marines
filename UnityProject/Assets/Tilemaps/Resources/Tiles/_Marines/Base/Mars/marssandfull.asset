@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c576ac449c2d45d99890dcfa21598645, type: 3}
-  m_Name: asteroid_7
+  m_Name: marssandfull
   m_EditorClassIdentifier: 
-  displayName: 
-  LayerType: 3
-  TileType: 3
+  displayName: Grass
+  LayerType: 4
+  TileType: 7
   RequiredTiles:
   - {fileID: 11400000, guid: 83855008e43a2674d8d6a006ce94326f, type: 2}
   floorTileSounds: {fileID: 0}
@@ -25,10 +25,11 @@ MonoBehaviour:
   passable: 1
   mineable: 0
   doesReflectBullet: 0
+  indestructible: 0
   passableException:
     m_keys: 01000000
     m_values: 00
-  maxHealth: 200
+  maxHealth: 0
   damageDeflection: 0
   armor:
     Melee: 100
@@ -41,11 +42,9 @@ MonoBehaviour:
     Acid: 0
     Magic: 0
     Bio: 100
-  tileInteractions:
-  - {fileID: 11400000, guid: 7b6820d9f95c544a8bf274f9125b4941, type: 2}
-  spawnOnDeconstruct: {fileID: 7602444472548548205, guid: 28ccdf7c9ebf84198bf4b8bd543f4ce8,
-    type: 3}
-  spawnAmountOnDeconstruct: 1
+  tileInteractions: []
+  spawnOnDeconstruct: {fileID: 0}
+  spawnAmountOnDeconstruct: 0
   lootOnDespawn: {fileID: 0}
   soundOnHit:
     SetLoadSetting: 0
@@ -54,4 +53,4 @@ MonoBehaviour:
       m_AssetGUID: 
       m_SubObjectName: 
       m_SubObjectType: 
-  sprite: {fileID: -6615287640207275731, guid: efa17b934e7523244893bd9e38eaa34d, type: 3}
+  sprite: {fileID: 21300000, guid: 32f7089e1e9ef2f4798cfe6c305d8d63, type: 3}
