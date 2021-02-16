@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 3921521694364753778, guid: ab1e465a59765f84b8691daa8693f857,
         type: 3}
       propertyPath: m_Name
-      value: SecurityBioSuit
+      value: BioSuitSecurity
       objectReference: {fileID: 0}
     - target: {fileID: 3927008119850082822, guid: ab1e465a59765f84b8691daa8693f857,
         type: 3}
@@ -118,7 +118,12 @@ PrefabInstance:
         type: 3}
       propertyPath: clothData
       value: 
-      objectReference: {fileID: 11400000, guid: 5aa3e378b1c9a2c468bf9411b91b4105,
+      objectReference: {fileID: 0}
+    - target: {fileID: 7931175119129480439, guid: ab1e465a59765f84b8691daa8693f857,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 68e30b738f4704d4094fda1e76137f9b,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab1e465a59765f84b8691daa8693f857, type: 3}

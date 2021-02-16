@@ -90,5 +90,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4e3ce9e08c9ab9d48ba47c34a1fa5a47,
         type: 2}
+    - target: {fileID: 5333789066635511418, guid: dbfef72a303adaa489b990c1ac8a96da,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 76c74df54d289ec46acad3fece216edf,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbfef72a303adaa489b990c1ac8a96da, type: 3}

@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 7594254446053789778, guid: 5322af238fc4d5747a67640c8e4a400b,
         type: 3}
       propertyPath: m_Name
-      value: MedicalBeltFull
+      value: M276PatternMedicalStorageRigFull
       objectReference: {fileID: 0}
     - target: {fileID: 7599740871131786534, guid: 5322af238fc4d5747a67640c8e4a400b,
         type: 3}

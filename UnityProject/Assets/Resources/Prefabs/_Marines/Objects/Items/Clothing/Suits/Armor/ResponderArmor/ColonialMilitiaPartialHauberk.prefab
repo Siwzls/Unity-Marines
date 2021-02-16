@@ -98,6 +98,18 @@ PrefabInstance:
       propertyPath: bodyPartsCovered
       value: 912
       objectReference: {fileID: 0}
+    - target: {fileID: 6113786736723242974, guid: 7728804a55a110a43bb3f514a43bfc75,
+        type: 3}
+      propertyPath: currentClothData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7434697d153447c4d92f77aef5af67b9,
+        type: 2}
+    - target: {fileID: 6113786736723242974, guid: 7728804a55a110a43bb3f514a43bfc75,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e25fc97344790a4ebc9402e1d51b352,
+        type: 2}
     - target: {fileID: 6477211013748410332, guid: 7728804a55a110a43bb3f514a43bfc75,
         type: 3}
       propertyPath: PresentSpriteSet

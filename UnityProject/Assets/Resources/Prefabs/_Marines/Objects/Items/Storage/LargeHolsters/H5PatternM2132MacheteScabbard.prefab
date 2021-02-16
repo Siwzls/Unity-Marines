@@ -100,6 +100,23 @@ PrefabInstance:
       propertyPath: m_AssetId
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4517055365397537096, guid: 643b42a9bbcccc54194e9aded6df93bb,
+        type: 3}
+      propertyPath: currentClothData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a1af578b14f8af4e8a28f92dd166fa9,
+        type: 2}
+    - target: {fileID: 4517055365397537096, guid: 643b42a9bbcccc54194e9aded6df93bb,
+        type: 3}
+      propertyPath: allClothingData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517055365397537096, guid: 643b42a9bbcccc54194e9aded6df93bb,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e4cc0452fbc9cbd47948b8572a233ba6,
+        type: 2}
     - target: {fileID: 8925967725256764702, guid: 643b42a9bbcccc54194e9aded6df93bb,
         type: 3}
       propertyPath: PresentSpriteSet

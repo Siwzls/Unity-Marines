@@ -9,26 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 070914b0fa83e4540b98a98820fe27ae, type: 3}
+  m_Script: {fileID: 11500000, guid: cd5a08c3d2a815a459870fba3d969bfc, type: 3}
   m_Name: H5 pattern M2132 machete scabbard
   m_EditorClassIdentifier: 
-  Sprites:
-    SpriteEquipped: {fileID: 11400000, guid: 5aa54a737526ca747ac9e03d00853c60, type: 2}
-    SpriteInHandsLeft: {fileID: 11400000, guid: d196f452c0ebf934d8931e07f8f3542a,
-      type: 2}
-    SpriteInHandsRight: {fileID: 11400000, guid: 13715f2808233894aa85fa1394c8048f,
-      type: 2}
-    SpriteItemIcon: {fileID: 11400000, guid: c487cd305f9d2c742b215aca1762de3d, type: 2}
-    Palette:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    IsPaletted: 0
-  StorageData:
-    maxSlots: 1
-    maxItemSize: 5
+  SpriteEquipped: {fileID: 11400000, guid: 5aa54a737526ca747ac9e03d00853c60, type: 2}
+  SpriteInHandsLeft: {fileID: 11400000, guid: d196f452c0ebf934d8931e07f8f3542a, type: 2}
+  SpriteInHandsRight: {fileID: 11400000, guid: 13715f2808233894aa85fa1394c8048f, type: 2}
+  SpriteItemIcon: {fileID: 11400000, guid: c487cd305f9d2c742b215aca1762de3d, type: 2}
+  Palette:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  IsPaletted: 0

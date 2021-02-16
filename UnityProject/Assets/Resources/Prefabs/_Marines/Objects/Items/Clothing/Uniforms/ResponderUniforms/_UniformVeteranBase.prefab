@@ -7,10 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4518280501321993091, guid: e576e96fb687f66458a87add8ef2a2dd,
+        type: 3}
+      propertyPath: allClothingData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518280501321993091, guid: e576e96fb687f66458a87add8ef2a2dd,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4eede9cb173c35b47b16da036fc349a4,
+        type: 2}
     - target: {fileID: 7406471568716945414, guid: e576e96fb687f66458a87add8ef2a2dd,
         type: 3}
       propertyPath: m_Name
-      value: USCMUniform
+      value: _UniformVeteranBase
       objectReference: {fileID: 0}
     - target: {fileID: 7411395044445463922, guid: e576e96fb687f66458a87add8ef2a2dd,
         type: 3}
@@ -66,6 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448152508601034162, guid: e576e96fb687f66458a87add8ef2a2dd,
+        type: 3}
+      propertyPath: m_AssetId
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e576e96fb687f66458a87add8ef2a2dd, type: 3}
