@@ -19,6 +19,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: df99ca0a28f1dd643bd8d923de4e5c18,
         type: 2}
+    - target: {fileID: 4309038874910097575, guid: a5b693ff143a3d5439e26e16fd08cacc,
+        type: 3}
+      propertyPath: currentClothData
+      value: 
+      objectReference: {fileID: 11400000, guid: df99ca0a28f1dd643bd8d923de4e5c18,
+        type: 2}
+    - target: {fileID: 4309038874910097575, guid: a5b693ff143a3d5439e26e16fd08cacc,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 10647f51272cc1c40ae95adbad274df7,
+        type: 2}
     - target: {fileID: 7007608793261465726, guid: a5b693ff143a3d5439e26e16fd08cacc,
         type: 3}
       propertyPath: m_Sprite

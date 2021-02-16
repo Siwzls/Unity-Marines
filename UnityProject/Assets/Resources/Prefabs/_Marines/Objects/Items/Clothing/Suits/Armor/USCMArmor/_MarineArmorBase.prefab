@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbb517be744373419b00ecd28766f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runningSpeedDebuff: 0.35
-  walkingSpeedDebuff: 0.35
+  runningSpeedDebuff: 0.55
+  walkingSpeedDebuff: 0.55
   slot: 0
 --- !u!1001 &7380153368785018445
 PrefabInstance:
@@ -33,6 +33,29 @@ PrefabInstance:
       propertyPath: clothData
       value: 
       objectReference: {fileID: 11400000, guid: 3f688630497c18740b59569f5adffd15,
+        type: 2}
+    - target: {fileID: 863223620888726551, guid: d2397c13e09f57f498dd74e297e3e432,
+        type: 3}
+      propertyPath: currentClothData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f688630497c18740b59569f5adffd15,
+        type: 2}
+    - target: {fileID: 863223620888726551, guid: d2397c13e09f57f498dd74e297e3e432,
+        type: 3}
+      propertyPath: allClothingData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 863223620888726551, guid: d2397c13e09f57f498dd74e297e3e432,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ed4ae656c460004494ab3ec0c7a2df7,
+        type: 2}
+    - target: {fileID: 2791576505265868791, guid: d2397c13e09f57f498dd74e297e3e432,
+        type: 3}
+      propertyPath: itemStorageStructure
+      value: 
+      objectReference: {fileID: 11400000, guid: ee76ba24a0cd443b1a308dd04cdb3678,
         type: 2}
     - target: {fileID: 5869886140656512206, guid: d2397c13e09f57f498dd74e297e3e432,
         type: 3}
@@ -155,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 7929594585646263533, guid: d2397c13e09f57f498dd74e297e3e432,
         type: 3}
       propertyPath: bodyPartsCovered
-      value: 992
+      value: 1008
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2397c13e09f57f498dd74e297e3e432, type: 3}
