@@ -9,26 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 070914b0fa83e4540b98a98820fe27ae, type: 3}
+  m_Script: {fileID: 11500000, guid: cd5a08c3d2a815a459870fba3d969bfc, type: 3}
   m_Name: USCM medic satchel
   m_EditorClassIdentifier: 
-  Sprites:
-    SpriteEquipped: {fileID: 11400000, guid: ddfd91d71a935ce42a35c164988c27a4, type: 2}
-    SpriteInHandsLeft: {fileID: 11400000, guid: 80db7db239a2f444a971e4181776df53,
-      type: 2}
-    SpriteInHandsRight: {fileID: 11400000, guid: 6e673c59d70dcbc44bd756555a82861d,
-      type: 2}
-    SpriteItemIcon: {fileID: 11400000, guid: 1b866494c0dbcb4418e9e0c122d01756, type: 2}
-    Palette:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    IsPaletted: 0
-  StorageData:
-    maxSlots: 7
-    maxItemSize: 4
+  SpriteEquipped: {fileID: 11400000, guid: ddfd91d71a935ce42a35c164988c27a4, type: 2}
+  SpriteInHandsLeft: {fileID: 11400000, guid: 80db7db239a2f444a971e4181776df53, type: 2}
+  SpriteInHandsRight: {fileID: 11400000, guid: 6e673c59d70dcbc44bd756555a82861d, type: 2}
+  SpriteItemIcon: {fileID: 11400000, guid: 1b866494c0dbcb4418e9e0c122d01756, type: 2}
+  Palette:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  IsPaletted: 0

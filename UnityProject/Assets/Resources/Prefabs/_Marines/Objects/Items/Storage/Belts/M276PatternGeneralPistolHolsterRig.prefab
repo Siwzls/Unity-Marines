@@ -7,6 +7,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1412758158916413638, guid: 2a3ef8ef5809560438c38eb444d70ebe,
+        type: 3}
+      propertyPath: currentClothData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2417dec427d9f0342940a7933fe6afc6,
+        type: 2}
+    - target: {fileID: 1412758158916413638, guid: 2a3ef8ef5809560438c38eb444d70ebe,
+        type: 3}
+      propertyPath: allClothingData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412758158916413638, guid: 2a3ef8ef5809560438c38eb444d70ebe,
+        type: 3}
+      propertyPath: allClothingData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c6643009d376d2744904af9e32b1040c,
+        type: 2}
     - target: {fileID: 7064626307509798483, guid: 2a3ef8ef5809560438c38eb444d70ebe,
         type: 3}
       propertyPath: initialName

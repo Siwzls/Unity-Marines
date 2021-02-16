@@ -28,6 +28,20 @@ MonoBehaviour:
   runningSpeedDebuff: -1
   walkingSpeedDebuff: -1
   slot: 0
+--- !u!114 &3313171561248431845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864679013969520924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3307020aa3640594a870e4961a6de749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: 3
+  bodyPartsCovered: 12288
 --- !u!1001 &3463029306022828862
 PrefabInstance:
   m_ObjectHideFlags: 0

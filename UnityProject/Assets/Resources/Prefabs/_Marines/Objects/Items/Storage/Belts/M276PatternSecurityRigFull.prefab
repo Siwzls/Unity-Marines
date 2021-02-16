@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 6034050210544421904, guid: 0c2ee0b3b98be9a47b3eaf08b0748b17,
         type: 3}
       propertyPath: m_Name
-      value: SecurityBeltFull
+      value: M276PatternSecurityRigFull
       objectReference: {fileID: 0}
     - target: {fileID: 6660843412095075786, guid: 0c2ee0b3b98be9a47b3eaf08b0748b17,
         type: 3}
