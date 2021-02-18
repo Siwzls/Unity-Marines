@@ -97,12 +97,12 @@ PrefabInstance:
     - target: {fileID: 8365296839387588313, guid: aa86a2f1735706141b988a218138c7dd,
         type: 3}
       propertyPath: initialName
-      value: Scanner
+      value: "\u0421oatrack"
       objectReference: {fileID: 0}
     - target: {fileID: 8365296839387588313, guid: aa86a2f1735706141b988a218138c7dd,
         type: 3}
       propertyPath: initialDescription
-      value: Used for scanning.
+      value: It's coatrack.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa86a2f1735706141b988a218138c7dd, type: 3}
