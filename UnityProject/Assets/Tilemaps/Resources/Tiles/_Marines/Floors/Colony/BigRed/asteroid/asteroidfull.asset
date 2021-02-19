@@ -25,6 +25,7 @@ MonoBehaviour:
   passable: 1
   mineable: 0
   doesReflectBullet: 0
+  indestructible: 0
   passableException:
     m_keys: 01000000
     m_values: 00
