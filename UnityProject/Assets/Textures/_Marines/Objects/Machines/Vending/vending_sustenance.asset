@@ -16,15 +16,15 @@ MonoBehaviour:
   - Frames:
     - sprite: {fileID: 7117486643676032941, guid: c41bae18b362da44a8b759cb7e11e615,
         type: 3}
-      secondDelay: 0
+      secondDelay: 0.1
     - sprite: {fileID: -1244864599990531089, guid: c41bae18b362da44a8b759cb7e11e615,
         type: 3}
-      secondDelay: 0
+      secondDelay: 0.1
     - sprite: {fileID: 2139828121080089753, guid: c41bae18b362da44a8b759cb7e11e615,
         type: 3}
-      secondDelay: 0
+      secondDelay: 0.1
     - sprite: {fileID: 4976190268006076272, guid: c41bae18b362da44a8b759cb7e11e615,
         type: 3}
-      secondDelay: 0
+      secondDelay: 0.1
   IsPalette: 0
   setID: 21837
