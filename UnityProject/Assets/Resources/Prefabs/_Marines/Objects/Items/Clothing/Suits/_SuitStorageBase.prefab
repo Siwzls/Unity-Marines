@@ -120,17 +120,6 @@ PrefabInstance:
       propertyPath: m_AssetId
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3891274522419703410, guid: a0c29a11d2c864b7982765b5340eed0e,
-        type: 3}
-      propertyPath: initialName
-      value: M3-L pattern light armor
-      objectReference: {fileID: 0}
-    - target: {fileID: 3891274522419703410, guid: a0c29a11d2c864b7982765b5340eed0e,
-        type: 3}
-      propertyPath: initialDescription
-      value: A lighter, cut down version of the standard M3 pattern armor. It sacrifices
-        durability for more speed.
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c29a11d2c864b7982765b5340eed0e, type: 3}
 --- !u!1 &6019047452768001938 stripped

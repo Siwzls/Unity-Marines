@@ -25,7 +25,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: 75e4e21a59e92ff4c9452b83d77c3243,
+      objectReference: {fileID: 11400000, guid: 9b851b55167a13141bae1f7d4b21c3fc,
         type: 2}
     - target: {fileID: 8183094236644858677, guid: c9c58a9243d494537abcb4ee470efab0,
         type: 3}
