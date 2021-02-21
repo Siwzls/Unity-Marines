@@ -80,14 +80,7 @@ namespace Objects.Command
 
 		public void OnSpawnServer(SpawnInfo info)
 		{
-			if (SubSceneManager.Instance.SyndicateScene == gameObject.scene)
-			{
-				nukeCode = AntagManager.SyndiNukeCode;
-			}
-			else
-			{
-				nukeCode = CodeGenerator();
-			}
+			nukeCode = CodeGenerator();
 		}
 
 		public static int CodeGenerator()
