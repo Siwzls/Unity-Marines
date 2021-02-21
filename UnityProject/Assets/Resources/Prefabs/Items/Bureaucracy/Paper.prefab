@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  initialText: 
 --- !u!114 &3029048239083948324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +110,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 66064101faf2cf84d8db3ffd022fd141,
+      objectReference: {fileID: 21300000, guid: ac0ab43e5b6b23d42985d4ecd044a7e3,
         type: 3}
     - target: {fileID: 212340400423555046, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
@@ -236,7 +237,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: f421a72c1fe743b44aff183b76241c34,
+      objectReference: {fileID: 11400000, guid: 88817b905d26e2b4b8bc3d742b73b881,
         type: 2}
     - target: {fileID: 6144467708197095229, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
@@ -247,13 +248,13 @@ PrefabInstance:
         type: 3}
       propertyPath: SubCatalogue.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f421a72c1fe743b44aff183b76241c34,
+      objectReference: {fileID: 11400000, guid: 88817b905d26e2b4b8bc3d742b73b881,
         type: 2}
     - target: {fileID: 6144467708197095229, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
       propertyPath: SubCatalogue.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 5e05fc5f8aecc6b428a4d1bcd723c65f,
+      objectReference: {fileID: 11400000, guid: 018d1bf2a9dd0764e93edbd34cf7ee2c,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7abba22164ce49f0bf9b9b219f39298, type: 3}
