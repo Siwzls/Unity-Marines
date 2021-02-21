@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: 7d8189749bcfdd448a8ac2c6b81f6fd7
   - enabled: 1
     path: Assets/Scenes/Ships/Almayer.unity
-    guid: f708b86db84608448bfaa5c4926e975d
+    guid: ad68caafa5c68a84bac79adb2307b690
   - enabled: 1
     path: Assets/Scenes/MainStations/LV-624.unity
     guid: c71d0aaf2772dee4387f886224d0edaf
