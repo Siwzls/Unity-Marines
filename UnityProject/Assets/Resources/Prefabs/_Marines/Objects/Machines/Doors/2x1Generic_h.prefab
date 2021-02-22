@@ -29,6 +29,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c3fd932f54dbc104c8aae0fb5e3f9eeb,
         type: 3}
+    - target: {fileID: 3025532991543332631, guid: 8fffba3a81d84ed4d96bd9095e9836da,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3703166675938345889, guid: 8fffba3a81d84ed4d96bd9095e9836da,
         type: 3}
       propertyPath: m_Sprite
@@ -83,6 +88,11 @@ PrefabInstance:
     - target: {fileID: 5413593152710067477, guid: 8fffba3a81d84ed4d96bd9095e9836da,
         type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676277226804479247, guid: 8fffba3a81d84ed4d96bd9095e9836da,
+        type: 3}
+      propertyPath: snapToGridOnStart
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6949987375471987888, guid: 8fffba3a81d84ed4d96bd9095e9836da,

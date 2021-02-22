@@ -140,6 +140,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6676277226804479247, guid: 8fffba3a81d84ed4d96bd9095e9836da,
+        type: 3}
+      propertyPath: snapToGridOnStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6949987375471987888, guid: 8fffba3a81d84ed4d96bd9095e9836da,
         type: 3}
       propertyPath: m_Sprite
