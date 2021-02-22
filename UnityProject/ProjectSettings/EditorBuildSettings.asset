@@ -16,13 +16,22 @@ EditorBuildSettings:
     guid: 7d8189749bcfdd448a8ac2c6b81f6fd7
   - enabled: 1
     path: Assets/Scenes/Ships/Almayer.unity
-    guid: f708b86db84608448bfaa5c4926e975d
+    guid: ad68caafa5c68a84bac79adb2307b690
   - enabled: 1
     path: Assets/Scenes/MainStations/LV-624.unity
     guid: c71d0aaf2772dee4387f886224d0edaf
   - enabled: 1
     path: Assets/Scenes/MainStations/BigRed.unity
-    guid: 9060b379fc7f7c64e85383eceac8831f
+    guid: 3c6461abc3c8af54683e3711854d7278
+  - enabled: 1
+    path: Assets/Scenes/MainStations/PrisonStation.unity
+    guid: a886b6bf6d1b80544b174db035fa9d2c
+  - enabled: 1
+    path: Assets/Scenes/MainStations/WhiskeyOutpost.unity
+    guid: 42496f1babfbcd94499c4969247a66b2
+  - enabled: 1
+    path: Assets/Scenes/MainStations/IceColony.unity
+    guid: 017950195d6e53940a2532b2928c7730
   - enabled: 1
     path: Assets/Scenes/AdditionalScenes/LavaLand.unity
     guid: af1528034e8c01e4689f3d3339b3e27c

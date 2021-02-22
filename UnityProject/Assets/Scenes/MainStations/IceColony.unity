@@ -33589,7 +33589,7 @@ GameObject:
   - component: {fileID: 1123049313}
   - component: {fileID: 1123049314}
   m_Layer: 0
-  m_Name: LV-624
+  m_Name: IceColony
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33634,7 +33634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDirty: 0
-  sceneId: 2522834674
+  sceneId: 145480562
   serverOnly: 0
   m_AssetId: 
 --- !u!4 &1123049308
