@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Messages.Server.SoundMessages;
+﻿using SoundMessages;
 using Mirror;
 using System.Collections.Generic;
 using System.Text;
@@ -180,8 +180,9 @@ namespace Objects
 			integrity = GetComponent<Integrity>();
 			integrity.OnApplyDamage.AddListener(OnDamageReceived);
 
-			audioSourceParameters =	new AudioSourceParameters(Volume, 0, 0, 0, 1, Spread, 
-				MinSoundDistance, MaxSoundDistance, MixerType.Muffled, VolumeRolloffType.EaseInAndOut, false);
+			audioSourceParameters =	new AudioSourceParameters(volume: Volume, spatialBlend: 1, spread: Spread, 
+				minDistance: MinSoundDistance, maxDistance: MaxSoundDistance,mixerType: MixerType.Muffled, 
+				volumeRolloffType: VolumeRolloffType.EaseInAndOut);
 		}
 
 		private void Update()
@@ -204,7 +205,7 @@ namespace Objects
 				SoundManager.StopNetworked(guid);
 				IsPlaying = true;
 				spriteHandler.SetSpriteSO(SpritePlaying);
-				guid  = await SoundManager.PlayNetworkedAtPos(musics[currentSongTrackIndex], registerTile.WorldPositionServer, audioSourceParameters, false, true, gameObject);
+				guid  = await SoundManager.PlayNetworkedAtPosAsync(musics[currentSongTrackIndex], registerTile.WorldPositionServer, audioSourceParameters, false, true, sourceObj: gameObject);
 				startPlayTime = Time.time;
 				UpdateGUI();
 			}
