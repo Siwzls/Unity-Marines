@@ -24,6 +24,7 @@ MonoBehaviour:
   passable: 0
   mineable: 0
   doesReflectBullet: 0
+  indestructible: 0
   passableException:
     m_keys: 02000000
     m_values: 01
@@ -48,6 +49,9 @@ MonoBehaviour:
     type: 3}
   spawnAmountOnDeconstruct: 2
   lootOnDespawn: {fileID: 11400000, guid: 2fad2125ace992148ab83979ad84ec66, type: 2}
+  toTileWhenDestroyed: {fileID: 0}
+  spawnOnDestroy: {fileID: 0}
+  damageOverlayList: {fileID: 0}
   soundOnHit:
     SetLoadSetting: 0
     AssetAddress: null
