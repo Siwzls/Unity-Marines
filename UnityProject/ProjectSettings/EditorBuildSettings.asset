@@ -33,9 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainStations/IceColony.unity
     guid: 017950195d6e53940a2532b2928c7730
   - enabled: 1
-    path: Assets/Scenes/AdditionalScenes/LavaLand.unity
-    guid: af1528034e8c01e4689f3d3339b3e27c
-  - enabled: 1
     path: Assets/Scenes/AdditionalScenes/CentCom.unity
     guid: c22d0e5435b686741b5c364bcac58b3a
   m_configObjects:
