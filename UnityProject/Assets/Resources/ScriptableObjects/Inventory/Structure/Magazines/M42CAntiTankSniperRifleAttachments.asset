@@ -15,5 +15,7 @@ MonoBehaviour:
   MaxItemSize: 5
   Whitelist:
   - {fileID: 11400000, guid: 5335ca7404da6c446abf69f5e4f0c285, type: 2}
+  - {fileID: 11400000, guid: 08c0755a6ef3af543ad24cca1fd68180, type: 2}
+  - {fileID: 11400000, guid: 6a91a7f708bcc504c8b97a6852d0ed95, type: 2}
   Required: []
   Blacklist: []

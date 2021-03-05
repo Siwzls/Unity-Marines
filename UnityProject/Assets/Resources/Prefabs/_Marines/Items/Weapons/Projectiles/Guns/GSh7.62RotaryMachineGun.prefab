@@ -7,6 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5781443380674188858, guid: 29b4f449b3187e34ab6187840e260c7d,
+        type: 3}
+      propertyPath: itemStorageCapacity
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bc30bdd7b8479d4c9cf805ed11070fa,
+        type: 2}
     - target: {fileID: 5783680106329567457, guid: 29b4f449b3187e34ab6187840e260c7d,
         type: 3}
       propertyPath: initialName

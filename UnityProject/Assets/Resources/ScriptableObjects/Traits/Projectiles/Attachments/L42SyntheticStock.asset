@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c909446621c41cd975e26eab73860a6, type: 3}
-  m_Name: MARAttachments
+  m_Script: {fileID: 11500000, guid: 4ccfe138752d4b66bcb7c56a0c9769c7, type: 3}
+  m_Name: L42SyntheticStock
   m_EditorClassIdentifier: 
-  MaxItemSize: 5
-  Whitelist:
-  - {fileID: 11400000, guid: 1e32c7396f8a1eb428f250783be38857, type: 2}
-  Required: []
-  Blacklist: []
+  traitDescription: A stock for the L42.
