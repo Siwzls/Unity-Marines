@@ -36,6 +36,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8d73f5b43e0b1464abb2a77eb862830e,
         type: 2}
+    - target: {fileID: 8140273610300698175, guid: a0bbb567e7ab88f4ca39f19f2b9c300e,
+        type: 3}
+      propertyPath: itemStorageCapacity
+      value: 
+      objectReference: {fileID: 11400000, guid: 1774288a686c5be48af26ea7cfc9a128,
+        type: 2}
     - target: {fileID: 8402717339875235034, guid: a0bbb567e7ab88f4ca39f19f2b9c300e,
         type: 3}
       propertyPath: m_Sprite

@@ -116,6 +116,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8dfac4783c923184f9c698be42c74f4f,
         type: 2}
+    - target: {fileID: 1502803385486228667, guid: 7a12598da4288d345872a4d8f448ebf7,
+        type: 3}
+      propertyPath: itemStorageCapacity
+      value: 
+      objectReference: {fileID: 11400000, guid: b5ed4155834229c46a9177c136678d87,
+        type: 2}
     - target: {fileID: 5118499591500353157, guid: 7a12598da4288d345872a4d8f448ebf7,
         type: 3}
       propertyPath: PresentSpriteSet
