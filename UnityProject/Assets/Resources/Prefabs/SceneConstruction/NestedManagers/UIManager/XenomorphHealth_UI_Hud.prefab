@@ -84,7 +84,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8232259481283617645}
-  - component: {fileID: 8121694487894258991}
   - component: {fileID: 8230030346061789011}
   - component: {fileID: 8122249003425384207}
   m_Layer: 5
@@ -114,46 +113,6 @@ RectTransform:
   m_AnchoredPosition: {x: -85, y: 541}
   m_SizeDelta: {x: 248.5, y: 1041.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8121694487894258991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8153163913192884163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b90c396f4a75ee40930b2282e9899c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toxinAlert: {fileID: 0}
-  heatAlert: {fileID: 0}
-  coldAlert: {fileID: 0}
-  pressureAlert: {fileID: 0}
-  oxygenAlert: {fileID: 0}
-  temperatureAlert: {fileID: 0}
-  hungerAlert: {fileID: 0}
-  heartMonitor: {fileID: 0}
-  bodyPartListeners:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  damageMonitorColors:
-  - {r: 1, g: 1, b: 1, a: 0}
-  - {r: 0.14901961, g: 0.47058824, b: 0.14901961, a: 1}
-  - {r: 1, g: 0.6827926, b: 0, a: 1}
-  - {r: 1, g: 0.43164754, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.6698113, g: 0.02850261, b: 0, a: 1}
-  - {r: 0.44313726, g: 0, b: 0, a: 1}
-  disabledBodyPartColor: {r: 0.42352942, g: 0.42352942, b: 0.42352942, a: 1}
-  destroyedBodyPartColor: {r: 0, g: 0, b: 0, a: 1}
-  baseBody: {fileID: 0}
-  alertsBox: {fileID: 0}
-  humanUI: 0
 --- !u!222 &8230030346061789011
 CanvasRenderer:
   m_ObjectHideFlags: 0
