@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 668260725655402721, guid: a93887f3c688180459678f6076272495,
         type: 3}
       propertyPath: m_Name
-      value: M392Submachinegun
+      value: M39B2Submachinegun
       objectReference: {fileID: 0}
     - target: {fileID: 672621526648653205, guid: a93887f3c688180459678f6076272495,
         type: 3}
@@ -100,6 +100,12 @@ PrefabInstance:
       propertyPath: itemSprites.SpriteRightHand
       value: 
       objectReference: {fileID: 11400000, guid: 9487d5351abd85249a28b70f4cb7078f,
+        type: 2}
+    - target: {fileID: 1140443510749475160, guid: a93887f3c688180459678f6076272495,
+        type: 3}
+      propertyPath: itemStorageCapacity
+      value: 
+      objectReference: {fileID: 11400000, guid: 288703f433e9ec5429c0dc7431e261ba,
         type: 2}
     - target: {fileID: 6629365314782643046, guid: a93887f3c688180459678f6076272495,
         type: 3}

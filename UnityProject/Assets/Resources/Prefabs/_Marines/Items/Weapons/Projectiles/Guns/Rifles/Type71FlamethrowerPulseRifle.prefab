@@ -18,6 +18,12 @@ PrefabInstance:
       value: This appears to be a less common variant of the Type 71 with an integrated
         undermounted flamethrower.
       objectReference: {fileID: 0}
+    - target: {fileID: 3048218448068486988, guid: f2372cafe86195d44bc9445e554c04a2,
+        type: 3}
+      propertyPath: itemStorageCapacity
+      value: 
+      objectReference: {fileID: 11400000, guid: a641331c02f74244d93bc42d2655a654,
+        type: 2}
     - target: {fileID: 3227805933503091585, guid: f2372cafe86195d44bc9445e554c04a2,
         type: 3}
       propertyPath: m_RootOrder
