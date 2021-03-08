@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Messages.Server.SoundMessages;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+using AddressableReferences;
+using Messages.Server.SoundMessages;
 
 /// <summary>
 /// Utilities for working with players
@@ -47,8 +47,13 @@ public static class PlayerUtils
 			}
 			if (ps.PlayerSync.IsMovingServer)
 			{
-				var plantPos = ps.WorldPos + ps.CurrentDirection.Vector;
-				Spawn.ServerPrefab("Banana peel", plantPos, cancelIfImpassable: true);
+				//love clown
+				ps.playerMove.Uncuff();
+
+				ps.playerHealth.ResetDamageAll();
+				ps.registerTile.ServerStandUp();
+				var left = Spawn.ServerPrefab("Bike Horn").GameObject;
+				var right = Spawn.ServerPrefab("Bike Horn").GameObject;
 
 			}
 			foreach (var pos in ps.WorldPos.BoundsAround().allPositionsWithin)
@@ -58,7 +63,6 @@ public static class PlayerUtils
 				matrixInfo.MetaDataLayer.Clean(pos, localPos, true);
 			}
 		}
-
 		AudioSourceParameters audioSourceParameters = new AudioSourceParameters(pitch: Random.Range(0.2f,0.5f));
 		ShakeParameters shakeParameters = new ShakeParameters(true, 64, 30);
 		SoundManager.PlayNetworked(SingletonSOSounds.Instance.ClownHonk, audioSourceParameters, true, shakeParameters);
