@@ -24,6 +24,8 @@ MonoBehaviour:
   SpawnWithNoAir: 0
   passable: 0
   mineable: 0
+  miningTime: 5
+  RadiationPassability: 1
   doesReflectBullet: 0
   indestructible: 0
   passableException:
@@ -42,7 +44,8 @@ MonoBehaviour:
     Acid: 50
     Magic: 0
     Bio: 0
-  tileInteractions: []
+  tileInteractions:
+  - {fileID: 11400000, guid: d27fd166098cf084abd6ebb4f8b2dd25, type: 2}
   spawnOnDeconstruct: {fileID: 0}
   spawnAmountOnDeconstruct: 0
   lootOnDespawn: {fileID: 0}
