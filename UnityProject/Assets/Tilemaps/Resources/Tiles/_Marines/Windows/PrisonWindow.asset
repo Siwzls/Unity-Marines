@@ -24,6 +24,8 @@ MonoBehaviour:
   SpawnWithNoAir: 0
   passable: 0
   mineable: 0
+  miningTime: 5
+  RadiationPassability: 1
   doesReflectBullet: 0
   indestructible: 0
   passableException:
@@ -47,7 +49,8 @@ MonoBehaviour:
   spawnOnDeconstruct: {fileID: 0}
   spawnAmountOnDeconstruct: 1
   lootOnDespawn: {fileID: 11400000, guid: a7650f85d1f8f0545a4d7da9d6435cb2, type: 2}
-  toTileWhenDestroyed: {fileID: 0}
+  toTileWhenDestroyed: {fileID: 11400000, guid: 4d601c15e3e89e3449231d8d26f210d8,
+    type: 2}
   spawnOnDestroy: {fileID: 0}
   damageOverlayList: {fileID: 11400000, guid: a9338e07e1ad66d48bf05e214ab1f02e, type: 2}
   soundOnHit:
