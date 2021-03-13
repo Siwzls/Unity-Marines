@@ -1,6 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2357088966125883441
+--- !u!114 &9019548994788298775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182366540502230666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5602fb606176b644ba80be6feb1b2ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefibrillatorTrait: {fileID: 11400000, guid: 680252d70a89d4846bc5de6e814ffa57, type: 2}
+  Time: 5
+--- !u!1001 &1183052514340215344
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,7 +23,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1011433845357754, guid: a7abba22164ce49f0bf9b9b219f39298, type: 3}
       propertyPath: m_Name
-      value: Cyborg Right Leg
+      value: Defibrillator Paddles
       objectReference: {fileID: 0}
     - target: {fileID: 4527534762131918, guid: a7abba22164ce49f0bf9b9b219f39298, type: 3}
       propertyPath: m_RootOrder
@@ -64,7 +78,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 119a2ff55a4d6054b9bf2bac831c591a,
+      objectReference: {fileID: 21300000, guid: c0af86ab7600e244399bc0e9e187977d,
         type: 3}
     - target: {fileID: 212340400423555046, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
@@ -73,51 +87,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 499351249353511896, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
-      propertyPath: hitDamage
-      value: 3
+      propertyPath: initialTraits.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 499351249353511896, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
-      propertyPath: initialName
-      value: cyborg right leg
-      objectReference: {fileID: 0}
-    - target: {fileID: 499351249353511896, guid: a7abba22164ce49f0bf9b9b219f39298,
-        type: 3}
-      propertyPath: initialSize
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 499351249353511896, guid: a7abba22164ce49f0bf9b9b219f39298,
-        type: 3}
-      propertyPath: isEVACapable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499351249353511896, guid: a7abba22164ce49f0bf9b9b219f39298,
-        type: 3}
-      propertyPath: initialDescription
+      propertyPath: itemSprites.SpriteLeftHand
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397050043076861577, guid: a7abba22164ce49f0bf9b9b219f39298,
+      objectReference: {fileID: 11400000, guid: 6ebe34edb5d86344cbaf250e7640a7f4,
+        type: 2}
+    - target: {fileID: 499351249353511896, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
-      propertyPath: spriteHandler
+      propertyPath: initialTraits.Array.data[0]
       value: 
-      objectReference: {fileID: 8499285623362770700}
+      objectReference: {fileID: 11400000, guid: ca26dc287738d424ab39fd41879d4e34,
+        type: 2}
+    - target: {fileID: 499351249353511896, guid: a7abba22164ce49f0bf9b9b219f39298,
+        type: 3}
+      propertyPath: itemSprites.SpriteRightHand
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f9a58ccabd6b5c439bf284fdafa81a7,
+        type: 2}
     - target: {fileID: 6144467708197095229, guid: a7abba22164ce49f0bf9b9b219f39298,
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
-      objectReference: {fileID: 11400000, guid: 340915af2988c77408fbe3b874e80582,
+      objectReference: {fileID: 11400000, guid: ec49f1cc42ad70a489f45c464ba90127,
+        type: 2}
+    - target: {fileID: 6144467708197095229, guid: a7abba22164ce49f0bf9b9b219f39298,
+        type: 3}
+      propertyPath: SubCatalogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144467708197095229, guid: a7abba22164ce49f0bf9b9b219f39298,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ec49f1cc42ad70a489f45c464ba90127,
+        type: 2}
+    - target: {fileID: 6144467708197095229, guid: a7abba22164ce49f0bf9b9b219f39298,
+        type: 3}
+      propertyPath: SubCatalogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e8725a7a07b3c04ea4ab464ff0349f3,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7abba22164ce49f0bf9b9b219f39298, type: 3}
---- !u!114 &8499285623362770700 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6144467708197095229, guid: a7abba22164ce49f0bf9b9b219f39298,
+--- !u!1 &1182366540502230666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1011433845357754, guid: a7abba22164ce49f0bf9b9b219f39298,
     type: 3}
-  m_PrefabInstance: {fileID: 2357088966125883441}
+  m_PrefabInstance: {fileID: 1183052514340215344}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db025f3627a11af4fb670ccd1e2188ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -57,7 +57,7 @@ namespace HealthV2
 			}
 		}
 
-		public BodyType BodyType = BodyType.Neutral;
+		public BodyType BodyType = BodyType.NonBinary;
 
 		//I don't know what this is. It was in the first Health system.
 		public float RTT;
@@ -136,12 +136,6 @@ namespace HealthV2
 		protected DamageType LastDamageType;
 
 		protected GameObject LastDamagedBy;
-
-		// public float MaxNutrimentLevel = 30;
-
-		// public float NutrimentLevel = 20;
-
-		public Reagent Cem;
 
 		public HungerState hungerState => CalculateHungerState();
 
@@ -236,14 +230,6 @@ namespace HealthV2
 			var bit =  RootBodyPartContainers.PickRandom();
 			bit.TakeDamage(null, 1, AttackType.Melee, DamageType.Brute);
 		}
-
-
-		[RightClickMethod]
-		public void TestChemistry()
-		{
-			circulatorySystem.UseBloodPool.Add(Cem, 20);
-		}
-
 
 		/// <summary>
 		/// Adds a new implant to the health master.

@@ -195,7 +195,7 @@ PrefabInstance:
         type: 3}
       propertyPath: BodyTypesSprites.BodyTypes.Array.data[0].Sprites.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: e8bc09468ba0f3f42add3b2e6c68e234,
+      objectReference: {fileID: 11400000, guid: de703c1f006061390b50d3b16bb8eda7,
         type: 2}
     - target: {fileID: 1673759363237950006, guid: e241039a7933eb347bd1a9bb67a9078a,
         type: 3}
@@ -228,7 +228,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300002, guid: 6a1f850ea1c5e4a4689f29055a52d7f6,
+      objectReference: {fileID: 21300000, guid: 6a1f850ea1c5e4a4689f29055a52d7f6,
         type: 3}
     - target: {fileID: 2733873253844105974, guid: e241039a7933eb347bd1a9bb67a9078a,
         type: 3}
@@ -299,11 +299,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8234622556944347693, guid: e241039a7933eb347bd1a9bb67a9078a,
-        type: 3}
-      propertyPath: variantIndex
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8234622556944347693, guid: e241039a7933eb347bd1a9bb67a9078a,
         type: 3}
