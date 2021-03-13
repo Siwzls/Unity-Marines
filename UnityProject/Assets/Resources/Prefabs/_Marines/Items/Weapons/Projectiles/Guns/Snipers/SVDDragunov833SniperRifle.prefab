@@ -102,11 +102,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 05bec90dab7e9d8488d74fca73b26762,
         type: 2}
+    - target: {fileID: 1146655246223069496, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: itemStorageCapacity
+      value: 
+      objectReference: {fileID: 11400000, guid: 273e3913dd09b7f42acf372b0d0dfb5c,
+        type: 2}
     - target: {fileID: 6645671663545590534, guid: f7a45247b53ab0547b06d01fddc08bdc,
         type: 3}
       propertyPath: PresentSpriteSet
       value: 
       objectReference: {fileID: 11400000, guid: d8084009f34d1bf42b8f518ecdea54d8,
         type: 2}
+    - target: {fileID: 7821125340688425254, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: ammoType
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821125340688425254, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: FireDelay
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821125340688425254, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 8028783795534274426, guid: 26058a0d6f6ed7b489140bb839cc3736,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a45247b53ab0547b06d01fddc08bdc, type: 3}

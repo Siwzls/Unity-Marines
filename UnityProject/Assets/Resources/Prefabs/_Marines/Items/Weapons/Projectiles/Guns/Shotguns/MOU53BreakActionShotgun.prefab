@@ -28,6 +28,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1670252429045839887, guid: 4097fecce39fde342ac847342eab5852,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670252429045839887, guid: 4097fecce39fde342ac847342eab5852,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 6686167337168025960, guid: e8252036ec82f9a40ae22c300087f808,
+        type: 3}
     - target: {fileID: 2854717675572771375, guid: 4097fecce39fde342ac847342eab5852,
         type: 3}
       propertyPath: PresentSpriteSet

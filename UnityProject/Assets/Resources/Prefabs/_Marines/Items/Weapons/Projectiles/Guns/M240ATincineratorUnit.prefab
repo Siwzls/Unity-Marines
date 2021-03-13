@@ -13,6 +13,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: d099325281fe8cd49b6cec665f476a74,
         type: 2}
+    - target: {fileID: 3005535234720104791, guid: f9f3529345dadb64a9154f96ecadea82,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3461912552616699972, guid: f9f3529345dadb64a9154f96ecadea82,
         type: 3}
       propertyPath: allClothingData.Array.data[0]

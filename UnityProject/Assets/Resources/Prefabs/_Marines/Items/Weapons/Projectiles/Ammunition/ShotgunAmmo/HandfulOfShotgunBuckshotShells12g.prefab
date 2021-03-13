@@ -101,5 +101,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -552755709370565294, guid: 1a00fab5770d00b43926f5535a37956c,
         type: 3}
+    - target: {fileID: 9066088432200337072, guid: add14bbfa74911d40afd7d801176a8da,
+        type: 3}
+      propertyPath: ProjectilesFired
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066088432200337072, guid: add14bbfa74911d40afd7d801176a8da,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 8794746515736527842, guid: 685909ec0464f7a489246d6fed4dbbef,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: add14bbfa74911d40afd7d801176a8da, type: 3}

@@ -89,5 +89,16 @@ PrefabInstance:
       propertyPath: initialName
       value: N-Y speed loader (7.62x38mmR)
       objectReference: {fileID: 0}
+    - target: {fileID: 8798881494819416792, guid: b31870667fcd9534ea611a232f45aa85,
+        type: 3}
+      propertyPath: ammoType
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798881494819416792, guid: b31870667fcd9534ea611a232f45aa85,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 7877645644474979083, guid: 6a2b3b31860af764e8b31803b3dbc75c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b31870667fcd9534ea611a232f45aa85, type: 3}

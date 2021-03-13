@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: ammoType
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: magazineSize
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 9218863040930670887, guid: 764891c41f6541c4398c199f74d221cf,
+        type: 3}
     - target: {fileID: 3606962689093887868, guid: ab65ebf1eb26f3943b436906ee1a879d,
         type: 3}
       propertyPath: m_RootOrder

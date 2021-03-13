@@ -7,6 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: magazineSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 1865975295055998585, guid: bf14f282d00282845bc62da4994b4f99,
+        type: 3}
     - target: {fileID: 3606962689093887868, guid: ab65ebf1eb26f3943b436906ee1a879d,
         type: 3}
       propertyPath: m_RootOrder

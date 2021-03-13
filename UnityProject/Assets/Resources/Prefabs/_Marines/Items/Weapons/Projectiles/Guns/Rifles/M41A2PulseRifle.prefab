@@ -108,5 +108,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2e79940e2c1892a42b166e6ae76618fc,
         type: 2}
+    - target: {fileID: 8837465337462051479, guid: 181c13523db6cd64db782a16731401c6,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837465337462051479, guid: 181c13523db6cd64db782a16731401c6,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 2803903739438306460, guid: 170eda9162c6e0741a050c76b3937d74,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 181c13523db6cd64db782a16731401c6, type: 3}

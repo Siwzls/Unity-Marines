@@ -93,6 +93,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4bc00cfccb7454d4f96096e29f46b20f,
         type: 2}
+    - target: {fileID: 2976371020024178110, guid: 09e528c0a8ebd89439fd5e51c91e9841,
+        type: 3}
+      propertyPath: magazineSize
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6107665000180232160, guid: 09e528c0a8ebd89439fd5e51c91e9841,
         type: 3}
       propertyPath: PresentSpriteSet

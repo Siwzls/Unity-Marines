@@ -96,5 +96,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A19HighVelocityIncendiaryMagazine10x24
       objectReference: {fileID: 0}
+    - target: {fileID: 8013507773124710324, guid: 45d9d2be7df28534a8ead6aca59093ad,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 570345048743758998, guid: 65552504413f2b649b79470b2813f1bb,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d9d2be7df28534a8ead6aca59093ad, type: 3}

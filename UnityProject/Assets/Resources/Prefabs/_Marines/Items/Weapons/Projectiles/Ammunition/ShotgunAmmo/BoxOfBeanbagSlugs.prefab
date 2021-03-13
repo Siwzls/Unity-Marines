@@ -89,6 +89,12 @@ PrefabInstance:
       value: A box filled with beanbag shotgun shells used for non-lethal crowd control.
         12 Gauge.
       objectReference: {fileID: 0}
+    - target: {fileID: 2478616465243617720, guid: a06f68f87934d8f47a02d7b00b36376c,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 3269618378949998405, guid: d658a5d4998a726458276444a217972f,
+        type: 3}
     - target: {fileID: 6911101091939447782, guid: a06f68f87934d8f47a02d7b00b36376c,
         type: 3}
       propertyPath: PresentSpriteSet

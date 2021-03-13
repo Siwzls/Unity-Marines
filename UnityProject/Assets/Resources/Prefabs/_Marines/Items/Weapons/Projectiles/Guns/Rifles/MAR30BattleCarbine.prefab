@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1412876187323686433, guid: a0bbb567e7ab88f4ca39f19f2b9c300e,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2534286675513760769, guid: a0bbb567e7ab88f4ca39f19f2b9c300e,
         type: 3}
       propertyPath: PresentSpriteSet

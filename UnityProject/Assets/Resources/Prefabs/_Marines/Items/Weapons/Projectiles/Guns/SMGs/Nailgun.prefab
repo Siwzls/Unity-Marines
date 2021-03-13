@@ -113,6 +113,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nailgun
       objectReference: {fileID: 0}
+    - target: {fileID: 5965184664477311062, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
+        type: 3}
+      propertyPath: ammoType
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965184664477311062, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965184664477311062, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 8356665900335745185, guid: 505096fbf4747bf4fa1e82bf1c51f4c5,
+        type: 3}
+    - target: {fileID: 5965184664477311062, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
+        type: 3}
+      propertyPath: SpawnsCasing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7095567435986543222, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
         type: 3}
       propertyPath: PresentSpriteSet

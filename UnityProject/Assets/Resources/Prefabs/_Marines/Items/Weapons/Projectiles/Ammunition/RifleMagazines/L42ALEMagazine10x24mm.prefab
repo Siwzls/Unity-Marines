@@ -94,5 +94,11 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A 10mm battle rifle armor shredding magazine.
       objectReference: {fileID: 0}
+    - target: {fileID: 8855239221208337754, guid: 754d1786bf8e2dc46b6b13018988d94e,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 5689486836359915468, guid: 061c0ee6dbeeeb845a931e0ea5febb04,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 754d1786bf8e2dc46b6b13018988d94e, type: 3}

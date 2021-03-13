@@ -106,6 +106,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f39415ee1e3c7624084e9d7da558f69c,
         type: 3}
+    - target: {fileID: 2686911178759312249, guid: d9cc4258b000c9645be079789c27ea4b,
+        type: 3}
+      propertyPath: ammoType
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686911178759312249, guid: d9cc4258b000c9645be079789c27ea4b,
+        type: 3}
+      propertyPath: magazineSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686911178759312249, guid: d9cc4258b000c9645be079789c27ea4b,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 8834903344058212361, guid: 59e1ffc6647eaad42b01989df509f420,
+        type: 3}
     - target: {fileID: 6396565172850481447, guid: d9cc4258b000c9645be079789c27ea4b,
         type: 3}
       propertyPath: PresentSpriteSet

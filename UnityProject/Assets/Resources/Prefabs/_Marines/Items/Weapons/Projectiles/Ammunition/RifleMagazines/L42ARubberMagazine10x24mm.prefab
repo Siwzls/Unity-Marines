@@ -89,5 +89,11 @@ PrefabInstance:
       propertyPath: initialName
       value: L42A rubber magazine (10x24mm)
       objectReference: {fileID: 0}
+    - target: {fileID: 8855239221208337754, guid: 754d1786bf8e2dc46b6b13018988d94e,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 1079280318551196098, guid: 2dd49d1cfaf910b4eaca8c2ae306b6e7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 754d1786bf8e2dc46b6b13018988d94e, type: 3}

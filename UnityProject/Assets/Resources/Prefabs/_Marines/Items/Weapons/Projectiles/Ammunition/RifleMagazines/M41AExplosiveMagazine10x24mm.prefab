@@ -88,6 +88,12 @@ PrefabInstance:
       value: A 10mm assault rifle magazine. Oh god... just don't hit friendlies with
         it. rifle magazine.
       objectReference: {fileID: 0}
+    - target: {fileID: 2976371020024178110, guid: 09e528c0a8ebd89439fd5e51c91e9841,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 5190759570780478699, guid: 75508eb851fa98e4dad35d6221a1102d,
+        type: 3}
     - target: {fileID: 6107665000180232160, guid: 09e528c0a8ebd89439fd5e51c91e9841,
         type: 3}
       propertyPath: PresentSpriteSet
