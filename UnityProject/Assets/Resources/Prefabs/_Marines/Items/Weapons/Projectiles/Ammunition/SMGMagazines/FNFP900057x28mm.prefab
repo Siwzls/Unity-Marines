@@ -110,5 +110,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7477393515128980377, guid: 3a958f17bef6bf448a14fc25de0beedd,
+        type: 3}
+      propertyPath: ammoType
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477393515128980377, guid: 3a958f17bef6bf448a14fc25de0beedd,
+        type: 3}
+      propertyPath: magazineSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477393515128980377, guid: 3a958f17bef6bf448a14fc25de0beedd,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 899008022437615619, guid: bc84d00dceaa6b64a874c6fd088770d1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a958f17bef6bf448a14fc25de0beedd, type: 3}

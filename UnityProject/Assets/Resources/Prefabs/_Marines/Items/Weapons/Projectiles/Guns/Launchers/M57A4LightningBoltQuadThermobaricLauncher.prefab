@@ -13,6 +13,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 3fbf5899bb90c1c418669b47dc9d91e4,
         type: 2}
+    - target: {fileID: 2322676623861038717, guid: cf9108ed60aa27842a33d6ed518da6bb,
+        type: 3}
+      propertyPath: ammoType
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322676623861038717, guid: cf9108ed60aa27842a33d6ed518da6bb,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322676623861038717, guid: cf9108ed60aa27842a33d6ed518da6bb,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 6331951735426262761, guid: d18d3b47d0655d74fad75e00652f6779,
+        type: 3}
     - target: {fileID: 4836963526464628920, guid: cf9108ed60aa27842a33d6ed518da6bb,
         type: 3}
       propertyPath: initialName

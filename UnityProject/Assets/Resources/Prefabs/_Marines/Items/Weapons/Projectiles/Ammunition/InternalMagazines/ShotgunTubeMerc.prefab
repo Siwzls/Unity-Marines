@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5526779012145314770, guid: e0dcc7dfe58b06340a44ebe2c2b33399,
+        type: 3}
+      propertyPath: magazineSize
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7235723794640107391, guid: e0dcc7dfe58b06340a44ebe2c2b33399,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +70,12 @@ PrefabInstance:
     - target: {fileID: 7240088718600112651, guid: e0dcc7dfe58b06340a44ebe2c2b33399,
         type: 3}
       propertyPath: m_Name
-      value: ShotgunTube
+      value: ShotgunTubeMerc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344741849963640767, guid: e0dcc7dfe58b06340a44ebe2c2b33399,
+        type: 3}
+      propertyPath: m_AssetId
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0dcc7dfe58b06340a44ebe2c2b33399, type: 3}

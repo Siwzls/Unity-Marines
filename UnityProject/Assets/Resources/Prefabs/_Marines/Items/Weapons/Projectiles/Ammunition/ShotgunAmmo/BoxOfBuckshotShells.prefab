@@ -88,6 +88,17 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A box filled with buckshot spread shotgun shells. 12 Gauge.
       objectReference: {fileID: 0}
+    - target: {fileID: 2478616465243617720, guid: a06f68f87934d8f47a02d7b00b36376c,
+        type: 3}
+      propertyPath: ProjectilesFired
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478616465243617720, guid: a06f68f87934d8f47a02d7b00b36376c,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 8794746515736527842, guid: 685909ec0464f7a489246d6fed4dbbef,
+        type: 3}
     - target: {fileID: 6911101091939447782, guid: a06f68f87934d8f47a02d7b00b36376c,
         type: 3}
       propertyPath: PresentSpriteSet

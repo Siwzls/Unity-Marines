@@ -89,5 +89,21 @@ PrefabInstance:
       propertyPath: initialName
       value: Mateba speed loader (.454)
       objectReference: {fileID: 0}
+    - target: {fileID: 8798881494819416792, guid: b31870667fcd9534ea611a232f45aa85,
+        type: 3}
+      propertyPath: ammoType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798881494819416792, guid: b31870667fcd9534ea611a232f45aa85,
+        type: 3}
+      propertyPath: magazineSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798881494819416792, guid: b31870667fcd9534ea611a232f45aa85,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 6734995759929865706, guid: c96babfd158228e49adb672c4a666037,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b31870667fcd9534ea611a232f45aa85, type: 3}

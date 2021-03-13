@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxItemSize: 5
   Whitelist:
+  - {fileID: 11400000, guid: 8df775cec6cdfa24eb89584de242f55a, type: 2}
   - {fileID: 11400000, guid: dd2be8f193e2293b6a13e612f3d65b23, type: 2}
   - {fileID: 11400000, guid: 475432c86e14bf94f82170357c1cde54, type: 2}
   - {fileID: 11400000, guid: a439c6695f0d3684481ffbafb0acc20b, type: 2}

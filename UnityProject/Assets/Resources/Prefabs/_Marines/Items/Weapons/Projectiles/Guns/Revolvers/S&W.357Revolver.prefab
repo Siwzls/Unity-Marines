@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2197965824367206156, guid: 9720450a37cfc274d8cb8cdbf9def86b,
+        type: 3}
+      propertyPath: ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197965824367206156, guid: 9720450a37cfc274d8cb8cdbf9def86b,
+        type: 3}
+      propertyPath: FireDelay
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197965824367206156, guid: 9720450a37cfc274d8cb8cdbf9def86b,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 1769333500576134971, guid: 79b7444a2686f584c9b0f3f2e46e67e8,
+        type: 3}
     - target: {fileID: 3328350753962237228, guid: 9720450a37cfc274d8cb8cdbf9def86b,
         type: 3}
       propertyPath: PresentSpriteSet
@@ -92,7 +108,7 @@ PrefabInstance:
     - target: {fileID: 9050872835764767177, guid: 9720450a37cfc274d8cb8cdbf9def86b,
         type: 3}
       propertyPath: initialName
-      value: S&W .357 revolver"
+      value: S&W .357 revolver
       objectReference: {fileID: 0}
     - target: {fileID: 9050872835764767177, guid: 9720450a37cfc274d8cb8cdbf9def86b,
         type: 3}

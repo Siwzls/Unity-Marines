@@ -109,6 +109,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Type71CommandoPulseCarbine
       objectReference: {fileID: 0}
+    - target: {fileID: 4813028132293979391, guid: e39546655d2bd4e409e1e8f17f1a93ae,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 8362912290466273928, guid: 9fc5823c94e038d42ac7b90a15d60da1,
+        type: 3}
     - target: {fileID: 8249289054304186079, guid: e39546655d2bd4e409e1e8f17f1a93ae,
         type: 3}
       propertyPath: PresentSpriteSet

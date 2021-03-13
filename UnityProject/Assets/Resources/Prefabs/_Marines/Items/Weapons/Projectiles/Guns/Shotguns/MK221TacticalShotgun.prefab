@@ -107,6 +107,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 97b2cb247fc551b4e8659274890c4e71,
         type: 2}
+    - target: {fileID: 6793950826182110296, guid: 3da8873fd78218546ae68a3f84918848,
+        type: 3}
+      propertyPath: FireDelay
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6793950826182110296, guid: 3da8873fd78218546ae68a3f84918848,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 7240088718600112651, guid: e0dcc7dfe58b06340a44ebe2c2b33399,
+        type: 3}
     - target: {fileID: 7996393347801935480, guid: 3da8873fd78218546ae68a3f84918848,
         type: 3}
       propertyPath: PresentSpriteSet

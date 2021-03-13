@@ -82,12 +82,33 @@ PrefabInstance:
     - target: {fileID: 5644928684976004078, guid: fb48d90e911edde43bbfc751f858ba74,
         type: 3}
       propertyPath: m_Name
-      value: HandfulOfShotgunSlugs
+      value: _HandfulOfShotgunShellsBase
       objectReference: {fileID: 0}
     - target: {fileID: 5747408013134030426, guid: fb48d90e911edde43bbfc751f858ba74,
         type: 3}
       propertyPath: m_AssetId
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7393844980299606583, guid: fb48d90e911edde43bbfc751f858ba74,
+        type: 3}
+      propertyPath: magType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393844980299606583, guid: fb48d90e911edde43bbfc751f858ba74,
+        type: 3}
+      propertyPath: ammoType
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393844980299606583, guid: fb48d90e911edde43bbfc751f858ba74,
+        type: 3}
+      propertyPath: magazineSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393844980299606583, guid: fb48d90e911edde43bbfc751f858ba74,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 9218863040930670887, guid: 764891c41f6541c4398c199f74d221cf,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb48d90e911edde43bbfc751f858ba74, type: 3}

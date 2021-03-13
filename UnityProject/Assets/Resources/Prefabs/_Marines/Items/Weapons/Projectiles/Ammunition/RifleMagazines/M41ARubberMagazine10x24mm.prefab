@@ -87,6 +87,12 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A 10mm magazine filled with rubber bullets.
       objectReference: {fileID: 0}
+    - target: {fileID: 2976371020024178110, guid: 09e528c0a8ebd89439fd5e51c91e9841,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 1079280318551196098, guid: 2dd49d1cfaf910b4eaca8c2ae306b6e7,
+        type: 3}
     - target: {fileID: 6107665000180232160, guid: 09e528c0a8ebd89439fd5e51c91e9841,
         type: 3}
       propertyPath: PresentSpriteSet

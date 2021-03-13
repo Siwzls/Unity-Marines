@@ -119,5 +119,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c664127bb07efeb41bea72e1fd1d3f21,
         type: 2}
+    - target: {fileID: 7821125340688425254, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: ammoType
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821125340688425254, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: FireDelay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821125340688425254, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 7021780435180706231, guid: 40e3776b9595f654daba5f057e124de3,
+        type: 3}
+    - target: {fileID: 7821125340688425254, guid: f7a45247b53ab0547b06d01fddc08bdc,
+        type: 3}
+      propertyPath: SpawnsCasing
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a45247b53ab0547b06d01fddc08bdc, type: 3}
