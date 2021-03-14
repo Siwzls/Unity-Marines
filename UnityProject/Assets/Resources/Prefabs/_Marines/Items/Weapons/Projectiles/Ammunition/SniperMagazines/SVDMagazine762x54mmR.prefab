@@ -13,6 +13,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7f3e0126897115d4e81983e6821ab43d,
         type: 2}
+    - target: {fileID: 5312143595887896686, guid: 40e3776b9595f654daba5f057e124de3,
+        type: 3}
+      propertyPath: ammoType
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312143595887896686, guid: 40e3776b9595f654daba5f057e124de3,
+        type: 3}
+      propertyPath: magazineSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312143595887896686, guid: 40e3776b9595f654daba5f057e124de3,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 7884894226548274842, guid: abed3647b2ed90c489c73a9370d9bfb4,
+        type: 3}
     - target: {fileID: 6982362290222130179, guid: 40e3776b9595f654daba5f057e124de3,
         type: 3}
       propertyPath: m_AssetId

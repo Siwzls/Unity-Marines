@@ -95,5 +95,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A19HighVelocityImpactMagazine10x24mm
       objectReference: {fileID: 0}
+    - target: {fileID: 8013507773124710324, guid: 45d9d2be7df28534a8ead6aca59093ad,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 4153157868656556271, guid: 99211b1a693b83c4ca4b9669925362b1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d9d2be7df28534a8ead6aca59093ad, type: 3}

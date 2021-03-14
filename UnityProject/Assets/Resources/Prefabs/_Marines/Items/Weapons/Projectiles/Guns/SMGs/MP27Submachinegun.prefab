@@ -108,6 +108,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP27Submachinegun
       objectReference: {fileID: 0}
+    - target: {fileID: 5965184664477311062, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
+        type: 3}
+      propertyPath: ammoType
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965184664477311062, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965184664477311062, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 7820417518654848987, guid: 85ab8abcf80f2584daa402741fd9f3c4,
+        type: 3}
     - target: {fileID: 7095567435986543222, guid: 91ec1c26c9dd97743a6348a1ddbcd276,
         type: 3}
       propertyPath: PresentSpriteSet

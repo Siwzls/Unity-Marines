@@ -7,6 +7,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2197965824367206156, guid: 9720450a37cfc274d8cb8cdbf9def86b,
+        type: 3}
+      propertyPath: ammoType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197965824367206156, guid: 9720450a37cfc274d8cb8cdbf9def86b,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197965824367206156, guid: 9720450a37cfc274d8cb8cdbf9def86b,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 1769333500576134971, guid: 3ba9d51905814244aa7df7b71fec7c8a,
+        type: 3}
+    - target: {fileID: 2197965824367206156, guid: 9720450a37cfc274d8cb8cdbf9def86b,
+        type: 3}
+      propertyPath: MagInternal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3328350753962237228, guid: 9720450a37cfc274d8cb8cdbf9def86b,
         type: 3}
       propertyPath: PresentSpriteSet

@@ -56,7 +56,7 @@ PrefabInstance:
     - target: {fileID: 5697035550803554880, guid: 3a958f17bef6bf448a14fc25de0beedd,
         type: 3}
       propertyPath: m_Name
-      value: M39HVMagazine
+      value: M39HVMagazine10x20mm
       objectReference: {fileID: 0}
     - target: {fileID: 5700551651313487668, guid: 3a958f17bef6bf448a14fc25de0beedd,
         type: 3}
@@ -113,5 +113,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7477393515128980377, guid: 3a958f17bef6bf448a14fc25de0beedd,
+        type: 3}
+      propertyPath: ammoType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477393515128980377, guid: 3a958f17bef6bf448a14fc25de0beedd,
+        type: 3}
+      propertyPath: magazineSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477393515128980377, guid: 3a958f17bef6bf448a14fc25de0beedd,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 161996304767515657, guid: c90fbbb78a33a054c822b85a6ab1914b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a958f17bef6bf448a14fc25de0beedd, type: 3}

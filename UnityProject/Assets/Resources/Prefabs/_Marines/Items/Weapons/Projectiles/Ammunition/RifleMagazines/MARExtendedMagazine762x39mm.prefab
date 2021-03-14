@@ -83,5 +83,10 @@ PrefabInstance:
       propertyPath: m_AssetId
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7351000806845095549, guid: 017c8dabf6432794cbe2f747ef7ab0e8,
+        type: 3}
+      propertyPath: magazineSize
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 017c8dabf6432794cbe2f747ef7ab0e8, type: 3}

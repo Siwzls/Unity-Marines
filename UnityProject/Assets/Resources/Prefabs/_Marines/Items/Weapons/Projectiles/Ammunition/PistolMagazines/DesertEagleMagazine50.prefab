@@ -95,5 +95,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ddc169123a20f5647851dada046a0372,
         type: 2}
+    - target: {fileID: 8665711366066072130, guid: 40001f0cf25e54044a30a0d5089fcbec,
+        type: 3}
+      propertyPath: ammoType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665711366066072130, guid: 40001f0cf25e54044a30a0d5089fcbec,
+        type: 3}
+      propertyPath: magazineSize
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40001f0cf25e54044a30a0d5089fcbec, type: 3}

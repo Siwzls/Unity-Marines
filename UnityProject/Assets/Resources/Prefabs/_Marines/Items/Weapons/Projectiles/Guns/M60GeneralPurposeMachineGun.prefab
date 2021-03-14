@@ -13,6 +13,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0a467bb4586a673459bcd9c194535720,
         type: 2}
+    - target: {fileID: 3165839588915393246, guid: 358db724cb0b4f34788e76966262c97d,
+        type: 3}
+      propertyPath: ammoType
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165839588915393246, guid: 358db724cb0b4f34788e76966262c97d,
+        type: 3}
+      propertyPath: FireDelay
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165839588915393246, guid: 358db724cb0b4f34788e76966262c97d,
+        type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 8343961649356670204, guid: 4a8db4a6379ea964ba4aa215874803bc,
+        type: 3}
     - target: {fileID: 5227789134664778432, guid: 358db724cb0b4f34788e76966262c97d,
         type: 3}
       propertyPath: itemStorageCapacity

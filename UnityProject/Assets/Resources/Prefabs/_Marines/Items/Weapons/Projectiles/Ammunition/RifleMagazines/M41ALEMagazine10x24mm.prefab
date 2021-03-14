@@ -87,6 +87,12 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A 10mm armor shredding magazine.
       objectReference: {fileID: 0}
+    - target: {fileID: 2976371020024178110, guid: 09e528c0a8ebd89439fd5e51c91e9841,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 5689486836359915468, guid: 061c0ee6dbeeeb845a931e0ea5febb04,
+        type: 3}
     - target: {fileID: 6107665000180232160, guid: 09e528c0a8ebd89439fd5e51c91e9841,
         type: 3}
       propertyPath: PresentSpriteSet

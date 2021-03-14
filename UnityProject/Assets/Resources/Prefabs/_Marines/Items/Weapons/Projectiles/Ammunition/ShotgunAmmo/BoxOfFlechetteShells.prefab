@@ -88,6 +88,17 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A box filled with flechette shotgun shells. 12 Gauge.
       objectReference: {fileID: 0}
+    - target: {fileID: 2478616465243617720, guid: a06f68f87934d8f47a02d7b00b36376c,
+        type: 3}
+      propertyPath: ProjectilesFired
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478616465243617720, guid: a06f68f87934d8f47a02d7b00b36376c,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 1768357790371764164, guid: 80d08af78c1ee9740b62f4a82fe3589e,
+        type: 3}
     - target: {fileID: 6911101091939447782, guid: a06f68f87934d8f47a02d7b00b36376c,
         type: 3}
       propertyPath: PresentSpriteSet

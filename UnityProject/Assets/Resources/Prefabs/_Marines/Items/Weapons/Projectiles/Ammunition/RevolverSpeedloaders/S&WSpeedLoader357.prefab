@@ -89,5 +89,15 @@ PrefabInstance:
       propertyPath: initialName
       value: S&W speed loader (.357)
       objectReference: {fileID: 0}
+    - target: {fileID: 8798881494819416792, guid: b31870667fcd9534ea611a232f45aa85,
+        type: 3}
+      propertyPath: ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798881494819416792, guid: b31870667fcd9534ea611a232f45aa85,
+        type: 3}
+      propertyPath: magazineSize
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b31870667fcd9534ea611a232f45aa85, type: 3}

@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: ammoType
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: magazineSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934266603774110673, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 63851018587446155, guid: 80ac692fd3966a446ba59ee514e8c658,
+        type: 3}
     - target: {fileID: 3606962689093887868, guid: ab65ebf1eb26f3943b436906ee1a879d,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +81,12 @@ PrefabInstance:
     - target: {fileID: 3611046138077190664, guid: ab65ebf1eb26f3943b436906ee1a879d,
         type: 3}
       propertyPath: m_Name
-      value: _InternalMagazineBase
+      value: FlareGunInternalMagazine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3713559619824330684, guid: ab65ebf1eb26f3943b436906ee1a879d,
+        type: 3}
+      propertyPath: m_AssetId
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab65ebf1eb26f3943b436906ee1a879d, type: 3}

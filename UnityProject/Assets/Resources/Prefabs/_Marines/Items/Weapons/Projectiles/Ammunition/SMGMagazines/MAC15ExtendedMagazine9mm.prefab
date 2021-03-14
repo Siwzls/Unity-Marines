@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1951668659102496304, guid: 187e21fb099cad24db91bc89a1f38f40,
+        type: 3}
+      propertyPath: magazineSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3624108766457723485, guid: 187e21fb099cad24db91bc89a1f38f40,
         type: 3}
       propertyPath: m_AssetId

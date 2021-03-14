@@ -88,6 +88,12 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A box filled with self-detonating incendiary shotgun rounds. 12 Gauge.
       objectReference: {fileID: 0}
+    - target: {fileID: 2478616465243617720, guid: a06f68f87934d8f47a02d7b00b36376c,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 446889406060393743, guid: c46bb898e2ec1104d8bdbe91e1597f66,
+        type: 3}
     - target: {fileID: 6911101091939447782, guid: a06f68f87934d8f47a02d7b00b36376c,
         type: 3}
       propertyPath: PresentSpriteSet

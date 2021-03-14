@@ -65,7 +65,23 @@ PrefabInstance:
     - target: {fileID: 5061737593144674354, guid: fc76be8861333af4c885079e5be83fba,
         type: 3}
       propertyPath: m_Name
-      value: ShotgunTubeDouble
+      value: ShotgunTubeMOU53
       objectReference: {fileID: 0}
+    - target: {fileID: 5164170947982210438, guid: fc76be8861333af4c885079e5be83fba,
+        type: 3}
+      propertyPath: m_AssetId
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995017347802429931, guid: fc76be8861333af4c885079e5be83fba,
+        type: 3}
+      propertyPath: magazineSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995017347802429931, guid: fc76be8861333af4c885079e5be83fba,
+        type: 3}
+      propertyPath: initalProjectile
+      value: 
+      objectReference: {fileID: 1768357790371764164, guid: 80d08af78c1ee9740b62f4a82fe3589e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc76be8861333af4c885079e5be83fba, type: 3}

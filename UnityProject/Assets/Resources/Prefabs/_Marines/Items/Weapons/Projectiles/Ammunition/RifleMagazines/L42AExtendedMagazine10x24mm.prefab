@@ -94,5 +94,10 @@ PrefabInstance:
       propertyPath: initialDescription
       value: A 10mm battle rifle extended magazine.
       objectReference: {fileID: 0}
+    - target: {fileID: 8855239221208337754, guid: 754d1786bf8e2dc46b6b13018988d94e,
+        type: 3}
+      propertyPath: magazineSize
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 754d1786bf8e2dc46b6b13018988d94e, type: 3}
