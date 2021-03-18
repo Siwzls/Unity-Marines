@@ -34,13 +34,13 @@ PrefabInstance:
         type: 3}
       propertyPath: flameSprites.Array.data[0]
       value: 
-      objectReference: {fileID: -1956948338286630970, guid: 7264d39c40396fb4eaf487ddb0c04a27,
+      objectReference: {fileID: 21300000, guid: 25f30ff13ffd4bc4baa30c458db84645,
         type: 3}
     - target: {fileID: 4591132913751966026, guid: b735ab74dab174a4f90c79558cd51e43,
         type: 3}
       propertyPath: flameSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 636772202433239952, guid: 7264d39c40396fb4eaf487ddb0c04a27,
+      objectReference: {fileID: 21300002, guid: 25f30ff13ffd4bc4baa30c458db84645,
         type: 3}
     - target: {fileID: 4591132913751966026, guid: b735ab74dab174a4f90c79558cd51e43,
         type: 3}
@@ -157,6 +157,16 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7355274273567987861, guid: b735ab74dab174a4f90c79558cd51e43,
         type: 3}
+      propertyPath: exportCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8230906268658171685, guid: b735ab74dab174a4f90c79558cd51e43,
+        type: 3}
+      propertyPath: exportName
+      value: industrial welding tool
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355274273567987861, guid: b735ab74dab174a4f90c79558cd51e43,
+        type: 3}
       propertyPath: initialName
       value: industrial welding tool
       objectReference: {fileID: 0}
@@ -164,16 +174,6 @@ PrefabInstance:
         type: 3}
       propertyPath: initialDescription
       value: A slightly larger welder with a larger tank.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230906268658171685, guid: b735ab74dab174a4f90c79558cd51e43,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230906268658171685, guid: b735ab74dab174a4f90c79558cd51e43,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9051842671118403817, guid: b735ab74dab174a4f90c79558cd51e43,
         type: 3}
