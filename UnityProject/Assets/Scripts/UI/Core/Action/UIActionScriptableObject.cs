@@ -37,7 +37,7 @@ public class UIActionScriptableObject : ScriptableObject, IServerActionGUI
 		{
 			if (UIActionSOSingleton.Instance == null)
 			{
-				Resources.LoadAll<UIActionSOSingleton>("ScriptableObjectsSingletons");
+				Resources.LoadAll<UIActionSOSingleton>("ScriptableObjects/SOs singletons");
 			}
 			if (!UIActionSOSingleton.Instance.uIActions.Contains(this))
 			{
