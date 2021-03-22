@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryEscapeShuttle: {fileID: 0}
   GameModeData: {fileID: 11400000, guid: 050782fd4c93a164e8100c4c7183d5b3, type: 2}
-  SecretGameMode: 1
+  SecretGameMode: 0
   Rebels: 
   counting: 0
   NextGameMode: Random
