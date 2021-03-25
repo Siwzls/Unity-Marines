@@ -25,7 +25,9 @@ namespace Antagonists
 		/// <summary>
 		/// All active antagonists
 		/// </summary>
-		private List<SpawnedAntag> ActiveAntags = new List<SpawnedAntag>();
+		private List<SpawnedAntag> activeAntags = new List<SpawnedAntag>();
+
+		public List<SpawnedAntag> ActiveAntags => activeAntags;
 
 		/// <summary>
 		/// Keeps track of which players have already been targeted for objectives
@@ -78,7 +80,7 @@ namespace Antagonists
 		/// <summary>
 		/// Returns the number of active antags
 		/// </summary>
-		public int AntagCount => ActiveAntags.Count;
+		public int AntagCount => activeAntags.Count;
 
 		/// <summary>
 		/// Server only. Spawn the joined viewer as the indicated antag, includes creating their player object
@@ -126,7 +128,7 @@ namespace Antagonists
 		public void ServerFinishAntag(Antagonist chosenAntag, ConnectedPlayer connectedPlayer)
 		{
 			var spawnedAntag = SetAntagDetails(chosenAntag, connectedPlayer);
-			ActiveAntags.Add(spawnedAntag);
+			activeAntags.Add(spawnedAntag);
 			ShowAntagBanner(connectedPlayer, chosenAntag);
 			chosenAntag.AfterSpawn(connectedPlayer);
 
@@ -140,14 +142,14 @@ namespace Antagonists
 		/// </summary>
 		/// <param name="player">The player that should receive an uplink in the first PDA found on them.</param>
 		/// <param name="tcCount">The amount of telecrystals the uplink should be given.</param>
-		public static void TryInstallPDAUplink(ConnectedPlayer player, int tcCount)
+		public static void TryInstallPDAUplink(ConnectedPlayer player, int tcCount, bool isNukeOps)
 		{
 			foreach (ItemSlot slot in player.Script.ItemStorage.GetItemSlotTree())
 			{
 				if (slot.IsEmpty) continue;
 				if (slot.Item.TryGetComponent<Items.PDA.PDALogic>(out var pda))
 				{
-					pda.InstallUplink(player, tcCount);
+					pda.InstallUplink(player, tcCount, isNukeOps);
 				}
 			}
 		}
@@ -173,7 +175,7 @@ namespace Antagonists
 		/// </summary>
 		public void RemindAntags()
 		{
-			foreach (var activeAntag in ActiveAntags)
+			foreach (var activeAntag in activeAntags)
 			{
 				activeAntag.Owner?.ShowObjectives();
 			}
@@ -188,10 +190,10 @@ namespace Antagonists
 
 			var message = $"End of Round Report on {ServerData.ServerConfig.ServerName}\n";
 
-			if (ActiveAntags.Count > 0)
+			if (activeAntags.Count > 0)
 			{
 				// Group all the antags by type and list them together
-				foreach (var antagType in ActiveAntags.GroupBy(t => t.GetType()))
+				foreach (var antagType in activeAntags.GroupBy(t => t.GetType()))
 				{
 					statusSB.AppendLine($"<size=48>The <b>{antagType.First().Antagonist.AntagName}s</b> were:\n</size>");
 					message += $"The {antagType.First().Antagonist.AntagName}s were:\n";
@@ -228,7 +230,7 @@ namespace Antagonists
 		/// </summary>
 		public void ResetAntags()
 		{
-			ActiveAntags.Clear();
+			activeAntags.Clear();
 			TargetedPlayers.Clear();
 			TargetedItems.Clear();
 		}
