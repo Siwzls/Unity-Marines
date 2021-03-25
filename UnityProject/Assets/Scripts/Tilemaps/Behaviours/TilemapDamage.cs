@@ -81,7 +81,7 @@ public class TilemapDamage : MonoBehaviour, IFireExposable
 			return 0;
 		}
 
-		var damageTaken = basicTile.Armor.GetDamage(damage, attackType);
+		var damageTaken = basicTile.Armor.GetDamage(damage < basicTile.damageDeflection ? 0 : damage, attackType);
 
 		data.AddTileDamage(Layer.LayerType, damageTaken);
 
@@ -93,11 +93,21 @@ public class TilemapDamage : MonoBehaviour, IFireExposable
 
 		var totalDamageTaken = data.GetTileDamage(Layer.LayerType);
 
-
 		if (totalDamageTaken >= basicTile.MaxHealth)
 		{
 			data.RemoveTileDamage(Layer.LayerType);
 			tileChangeManager.RemoveTile(data.Position, Layer.LayerType);
+			tileChangeManager.RemoveOverlaysOfType(data.Position, LayerType.Effects, TileChangeManager.OverlayType.Damage);
+
+			if (Layer.LayerType == LayerType.Floors || Layer.LayerType == LayerType.Base)
+			{
+				tileChangeManager.RemoveOverlaysOfType(data.Position, LayerType.Floors, TileChangeManager.OverlayType.Cleanable);
+			}
+
+			if (Layer.LayerType == LayerType.Walls)
+			{
+				tileChangeManager.RemoveOverlaysOfType(data.Position, LayerType.Walls, TileChangeManager.OverlayType.Cleanable);
+			}
 
 			//Add new tile if needed
 			//TODO change floors to using overlays, but generic overlay will need to be sprited
@@ -150,7 +160,7 @@ public class TilemapDamage : MonoBehaviour, IFireExposable
 				{
 					if (overlayData.damagePercentage <= totalDamageTaken / basicTile.MaxHealth)
 					{
-						tileChangeManager.UpdateOverlay(data.Position, overlayData.overlayTile);
+						tileChangeManager.AddOverlay(data.Position, overlayData.overlayTile);
 						break;
 					}
 				}
@@ -188,7 +198,8 @@ public class TilemapDamage : MonoBehaviour, IFireExposable
 	public void RemoveTileEffects(Vector3Int cellPos)
 	{
 		var data = metaDataLayer.Get(cellPos);
-		tileChangeManager.RemoveOverlay(cellPos, LayerType.Effects);
+
+		tileChangeManager.RemoveOverlaysOfType(cellPos, LayerType.Effects, TileChangeManager.OverlayType.Damage);
 		data.ResetDamage(Layer.LayerType);
 	}
 }

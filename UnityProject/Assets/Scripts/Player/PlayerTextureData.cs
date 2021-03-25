@@ -20,7 +20,7 @@ public class PlayerTextureData : ScriptableObject
 		{
 			if (PlayerTextureDataSOs.Instance == null)
 			{
-				Resources.LoadAll<PlayerTextureDataSOs>("ScriptableObjects/SOs singletons");
+				Resources.LoadAll<PlayerTextureDataSOs>("ScriptableObjectsSingletons");
 			}
 			if (!PlayerTextureDataSOs.Instance.DataRaceData.Contains(this))
 			{
